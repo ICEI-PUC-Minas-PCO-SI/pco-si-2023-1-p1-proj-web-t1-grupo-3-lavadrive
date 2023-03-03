@@ -3,15 +3,15 @@
 
 `CURSO`
 
-→ Sistemas de informação - PUC MINAS Contagem
+* Sistemas de informação - PUC MINAS Contagem
 
 `DISCIPLINA`
 
-→ Trabalho Interdisciplinar: Aplicações Web
+* Trabalho Interdisciplinar: Aplicações Web
 
 `SEMESTRE`
 
-→ 1° semestre
+* 1° semestre
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
