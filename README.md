@@ -3,7 +3,7 @@
 
 `CURSO`
 
-* Sistemas de informação - PUC MINAS Contagem
+* Sistemas de informação - PUC MINAS (Contagem)
 
 `DISCIPLINA`
 
