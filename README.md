@@ -11,7 +11,7 @@
 
 `SEMESTRE`
 
-* 1° semestre
+* 1° semestre de 2023
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
