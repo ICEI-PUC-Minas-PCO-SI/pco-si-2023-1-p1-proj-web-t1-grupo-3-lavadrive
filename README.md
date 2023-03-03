@@ -13,7 +13,7 @@
 
 * 1° semestre de 2023
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto visa facilitar o agendamento de lavagens de carros, tendo em vista que geralmente, diversas críticas são feitas acerca desses sistemas. O LavaDriver veio com a intenção de inovar as interações com o usuário, para trazer um atendimento mais efetivo e possibilitar resultados melhores.
 
 ## Integrantes
 
