@@ -3,22 +3,29 @@
 
 `CURSO`
 
+→ Sistemas de informação - PUC MINAS Contagem
+
 `DISCIPLINA`
 
+→ Trabalho Interdisciplinar: Aplicações Web
+
 `SEMESTRE`
+
+→ 1° semestre
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Daniel Vitor Salviano Araújo
+* Gustavo Augusto Santos Perdigão
+* Lucas Eduardo Rodrigues Oliveira
+* Pedro Antônio Silva Neves
+* Yago de Arruda Simões
 
 ## Orientador
 
-* Nome completo do professor 1
+* Fábio Leandro Rodrigues Cordeiro
 
 ## Instruções de utilização
 
