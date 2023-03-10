@@ -1,29 +1,24 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A ideia do projeto LavaDrive nasceu no inicio de 2023, procurando se diferenciar dos demais lava-jatos. Nossa missão é dinamizar as interações entre o lavajato e os clientes, trazendo um atendimento mais efetivo e contando com um sistema mais moderno de lavagem nos veiculos.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A aplicação busca sanar problemas relacionados com meios de comunicação com os clientes, minimizando qualquer tipo de problemas relacionados a autonomia.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Objetivo geral: Através de uma plataforma ágil e segura, buscamos dinamizar as interações entre o lavajato e os clientes, trazendo um atendimento efetivo.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivo especifíco:
+<ul>
+ <li>Fidelidade e praticidade nos atendimentos. </li>
+ <li>Uso das tecnologias mais avançadas do mercado para a construção do sistema. </li>
+</ul>
 
 ## Justificativa
+
+Para amantes de carro, manter o carro sempre limpo é vital. Entratanto, nem sempre possuem tempo para poder limpar o próprio carro e realizar os devidos cuidados
 
 Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
 
