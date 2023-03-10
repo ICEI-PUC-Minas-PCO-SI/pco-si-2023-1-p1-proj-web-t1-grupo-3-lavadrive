@@ -48,16 +48,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Agendamento da limpeza por horário e data | ALTA | 
+|RF-002| Divisão de filas por categoria do automóvel | ALTA |
+|RF-003| | MÉDIA |
+|RF-004| Várais opções no serviço de limpeza do veículo | MÉDIA |
+|RF-005| Avaliação do usuário após o serviço | MÉDIA |
+|RF-007| Observações feitas pelo usuário antes da lavagem | MÉDIA |
+|RF-008| Gerencimento de cadastros de usuários | MÉDIA |
+|RF-009| Gerencimento de cadastros de carros (placa, modelo, etc.) | MÉDIA |
+|RF-010| Pagamento pode ser adiantado pelo usuário | MÉDIA |
+|RF-011| Pagamento via dinheiro, pix ou cartão (débito/crédito) | MÉDIA |
+|RF-012| Notificação quando o carro estiver pronto | MÉDIA |
+|RF-012| Estimativa do tempo de conclusão da limpeza | MÉDIA |
+
+
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| Notificar ao término da limpeza | MÉDIA | 
+|RNF-002|  |  BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
