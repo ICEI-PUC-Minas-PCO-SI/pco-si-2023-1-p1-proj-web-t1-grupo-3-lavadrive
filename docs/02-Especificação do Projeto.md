@@ -8,8 +8,6 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
-
 André Veríssimo tem 32 anos, é casado,tem filhos e trabalha como uber já faz 5 anos, dessa forma ele precisa sustentá-los e procura uma forma de deixar o carro limpo gastando o mínimo de tempo possível que poderia estar ganhando dinheiro para sua família.
 Seus filhos são pequenos e a mulher precisa cuidar deles, então André não tem ajuda para levar o carro no lava-jato, ultimamente necessitando de uma maneira rápida para agendar uma lavagem de maneira virtual e bancar tudo que precisa dentro de casa, no qual pudesse colocar um horário pré-definido para levar o carro e buscar rapidamente e em qual dia quisesse.
 
