@@ -10,6 +10,14 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
+André Veríssimo tem 32 anos, é casado,tem filhos e trabalha como uber já faz 5 anos, dessa forma ele precisa sustentá-los e procura uma forma de deixar o carro limpo gastando o mínimo de tempo possível que poderia estar ganhando dinheiro para sua família.
+Seus filhos são pequenos e a mulher precisa cuidar deles, então André não tem ajuda para levar o carro no lava-jato, ultimamente necessitando de uma maneira rápida para agendar uma lavagem de maneira virtual e bancar tudo que precisa dentro de casa, no qual pudesse colocar um horário pré-definido para levar o carro e buscar rapidamente e em qual dia quisesse.
+
+Danilo Ramos tem 24 anos, é solteiro e trabalha como atendente do McDonalds de manhã e como bartender nas noites, pra ganhar dinheiro o suficiente pra se sustentar,porém como ocorreu a falência de seus pais quando era pequeno, Danilo nunca aprendeu como lavar o carro pela parte de dentro de forma adequeada, sempre ficando alguma parte suja após a limpeza, e sujando de novo rapidamente após comer dentro do carro na volta de seu longo período trabalhando, obrigando-o a contratar alguém para fazer tal serviço, porém após ir no LaveBem, Danilo ficou impressionado com as diversas opções de serviço que possuiam, como a lavagem completa por dentro, a verificação da qualidade dos vidros do carro e o chaveiro de brinde.
+
+Gabriel Silva da Costa tem 35 anos, é um milionário de sucesso e trabalha com marketing digital. É bem inteligente e conquistou tudo que queria em sua vida, após passar anos sofridos sem conseguir avançar com seu negócio, até que explodiu no comércio e ficou rico. Porém, como é solteiro, precisa sempre levar seu carro, sua moto, e sua caminhonete para lavar um de cada vez, e em dias diferentes,para limpar após muito tempo sem mexer nisso, e Gabriel ficou maravilhado com a divisão de filas por categoria do automóvel e a rapidez do serviço da LaveBem.
+
+
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
@@ -102,8 +110,3 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 > - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
 > - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
-(personas)
-André Veríssimo tem 32 anos, é casado,tem filhos e trabalha como uber já faz 5 anos, dessa forma ele precisa sustentá-los e procura uma forma de deixar o carro limpo gastando o mínimo de tempo possível que poderia estar ganhando dinheiro para sua família.
-Seus filhos são pequenos e a mulher precisa cuidar deles, então André não tem ajuda para levar o carro no lava-jato, ultimamente necessitando de uma maneira rápida para agendar uma lavagem de maneira virtual e bancar tudo que precisa dentro de casa, no qual pudesse colocar um horário pré-definido para levar o carro e buscar rapidamente e em qual dia quisesse.
-
-Danilo Ramos tem 24 anos, é solteiro e trabalha como atendente do McDonalds de manhã e como bartender nas noites, pra ganhar dinheiro o suficiente pra se sustentar,porém como ocorreu a falência de seus pais quando era pequeno, Danilo nunca aprendeu como lavar o carro pela parte de dentro de forma adequeada, sempre ficando alguma parte suja após a limpeza, e sujando de novo rapidamente após comer dentro do carro na volta de seu longo período trabalhando, obrigando-o a contratar alguém para fazer tal serviço, porém após ir no LaveBem, Danilo ficou impressionado com as diversas opções de serviço que possuiam, como a lavagem completa por dentro, a verificação da qualidade dos vidros do carro e o chaveiro de brinde.
