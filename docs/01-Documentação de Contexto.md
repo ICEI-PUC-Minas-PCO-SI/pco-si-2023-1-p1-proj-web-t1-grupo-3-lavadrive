@@ -1,6 +1,6 @@
 # Introdução
 
-A ideia do projeto LavaDrive nasceu no inicio de 2023, procurando se diferenciar dos demais lava-jatos. Nossa missão é dinamizar as interações entre o lavajato e os clientes, trazendo um atendimento mais efetivo e contando com um sistema mais moderno de lavagem nos veiculos.
+A ideia do projeto LavaDrive nasceu no inicio de 2023, procurando se diferenciar dos demais lava-jatos. Nosso objetivo é transformar a interação entre o lavajato e os clientes, contando com um atendimento efetivo e um sistema moderno de lavagem de veiculos.
 
 ## Problema
 
@@ -18,14 +18,8 @@ Objetivo especifíco:
 
 ## Justificativa
 
-Para amantes de carro, manter o carro sempre limpo é vital. Entratanto, nem sempre possuem tempo para poder limpar o próprio carro e realizar os devidos cuidados
+Para amantes de carro, manter o carro sempre limpo é vital. Entratanto, nem sempre possuem tempo para poder limpar o próprio carro e realizar os devidos cuidados, para solucionar este problema a lava drive visa oferecer um agendamento online eficiente para tornar a lavagem do carro um processo mais pratico.
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
