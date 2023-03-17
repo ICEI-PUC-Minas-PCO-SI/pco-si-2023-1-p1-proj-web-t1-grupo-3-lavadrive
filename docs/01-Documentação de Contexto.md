@@ -8,7 +8,7 @@ A aplicação busca sanar problemas relacionados com meios de comunicação com 
 
 ## Objetivos
 
-Objetivo geral: Através de uma plataforma ágil e segura, buscamos dinamizar as interações entre o lavajato e os clientes, trazendo um atendimento efetivo.
+Objetivo geral: Através de uma plataforma ágil e segura, buscamos dinamizar as interações entre o lava-jato e os clientes, trazendo um atendimento efetivo.
 
 Objetivo especifíco:
 <ul>
@@ -18,13 +18,12 @@ Objetivo especifíco:
 
 ## Justificativa
 
-Para amantes de carro, manter o carro sempre limpo é vital. Entratanto, nem sempre possuem tempo para poder limpar o próprio carro e realizar os devidos cuidados, para solucionar este problema a lava drive visa oferecer um agendamento online eficiente para tornar a lavagem do carro um processo mais pratico.
+Para amantes de carro, manter o carro sempre limpo é vital. Entretanto, nem sempre possuem tempo para poder limpar o próprio carro e realizar os devidos cuidados. Para solucionar este problema, a LavaDrive visa oferecer um agendamento online eficiente para tornar a lavagem do carro um processo mais prático. 
 
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público-alvo da LavaDrive são todos que tenham o interesse de realizar uma limpeza no veículo, mas desejam ser atendidas de maneira rápida, organizada, segura e direta.
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
