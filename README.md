@@ -18,8 +18,8 @@ O projeto visa facilitar o agendamento de lavagem de veículos (carros, motocicl
 ## Integrantes
 
 * Daniel Vitor Salviano Araújo
+* Gabriel Viegas Andrade
 * Gustavo Augusto Santos Perdigão
-* Lucas Eduardo Rodrigues de Oliveira
 * Pedro Antônio Silva Neto
 * Yago de Arruda Simões
 
