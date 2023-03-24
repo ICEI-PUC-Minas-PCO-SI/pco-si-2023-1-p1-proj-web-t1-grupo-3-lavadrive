@@ -73,10 +73,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Notificar ao término da limpeza | MÉDIA | 
-|RNF-002| O site deve estar online 24 horas |  BAIXA | 
-|RNF-003| Compatível com todos os sistemas operacionais |  BAIXA | 
-|RNF-004| Verificação em duas etapas diante de um acesso não autorizado | ALTO | 
+|RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO | 
+|RNF-002| Notificar ao término da limpeza | MÉDIA | 
+|RNF-003| O site deve estar online 24 horas |  BAIXA | 
+|RNF-004| Compatível com todos os sistemas operacionais |  BAIXA | 
 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
