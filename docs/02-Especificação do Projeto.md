@@ -56,7 +56,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| Agendamento da limpeza por horário e data | ALTA | 
 |RF-002| Divisão de filas por categoria do automóvel | ALTA |
-|RF-003| Pagamento via dinheiro, pix ou cartão (débito/crédito) | MÉDIA |
+|RF-003| Pagamento via dinheiro, pix ou cartão (débito/crédito) | ALTA |
 |RF-004| Várais opções no serviço de limpeza do veículo | MÉDIA |
 |RF-005| Avaliação do usuário após o serviço | MÉDIA |
 |RF-006| Observações feitas pelo usuário antes da lavagem | MÉDIA |
