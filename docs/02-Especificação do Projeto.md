@@ -34,10 +34,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Funcionário         | Acessar a agenda                   | Desmarcar ou marcar horarios           |
-|Cliente             | Marcar o horario                   | Evitar ficar esperando em longas filas |
-|Cliente             | Avaliar o serviço                  | Deixar a sua opnião sobre o atendimento|
-|Cliente             | Pagamento adiantado                | Tornar o processo ainda mais dinamico  |
+|Funcionário         | Acessar a agenda                   | Desmarcar ou marcar horários           |
+|Cliente             | Marcar o horário                   | Evitar ficar esperando em longas filas |
+|Cliente             | Avaliar o serviço                  | Deixar a sua opinião                   |
+|Cliente             | Pagamento adiantado                | Tornar o processo ainda mais dinâmico  |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
