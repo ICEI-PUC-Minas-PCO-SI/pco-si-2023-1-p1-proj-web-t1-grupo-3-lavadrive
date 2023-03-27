@@ -15,6 +15,8 @@ Seus filhos são pequenos e a mulher precisa cuidar deles, então André não te
 
 3. Gabriel Silva da Costa tem 35 anos, é um milionário de sucesso e trabalha com marketing digital. É bem inteligente e conquistou tudo que queria em sua vida, após passar anos sofridos sem conseguir avançar com seu negócio, até que explodiu no comércio e ficou rico. Porém, como é solteiro, precisa sempre levar seu carro, sua moto, e sua caminhonete para lavar um de cada vez, e em dias diferentes,para limpar após muito tempo sem mexer nisso, e Gabriel ficou maravilhado com a divisão de filas por categoria do automóvel e a rapidez do serviço da LavaDrive.
 
+4. Natalia Verona tem 26 anos é solteira e trabalha como investigadora da policia civil. É inteligente, bem humorada e adora gatos, mas que está sempre ocupada com o trabalho sendo um grande desafio separar um tempo do seu dia para limpar seu carro. Ela encontrou a solução na LavaDrive que com o pagamento adiantado, marcação de horário e serviço eficiente permite que ela aproveite o seu tempo livre sem se preocupar com a limpeza do carro. 
+
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
