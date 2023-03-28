@@ -17,6 +17,8 @@ Seus filhos são pequenos e a mulher precisa cuidar deles, então André não te
 
 4. Natalia Verona tem 26 anos é solteira e trabalha como investigadora da policia civil. É inteligente, bem humorada e adora gatos, mas que está sempre ocupada com o trabalho sendo um grande desafio separar um tempo do seu dia para limpar seu carro. Ela encontrou a solução na LavaDrive que com o pagamento adiantado, marcação de horário e serviço eficiente permite que ela aproveite o seu tempo livre sem se preocupar com a limpeza do carro. 
 
+5. Geraldo Ferreira tem 71 anos, é divorciado e está aposentado. Geraldo é um apreciador de carros, gosta de assistir a corridas e adora observar carros luxuosos ou esportivos. O sonho de Geraldo era ter um carro diferente, que chamasse a atenção, e atualmente ele conquistou isso, uma vez que os carros de sua época são extremamente diferentes dos atuais, e considerados raros hoje em dia. Entretanto, devido a época de produção do carro, Geraldo possui diversas complicações automobilísticas, e dentre elas, está a preocupação em achar um lugar que cuide do seu carro da forma que ele procura, uma vez que, devido a sua idade, Geraldo está debilitado à realizar essa tarefa. E depois que Geraldo encontrou o LavaDrive, ele ficou aliviado, já que todas as observações que ele fazia em relação ao cuidado com seu carro sempre eram atendidas no momento da limpeza, e agora leva seu carro uma vez por semana no mesmo.
+
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
