@@ -1,6 +1,6 @@
 # Introdução
 
-A ideia do projeto LavaDrive nasceu no inicio de 2023, procurando se diferenciar dos demais lava-jatos. Nosso objetivo é transformar a interação entre o lava-jato e os clientes, contando com um atendimento efetivo e um sistema moderno de lavagem de veículos.
+A ideia do projeto LavaDrive nasceu no início de 2023, procurando se diferenciar dos demais lava-jatos. Nosso objetivo é transformar a interação entre o lava-jato e os clientes, contando com um atendimento efetivo e um sistema moderno de lavagem de veículos.
 
 ## Problema
 
