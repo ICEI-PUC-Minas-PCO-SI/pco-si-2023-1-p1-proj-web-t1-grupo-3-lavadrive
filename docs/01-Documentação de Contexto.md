@@ -10,7 +10,7 @@ A aplicação busca sanar problemas relacionados com meios de comunicação com 
 
 Objetivo geral: Através de uma plataforma ágil e segura, buscamos dinamizar as interações entre o lava-jato e os clientes, trazendo um atendimento efetivo.
 
-Objetivo específíco:
+Objetivo específico:
 <ul>
  <li>Fidelidade e praticidade nos atendimentos. </li>
  <li>Uso das tecnologias mais avançadas do mercado para a construção do sistema. </li>
