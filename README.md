@@ -13,7 +13,7 @@
 
 * 1° semestre de 2023
 
-O projeto visa facilitar o agendamento de lavagem de veículos (carros, motocicletas, micro-ônibus, etc.), tendo em vista que geralmente, diversas críticas são feitas acerca desses sistemas. O LavaDriver veio com a intenção de inovar as interações com o usuário, para, dessa forma, trazer um atendimento mais efetivo e possibilitar resultados melhores.
+O projeto visa facilitar o agendamento de lavagem de veículos (carros, motocicletas, micro-ônibus etc.), tendo em vista que geralmente, diversas críticas são feitas acerca desses sistemas. O LavaDriver veio com a intenção de inovar as interações com o usuário, para, dessa forma, trazer um atendimento mais efetivo e possibilitar resultados melhores.
 
 ## Integrantes
 
