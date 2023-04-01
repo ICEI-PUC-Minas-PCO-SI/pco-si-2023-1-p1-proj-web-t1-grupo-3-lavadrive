@@ -46,15 +46,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| Pagamento pode ser adiantado pelo usuário | MÉDIA |
 |RF-010| Notificação quando o carro estiver pronto | MÉDIA |
 |RF-011| Estimativa do tempo de conclusão da limpeza | MÉDIA |
+|RF-012| Notificar ao término da limpeza | Baixa |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO | 
-|RNF-002| Notificar ao término da limpeza | MÉDIA | 
-|RNF-003| O site deve estar online 24 horas |  BAIXA | 
-|RNF-004| Compatível com todos os sistemas operacionais |  BAIXA | 
+|RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO |  
+|RNF-002| O site deve estar online 24 horas |  BAIXA | 
+|RNF-003| Compatível com todos os sistemas operacionais |  BAIXA | 
 
 ## Restrições
 
