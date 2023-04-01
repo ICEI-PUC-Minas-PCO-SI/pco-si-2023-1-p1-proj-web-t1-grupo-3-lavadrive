@@ -53,7 +53,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO |  
-|RNF-002| O site deve estar online 24 horas |  BAIXA | 
+|RNF-002| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
 |RNF-003| Compatível com todos os sistemas operacionais |  BAIXA | 
 
 ## Restrições
