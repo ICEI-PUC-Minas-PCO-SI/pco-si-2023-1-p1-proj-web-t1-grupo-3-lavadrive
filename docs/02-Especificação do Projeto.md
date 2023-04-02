@@ -27,15 +27,16 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Funcionário         | Acessar a agenda                   | Desmarcar ou marcar horários           |
-|Cliente             | Marcar o horário                   | Evitar ficar esperando em longas filas |
-|Cliente             | Avaliar o serviço                  | Deixar a sua opinião                   |
-|Cliente             | Pagamento adiantado                | Tornar o processo ainda mais dinâmico  |
-|Motorista de aplicativo| De praticidade                  | Pegar o carro limpo e continuar trabalhando  |
-|Jornalista          | De um ótimo serviço e atendimento aos clientes | Dirigir com o carro após sentir ter todas as suas exigências cumpridas pelos trabalhadores.|
+|Cliente             | Marcar o horário                   | Evitar a esperao em longas filas       |
+|Cliente             | Avaliar o serviço                  | Enviar seu feedback                    |
+|Cliente             | Adiantar pagamento                 | Tornar o processo ainda mais dinâmico  |
+|Motorista de aplicativo| De praticidade e rapidez        | Gastar menos tempo com a limpeza do veículo, para maximizar o lucro de seu serviço  |
+|Jornalista          | De um ótimo serviço e atendimento aos clientes | Dirigir com o carro após sentir ter todas as suas exigências cumpridas pelos trabalhadores |
 |Estudante           | De uma limpeza em dia e feita com muita atenção | Curtir com o seu automóvel lavado e bem cuidado.  |
 |Atendente de serviço| De receber um serviço bem organizado e rápido   | Receber o carro após o tempo estimado e continuar fazendo suas funções. |
-|Investigadora       | De serviço rápido e cedo            | Fazer suas obrigações, pagar a limpeza e curtir o dia.  |
-|Apreciador de carros| De um trabalho bem feito e com cuidado| Receber o carro limpo e de pessoas confiáveis que sabem o que estão fazendo.  |
+|Investigadora       | De serviço rápido e cedo            | Fazer suas obrigações, pagar a limpeza e curtir o dia  |
+|Apreciador de carros| De um trabalho bem feito e com muito cuidado| Receber o carro limpo, aos cuidados de quem também valoriza os veículos assim como ele  |
+|Marketer            | De uma divisão por categorias      | Poder lavar seus 3 veículos diferentes, com cada veículo em uma fila específica, minimizando a espera  | 
 
 
 ## Requisitos
