@@ -9,13 +9,13 @@ A falta de transparência e confiabilidade nos serviços prestados por esses est
 
 ## Objetivos
 
- Objetivo geral: Através de uma plataforma ágil e segura, a aplicação busca proporcionar uma experiência de lavagem de carros mais conveniente e eficiente para os clientes, trazendo um atendimento efetivo.
+ Objetivo geral: Através de uma plataforma ágil e segura, a aplicação busca proporcionar para o usuário uma facilidade na hora de agendar a limpeza do seu veículo, contando com uma agenda de horários onde será possível ver os horários disponíveis e os horários ocupados.
 
 Objetivo específico:
 <ul>
  <li>Fidelidade nos atendimentos. </li>
  <li>Uso das tecnologias mais avançadas do mercado para a construção do sistema. </li>
- <li>Melhorar a eficiência do processo de lavagem de carros e reduzir o tempo de espera dos clientes. </li>
+ <li>Evitar a formação de filas de espera. </li>
  
 
 ## Justificativa
