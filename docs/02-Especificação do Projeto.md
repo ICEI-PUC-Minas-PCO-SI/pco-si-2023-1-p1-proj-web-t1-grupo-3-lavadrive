@@ -48,29 +48,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-------------------------|------------|
 |RF-001| A aplicação mostra o agendamento da limpeza pelo horário e pela data na qual foram feitas. | ALTA | 
-|RF-002| A aplicação tem a divisão de filas por categoria do automóvel para facilitar a vida dos usuários. | ALTA |
+|RF-002| A aplicação tem a divisão de filas por categoria do automóvel. | ALTA |
 |RF-003| A aplicação tem pagamento via dinheiro, pix ou cartão que é feita para diversos tipos de recebimento. | ALTA |
-|RF-004| A aplicação mostra várias opções no serviço de limpeza do veículo feitas na hora. | MÉDIA |
+|RF-004| A aplicação mostra várias opções de limpeza do veículo.| MÉDIA |
 |RF-005| A aplicação mostra a avaliação do usuário após o serviço. | MÉDIA |
 |RF-006| A aplicação deixa as pessoas fazerem observações antes e depois da lavagem. | MÉDIA |
 |RF-007| O sistema deixa fazer o gerenciamento de cadastros de usuários. | MÉDIA |
 |RF-008| O sistema deixa fazer o gerenciamento de cadastros de carros (placa, modelo, etc.) | MÉDIA |
 |RF-009| O sistema deixa o pagamento ser adiantado pelo usuário. | MÉDIA |
-|RF-010| A aplicação mostra  uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA |
+|RF-010| A aplicação mostra uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA |
 |RF-011| O sistema mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado. | MÉDIA |
 |RF-012| O sistema notifica ao término da limpeza. | BAIXA |
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|-----------|
-|RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO |
-|RNF-002| O site deve ter boa responsividade nas diferentes plataformas.| ALTO |
-|RNF-003| O site deve possuir boa usabilidade em suas funções. | ALTO |
-|RNF-004| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
-|RNF-005| Compatível com todos os sistemas operacionais | BAIXA |
-|RNF-006| O site deve ter confiabilidade para seus clientes poderem colocar suas informações sem problemas. | BAIXA |
-|RNF-007| O site deve ser simples e prático em suas obrigações. | BAIXA |
-|RNF-008| O site deve processar requisições dentro de 5 segundos para coloca-lás em ordem. | BAIXA |
+|RNF-001| O site deve ter boa responsividade nas diferentes plataformas.| ALTO |
+|RNF-002| O site deve possuir boa usabilidade em suas funções. | ALTO |
+|RNF-003| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
+|RNF-004| Compatível com todos os sistemas operacionais | BAIXA |
+|RNF-005| O site deve ter confiabilidade para seus clientes poderem colocar suas informações sem problemas. | BAIXA |
+|RNF-006| O site deve ser simples e prático em suas obrigações. | BAIXA |
+|RNF-007| O site deve processar requisições dentro de 5 segundos para coloca-lás em ordem. | BAIXA |
 
 ## Restrições 
 
