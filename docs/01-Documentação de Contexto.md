@@ -1,6 +1,7 @@
-# Introdução
+# Introdução (A introdução foi melhor desenvolvida e explicada)
 
-A ideia para o projeto LavaDrive surgiu no início de 2023 com o objetivo de se destacar dos demais sistemas de lava-jatos, os quais frequentemente enfrentam problemas de desempenho. O sistema LavaDrive é um dos mais modernos e autônomos disponíveis atualmente no mercado.
+  Logo após a pandemia, foram vistas várias lojas e mercados se modernizando e se atualizando para o mercado atual da tecnologia, para conseguirem cumprir suas funções com facilidade num meio em que todos dependem da internet, enquanto os lava-jatos ficaram ultrapassados demais, com todas as tecnologias aparecendo nas escolas, faculdades e lojas famosas como Americanas e Araujo, as coisas não podiam continuar assim, então a ideia do projeto LavaDrive nasceu no início de 2023.  
+  A qual foi procurada para modernizar os lava-jatos, deixar as funções de maneira mais prática,  atraíndo assim novos clientes, através da construção de um sistema para facilitar a interação de lava-jato e clientes, a partir da padronização de todos os feitos que demorariam até mêses para serem feitos de maneira manual, e a rapidez adquirida pelo fato de ser um processo online.
 
 ## Problema
 
