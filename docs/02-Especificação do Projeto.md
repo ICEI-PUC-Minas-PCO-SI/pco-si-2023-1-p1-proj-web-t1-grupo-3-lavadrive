@@ -44,8 +44,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | (Foram colocados de uma maneira mais específica e foi colocado o requisito funcional RF-013)
-|------|-----------------------------------------|----|
+|ID    | Descrição do Requisito  | Prioridade | 
+|------|-------------------------|------------|
 |RF-001| A aplicação mostra o agendamento da limpeza pelo horário e pela data na qual foram feitas. | ALTA | 
 |RF-002| A aplicação tem a divisão de filas por categoria do automóvel para facilitar a vida dos usuários. | ALTA |
 |RF-003| A aplicação tem pagamento via dinheiro, pix ou cartão que é feita para diversos tipos de recebimento. | ALTA |
@@ -61,8 +61,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-013| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade | (Foram colocados mais requisitos não funcionais e foi retirado um requisito dessa parte e colocado em requisitos funcionais RF-013)
-|-------|-------------------------|----|
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|-----------|
 |RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO |
 |RNF-002| O site deve ter boa responsividade nas diferentes plataformas.| ALTO |
 |RNF-003| O site deve possuir boa usabilidade em suas funções. | ALTO |
