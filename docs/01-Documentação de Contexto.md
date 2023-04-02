@@ -22,6 +22,6 @@ Objetivo específico:
 Para os amantes de carros, manter o veículo limpo e bem cuidado é uma prioridade, mas nem sempre é possível encontrar tempo na agenda para fazer isso. A falta de tempo e a dificuldade em encontrar um estabelecimento de confiança para realizar a limpeza do carro podem ser frustrantes. O LavaDrive surge como uma solução prática e eficiente para esse problema, oferecendo aos clientes um agendamento online simples e rápido para a lavagem de seus carros.
 
 
-## Público-Alvo
+## Público-Alvo ( O público-alvo foi melhor descrito e especificado)
 
-O público-alvo da LavaDrive são todos que tenham o interesse de realizar uma limpeza no veículo, mas desejam ser atendidos de maneira rápida, organizada, segura e direta.
+ O público-alvo da LavaDrive são grandes empresários e empreendedores, donos de lojas famosas, jogadores de futebol e donos de empresas grandes, considerando que são pessoas que não tem muito tempo para passar por toda a burocracia de uma lava-jato, porém, tem muito dinheiro e desejam ser atendidos de maneira bem rápida e organizada.
