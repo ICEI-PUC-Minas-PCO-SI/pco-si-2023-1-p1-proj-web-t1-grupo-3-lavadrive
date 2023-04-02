@@ -58,7 +58,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-010| A aplicação mostra  uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA |
 |RF-011| O sistema mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado. | MÉDIA |
 |RF-012| O sistema notifica ao término da limpeza. | BAIXA |
-|RF-013| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
