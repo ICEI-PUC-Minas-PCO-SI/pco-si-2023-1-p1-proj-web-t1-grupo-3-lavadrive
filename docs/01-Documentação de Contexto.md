@@ -4,7 +4,7 @@ A ideia para o projeto LavaDrive surgiu no início de 2023 com o objetivo de se 
 
 ## Problema
 
-A falta de transparência e confiabilidade nos serviços prestados por esses estabelecimentos é um dos principais problemas que levaram a criação desse sistema. Muitas vezes, os clientes não têm certeza sobre o que está incluído em cada tipo de serviço, ou se o serviço foi realizado de forma adequada. Além disso, a desorganização é outro grande obstáculo. Informações detalhadas sobre preços, horários de funcionamentos e sobre o serviço são deixadas de lado, levando a um atendimento ineficiente.
+A falta de transparência e confiabilidade nos serviços prestados por esses estabelecimentos é um dos principais problemas que levou à criação desse sistema. Muitas vezes, os clientes não têm certeza sobre o que está incluído em cada tipo de serviço ou se o serviço foi realizado de forma adequada. Além disso, a desorganização é outro grande obstáculo, já que informações detalhadas sobre preços, horários de funcionamento e sobre o serviço são deixadas de lado, levando a um atendimento ineficiente.
 
 ## Objetivos
 
