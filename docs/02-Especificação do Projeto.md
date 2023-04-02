@@ -1,4 +1,8 @@
-# Especificações do Projeto
+# Especificações do Projeto (Agora existe uma especificação de projeto que não estava aqui antes)
+   
+   Com a pandemia, os lava-jatos com o passar do tempo foram ficando muito ultrapassados, assim os donos delas e seus funcionários passaram a ter problemas com relação a suas funções e ao ganho de salário, dessa forma todos os locais que tinham como foco a lavagem de carros foram prejudicados, já que as pessoas não podiam sair de suas casas por causa do lock down, nem ter contato direto cara-a-cara.                     
+   Entretanto, em 2023, após tudo da pandemia ter acabado, foi feita uma intensa pesquisa pelos donos dessas lava-jatos para ver como lidariam com essa nova situação e a forma mais requisitada nas pesquisas foi o serviço online, pela praticidade e por ser bem rápido. O atual projeto visa fazer uma aplicação Web para lava-jatos onde o principal objetivo é facilitar o trabalho online e fazer sistemas web para incluir todo o sistema de limpeza de carros no mundo virtual atualmente, com design, o conteúdo e a funcionalidade e todos os elementos como marcar qual o tipo de automóvel no qual será feita a limpeza, o cadastro de cada usuário para ficar organizado na tela, o agendamento por data e hora, o cadastro de cada carro diferente, e muitas outras funcionalidades úteis para melhorar a experiência do usuário.
+
 
 ## Personas
 
@@ -16,7 +20,7 @@
 
 7. Luiz Dias é um estudante de 19 anos, cujo pai tem dois carros e aos finais de semana deixa um deles aos cuidados de Luiz. Para valorizar o automóvel, a limpeza tem que estar sempre em dia, porém há um problema nesta situação, visto que o carro sempre está sujo, e Luiz não sabe como limpá-lo devidamente. Ao conhecer o Lava-Drive, Luiz passou a frequentá-lo todos os finais de semana, para manter o carro sempre limpo e apresentável para curtir os passeios com os amigos.
 
-## Histórias de Usuários
+## Histórias de Usuários (Foram colocadas mais histórias de usuários)
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
@@ -26,6 +30,13 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Cliente             | Marcar o horário                   | Evitar ficar esperando em longas filas |
 |Cliente             | Avaliar o serviço                  | Deixar a sua opinião                   |
 |Cliente             | Pagamento adiantado                | Tornar o processo ainda mais dinâmico  |
+|Motorista de aplicativo| De praticidade                  | Pegar o carro limpo e continuar trabalhando  |
+|Jornalista          | De um ótimo serviço e atendimento aos clientes | Dirigir com o carro após sentir ter todas as suas exigências cumpridas pelos trabalhadores.|
+|Estudante           | De uma limpeza em dia e feita com muita atenção | Curtir com o seu automóvel lavado e bem cuidado.  |
+|Atendente de serviço| De receber um serviço bem organizado e rápido   | Receber o carro após o tempo estimado e continuar fazendo suas funções. |
+|Investigadora       | De serviço rápido e cedo            | Fazer suas obrigações, pagar a limpeza e curtir o dia.  |
+|Apreciador de carros| De um trabalho bem feito e com cuidado| Receber o carro limpo e de pessoas confiáveis que sabem o que estão fazendo.  |
+
 
 ## Requisitos
 
@@ -33,30 +44,35 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
+|ID    | Descrição do Requisito  | Prioridade | (Foram colocados de uma maneira mais específica e foi colocado o requisito funcional RF-013)
 |------|-----------------------------------------|----|
-|RF-001| Agendamento da limpeza por horário e data | ALTA | 
-|RF-002| Divisão de filas por categoria do automóvel | ALTA |
-|RF-003| Pagamento via dinheiro, pix ou cartão (débito/crédito) | ALTA |
-|RF-004| Várias opções no serviço de limpeza do veículo | MÉDIA |
-|RF-005| Avaliação do usuário após o serviço | MÉDIA |
-|RF-006| Observações feitas pelo usuário antes da lavagem | MÉDIA |
-|RF-007| Gerenciamento de cadastros de usuários | MÉDIA |
-|RF-008| Gerenciamento de cadastros de carros (placa, modelo, etc.) | MÉDIA |
-|RF-009| Pagamento pode ser adiantado pelo usuário | MÉDIA |
-|RF-010| Notificação quando o carro estiver pronto | MÉDIA |
-|RF-011| Estimativa do tempo de conclusão da limpeza | MÉDIA |
-|RF-012| Notificar ao término da limpeza | Baixa |
-
+|RF-001| A aplicação mostra o agendamento da limpeza pelo horário e pela data na qual foram feitas. | ALTA | 
+|RF-002| A aplicação tem a divisão de filas por categoria do automóvel para facilitar a vida dos usuários. | ALTA |
+|RF-003| A aplicação tem pagamento via dinheiro, pix ou cartão que é feita para diversos tipos de recebimento. | ALTA |
+|RF-004| A aplicação mostra várias opções no serviço de limpeza do veículo feitas na hora. | MÉDIA |
+|RF-005| A aplicação mostra a avaliação do usuário após o serviço. | MÉDIA |
+|RF-006| A aplicação deixa as pessoas fazerem observações antes e depois da lavagem. | MÉDIA |
+|RF-007| O sistema deixa fazer o gerenciamento de cadastros de usuários. | MÉDIA |
+|RF-008| O sistema deixa fazer o gerenciamento de cadastros de carros (placa, modelo, etc.) | MÉDIA |
+|RF-009| O sistema deixa o pagamento ser adiantado pelo usuário. | MÉDIA |
+|RF-010| A aplicação mostra  uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA |
+|RF-011| O sistema mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado. | MÉDIA |
+|RF-012| O sistema notifica ao término da limpeza. | BAIXA |
+|RF-013| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
+|ID     | Descrição do Requisito  |Prioridade | (Foram colocados mais requisitos não funcionais e foi retirado um requisito dessa parte e colocado em requisitos funcionais RF-013)
 |-------|-------------------------|----|
-|RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO |  
-|RNF-002| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
-|RNF-003| Compatível com todos os sistemas operacionais |  BAIXA | 
+|RNF-001| Verificação em duas etapas diante de um acesso não autorizado | ALTO |
+|RNF-002| O site deve ter boa responsividade nas diferentes plataformas.| ALTO |
+|RNF-003| O site deve possuir boa usabilidade em suas funções. | ALTO |
+|RNF-004| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
+|RNF-005| Compatível com todos os sistemas operacionais | BAIXA |
+|RNF-006| O site deve ter confiabilidade para seus clientes poderem colocar suas informações sem problemas. | BAIXA |
+|RNF-007| O site deve ser simples e prático em suas obrigações. | BAIXA |
+|RNF-008| O site deve processar requisições dentro de 5 segundos para coloca-lás em ordem. | BAIXA |
 
-## Restrições
+## Restrições (Foram colocadas mais restrições)
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
@@ -64,5 +80,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
+|03| A aplicação deve se restringir às tecnologias básicas da Web no Frontend |
+|04| A equipe não pode subcontratar o desenvolvimento do trabalho |
+|05| Não pode usar as informações já demonstradas como exemplos de outras aplicações |
 
 
