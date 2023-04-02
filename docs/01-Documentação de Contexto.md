@@ -20,8 +20,9 @@ Objetivo específico:
 
 ## Justificativa
 
-Para os amantes de carros, manter o veículo limpo e bem cuidado é uma prioridade, mas nem sempre é possível encontrar tempo na agenda para fazer isso. A falta de tempo e a dificuldade em encontrar um estabelecimento de confiança para realizar a limpeza do carro podem ser frustrantes. O LavaDrive surge como uma solução prática e eficiente para esse problema, oferecendo aos clientes um agendamento online simples e rápido para a lavagem de seus carros.
+Manter o veículo limpo vem se tornando um desafio tanto pela falta de tempo tanto pelas filas que se formam para acessar o serviço, A LavaDrive acredita que facilitando o acesso ao serviço através da Web, poderá dinamizar seus atendimentos.
 
+Assim, o projeto visa desenvolver a aplicação necessária para que as pessoas possam marcar e escolher a lavagem desejada através da web.
 
 ## Público-Alvo 
 
