@@ -5,7 +5,7 @@
 
 ## Problema
 
-A falta de transparência e confiabilidade nos serviços prestados por esses estabelecimentos é um dos principais problemas que levou à criação desse sistema. Muitas vezes, os clientes não têm certeza sobre o que está incluído em cada tipo de serviço ou se o serviço foi realizado de forma adequada. Além disso, a desorganização é outro grande obstáculo, já que informações detalhadas sobre preços, horários de funcionamento e sobre o serviço são deixadas de lado, levando a um atendimento ineficiente.
+O maior problema enfrentado por esse tipo de estabelecimento é a falta de transparencia sobre os tipos de serviços oferecidos e uma desorganização nos horarios, fazendo com que para ser atendido o cliente deve chegar cedo e ter a sorte de varias outras pessoas não terem tido a ideia de lavar o carro no mesmo horario.
 
 ## Objetivos
 
