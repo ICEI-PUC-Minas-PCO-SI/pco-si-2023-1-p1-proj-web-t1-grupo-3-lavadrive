@@ -1,4 +1,4 @@
-# Especificações do Projeto (Agora existe uma especificação de projeto que não estava aqui antes)
+# Especificações do Projeto 
    
    Com a pandemia, os lava-jatos com o passar do tempo foram ficando muito ultrapassados, assim os donos delas e seus funcionários passaram a ter problemas com relação a suas funções e ao ganho de salário, dessa forma todos os locais que tinham como foco a lavagem de carros foram prejudicados, já que as pessoas não podiam sair de suas casas por causa do lock down, nem ter contato direto cara-a-cara.                     
    Entretanto, em 2023, após tudo da pandemia ter acabado, foi feita uma intensa pesquisa pelos donos dessas lava-jatos para ver como lidariam com essa nova situação e a forma mais requisitada nas pesquisas foi o serviço online, pela praticidade e por ser bem rápido. O atual projeto visa fazer uma aplicação Web para lava-jatos onde o principal objetivo é facilitar o trabalho online e fazer sistemas web para incluir todo o sistema de limpeza de carros no mundo virtual atualmente, com design, o conteúdo e a funcionalidade e todos os elementos como marcar qual o tipo de automóvel no qual será feita a limpeza, o cadastro de cada usuário para ficar organizado na tela, o agendamento por data e hora, o cadastro de cada carro diferente, e muitas outras funcionalidades úteis para melhorar a experiência do usuário.
@@ -20,7 +20,7 @@
 
 7. Luiz Dias é um estudante de 19 anos, cujo pai tem dois carros e aos finais de semana deixa um deles aos cuidados de Luiz. Para valorizar o automóvel, a limpeza tem que estar sempre em dia, porém há um problema nesta situação, visto que o carro sempre está sujo, e Luiz não sabe como limpá-lo devidamente. Ao conhecer o Lava-Drive, Luiz passou a frequentá-lo todos os finais de semana, para manter o carro sempre limpo e apresentável para curtir os passeios com os amigos.
 
-## Histórias de Usuários (Foram colocadas mais histórias de usuários)
+## Histórias de Usuários 
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
@@ -72,7 +72,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-007| O site deve ser simples e prático em suas obrigações. | BAIXA |
 |RNF-008| O site deve processar requisições dentro de 5 segundos para coloca-lás em ordem. | BAIXA |
 
-## Restrições (Foram colocadas mais restrições)
+## Restrições 
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
