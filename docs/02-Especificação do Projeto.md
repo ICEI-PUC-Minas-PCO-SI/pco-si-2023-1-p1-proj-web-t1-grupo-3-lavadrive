@@ -45,20 +45,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | 
-|------|-------------------------|------------|
-|RF-001| A aplicação mostra o agendamento da limpeza pelo horário e pela data na qual foram feitas. | ALTA | 
-|RF-002| A aplicação tem a divisão de filas por categoria do automóvel. | ALTA |
-|RF-003| A aplicação tem pagamento via dinheiro, pix ou cartão que é feita para diversos tipos de recebimento. | ALTA |
-|RF-004| A aplicação mostra várias opções de limpeza do veículo.| MÉDIA |
-|RF-005| A aplicação mostra a avaliação do usuário após o serviço. | MÉDIA |
-|RF-006| A aplicação deixa as pessoas fazerem observações antes e depois da lavagem. | MÉDIA |
-|RF-007| O sistema deixa fazer o gerenciamento de cadastros de usuários. | MÉDIA |
-|RF-008| O sistema deixa fazer o gerenciamento de cadastros de carros (placa, modelo, etc.) | MÉDIA |
-|RF-009| O sistema deixa o pagamento ser adiantado pelo usuário. | MÉDIA |
-|RF-010| A aplicação mostra uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA |
-|RF-011| O sistema mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado. | MÉDIA |
-|RF-012| O sistema notifica ao término da limpeza. | BAIXA |
+|ID    | Descrição do Requisito  | Prioridade | Responsavel |
+|------|-------------------------|------------|-------------|
+|RF-001| A aplicação mostra o agendamento da limpeza pelo horário e pela data na qual foram feitas. | ALTA | Daniel |
+|RF-002| A aplicação tem a divisão de filas por categoria do automóvel. | ALTA | Gustavo |
+|RF-003| A aplicação tem pagamento via dinheiro, pix ou cartão que é feita para diversos tipos de recebimento. | ALTA | Yago |
+|RF-004| A aplicação mostra várias opções de limpeza do veículo.| MÉDIA | Gustavo |
+|RF-005| A aplicação mostra a avaliação do usuário após o serviço. | MÉDIA | Daniel |
+|RF-006| A aplicação deixa as pessoas fazerem observações antes e depois da lavagem. | MÉDIA | Yago |
+|RF-007| O sistema deixa fazer o gerenciamento de cadastros de usuários. | MÉDIA | Yago |
+|RF-008| O sistema deixa fazer o gerenciamento de cadastros de carros (placa, modelo, etc.) | MÉDIA | Daniel |
+|RF-009| O sistema deixa o pagamento ser adiantado pelo usuário. | MÉDIA | Pedro |
+|RF-010| A aplicação mostra uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA | Gabriel |
+|RF-011| O sistema mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado. | MÉDIA | Gabriel |
+|RF-012| O sistema notifica ao término da limpeza. | BAIXA | Pedro |
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
