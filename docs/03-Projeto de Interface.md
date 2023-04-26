@@ -35,12 +35,13 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 > - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
 
 ## Cadastro do Usuário
+
 ## Cadastro do Carro
 ## Tela de login
 ![Pagina de login](img/Login.png)
-![Pagina inicial](img/Inicial.png)
+## Pagina inicial
 ## Agendamento
 ## Pagamento
-![Pagina de agendamento](img/Agendamento.png)
+![formas de pagamento](https://user-images.githubusercontent.com/114188220/234692563-555312c3-899f-487a-816f-6745c9e16c23.png)
 ## Avaliação
-![User Flow](img/Avaliação.png)
+## User Flow
