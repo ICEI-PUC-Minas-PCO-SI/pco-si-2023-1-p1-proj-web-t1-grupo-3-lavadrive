@@ -33,7 +33,7 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 > - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
 
 ## Cadastro do Usuário
-
+![Cadatro do usuário](img/Usuário.png)
 ## Cadastro do Carro
 ![Cadastro do veiculo](img/Carro.png)
 ## Tela de login
