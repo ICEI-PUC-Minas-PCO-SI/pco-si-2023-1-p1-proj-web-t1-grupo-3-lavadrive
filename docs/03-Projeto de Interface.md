@@ -39,5 +39,6 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 ## Pagina inicial
 ## Agendamento
 ## Pagamento
+![Pagina de agendamento](img/Agendamento.png)
 ## Avaliação
 ## User Flow
