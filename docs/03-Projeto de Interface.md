@@ -38,9 +38,9 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 ## Cadastro do Carro
 ## Tela de login
 ![Pagina de login](img/Login.png)
-![Pagina inicial].(img/Inicial.png)
+![Pagina inicial](img/Inicial.png)
 ## Agendamento
 ## Pagamento
 ![Pagina de agendamento](img/Agendamento.png)
 ## Avaliação
-![User Flow].(img/Avaliação.png)
+![User Flow](img/Avaliação.png)
