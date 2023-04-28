@@ -4,7 +4,7 @@ Fiz o UserFlow com o programa figma, através de uma estrutura de mapa-mental, a
 ## Gabriel Viegas Andrade
 
 ## Gustavo Augusto Santos Perdigão
-Nessa segunda etapa, me responsabilizei pela motnagem das telas de cadastro do usuário e do carro. Além disso, também fui responsável por realizar alguns comandos no Git, no caso, utilizei o "merge" na branch "Release", e desta branch para a "main". Também editei o template.html do projeto, e adicionei um botão de "Login" no cabeçalho (localizado no header), os links rápidos, como o de "Dúvidas frequentes" e adicionei as imagens das formas de pagamento que serão aceitas em nosso site no rodapé da página (localizado no footer).
+Nessa segunda etapa, me responsabilizei pela montagemdas telas de cadastro do usuário e do carro. Além disso, também fui responsável por realizar alguns comandos no Git, no caso, utilizei o "merge" na branch "Release", e desta branch para a "main". Também editei o template.html do projeto, e adicionei um botão de "Login" no cabeçalho (localizado no header), os links rápidos, como o de "Dúvidas frequentes" e adicionei as imagens das formas de pagamento que serão aceitas em nosso site no rodapé da página (localizado no footer).
 
 ## Pedro Antônio Silva Neto
 Nessa segunda etapa, fui responsável por fazer a primeira versão da tela inicial utilizando a aplicação figma e realizei edições no template.CSS, alterando a fonte dos caracteres para ter uma melhor visibilidade upei a imagem da tela inicial para o github, fiz o projeto da funcionalidade de notificação após a lavagem do veículo.
