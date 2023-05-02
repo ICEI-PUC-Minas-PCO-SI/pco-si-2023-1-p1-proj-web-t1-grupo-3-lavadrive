@@ -30,7 +30,7 @@
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-outline-light">Início</button>
           <button type="button" class="btn btn-outline-light">Perfil</button>
-          <button type="button" class="btn btn-outline-light">Agendar</button>
+          <button type="button" class="btn btn-outline-light" disabled>Agendar</button>
           <button type="button" class="btn btn-outline-light">Login</button>
         </div>
 
@@ -47,20 +47,35 @@
 
       <!--Informações do Carro-->
       <div class="col-5 mx-4 pt-1 my-2 border text-center rounded">
-        <h4>Carro</h4>
+        <h4>Veículo</h4>
         <div class="mb-3">
-          <input type="text" name="input" placeholder="Placa" class="my-1">
-          <br>
-          <input type="text" name="input" placeholder="Categoria" class="my-1">
-          <br>
-          <input type="text" name="input" placeholder="Responsavel" class="my-1">
+
+          <div class="d-flex justify-content-center">
+            <input class="form-control text-center border-secondary" type="search" placeholder="Placa do Veículo"
+              aria-label="Search" style="width: 20rem;">
+          </div>
+
+          <div class="d-flex justify-content-center text-center mt-2">
+            <select class="form-select border-secondary text-center" style="width: 20rem;">
+              <option selected>Categoria do Veículo</option>
+              <option value="1">Veículo Pequeno</option>
+              <option value="2">Veículo Medio</option>
+              <option value="3">Veículo Grande</option>
+            </select>
+          </div>
+
+          <div class="d-flex justify-content-center mt-2">
+            <input class="form-control text-center border-secondary" type="search" placeholder="Responsavel pelo Veículo"
+              aria-label="Search" style="width: 20rem;">
+          </div>
+
         </div>
       </div>
 
       <!--Campo de Observações-->
       <div class="col-5 mx-4 pt-1 my-2 border text-center rounded">
         <h4>Observações</h4>
-        <textarea class="form-control mb-3 obs" id="exampleFormControlTextarea1" rows="4.5"></textarea>
+        <textarea class="form-control mb-3 obs" id="exampleFormControlTextarea1" rows="5"></textarea>
       </div>
 
     </div>
@@ -71,13 +86,16 @@
       <!--Limpezas-->
       <div class="col-11 mx-4 pt-1 my-2 border text-center row rounded">
         <h4>Tipo de limpeza</h4>
+        
         <div class="col-6 mb-3">
-          <button class="my-1 btn btn-light border" style="width: 32rem;" type="button">Limpeza rapida</button>
+          <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+          <label class="btn btn-light border mt-2" for="option1" style="width: 32rem;">Limpeza Rapida</label>
           <br>
-          <button class="my-1 btn btn-light border" style="width: 32rem;" type="button">Limpeza normal</button>
+          <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked>
+          <label class="btn btn-light border mt-2" for="option2" style="width: 32rem;">Limpeza Normal</label>
           <br>
-          <button class="my-1 btn btn-light border" style="width: 32rem;" type="button">Limpeza completa</button>
-          <br>
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+          <label class="btn btn-light border mt-2" for="option4" style="width: 32rem;">Limpeza Completa</label>
         </div>
 
         <!--Descrição-->
