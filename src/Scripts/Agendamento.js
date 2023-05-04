@@ -1,3 +1,4 @@
+//Altera a descrição de acordo com o tipo de limpeza
 function limpeza(button) {
     var Title = document.getElementById("limpTitle");
     var Desc = document.getElementById("limpDesc");
