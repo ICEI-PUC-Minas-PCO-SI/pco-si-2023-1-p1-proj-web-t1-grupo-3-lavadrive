@@ -1,7 +1,7 @@
 //Altera a descrição de acordo com o tipo de limpeza
 function limpeza(button) {
-    var Title = document.getElementById("limpTitle");
-    var Desc = document.getElementById("limpDesc");
+    let Title = document.getElementById("limpTitle");
+    let Desc = document.getElementById("limpDesc");
 
     if (button == 1) {
         Title.textContent = "Limpeza Rapida";
@@ -14,5 +14,19 @@ function limpeza(button) {
     else{
         Title.textContent = "Limpeza Completa";
         Desc.textContent ="Limpeza nas maquinas com enxague automatico, Pinheiro aromatico, Aspiração completa e Pretinho no pneu";
+    }
+}
+
+//Altera o valor pra saber se a opção de pagamento adiantado esta ativa ou não
+var pagAdiantado;
+
+function pagarAdiantado(){
+    pagAdiantado = !pagAdiantado;
+}
+
+//Caso a opção de pagamento adiantado estaja ativa envia para a tela de pagamento
+function finalizar(){
+    if(pagAdiantado == true){
+        window.location.href = "Pagamento.html";
     }
 }
