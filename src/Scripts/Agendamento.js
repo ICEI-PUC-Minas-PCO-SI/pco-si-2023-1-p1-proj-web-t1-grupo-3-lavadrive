@@ -31,45 +31,66 @@ function finalizar() {
     }
 }
 
-//Detecta os dias da semana
-function diasDaSemana() {
+//Detecta os dias da semana e o mes
+function diasDS() {
     let date = new Date;
 
-    let dayNames = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+    let name = date.getDay();
+    let day = date.getDate() - name;
 
-    for(let i = 0;i <= 10; i++){
-        let dayName = document.getElementById(`dayName${i}`);
-        let dayText = document.getElementById(`day${i}`);
-    
-        let name = date.getDay() + i;
-        if(name > 6){
+    let mesText = document.getElementById(`mes`);
+
+    switch (date.getMonth()) {
+        case 0:
+            mesText.textContent = "Janeiro";
+            break;
+        case 1:
+            mesText.textContent = "Fevereiro";
+            break;
+        case 2:
+            mesText.textContent = "Março";
+            break;
+        case 3:
+            mesText.textContent = "Abril";
+            break;
+        case 4:
+            mesText.textContent = "Maio";
+            break;
+        case 5:
+            mesText.textContent = "Junho";
+            break;
+        case 6:
+            mesText.textContent = "Julho";
+            break;
+        case 7:
+            mesText.textContent = "Agosto";
+            break;
+        case 8:
+            mesText.textContent = "Setembro";
+            break;
+        case 9:
+            mesText.textContent = "Outubro";
+            break;
+        case 10:
+            mesText.textContent = "Novembro";
+            break;
+        case 11:
+            mesText.textContent = "Dezembro";
+            break;
+    }
+
+    for (let i = 0; i < 8; i++) {
+        let dayText = document.getElementById(`dayT${i}`);
+
+        if (name > 6) {
             let aux = name;
             name = 0 + (aux - 7);
         }
-        let day = date.getDate();
-    
-        dayName.innerHTML = `${dayNames[name]}`;
-        dayText.innerHTML = `${day + i}`;
+
+        dayText.innerHTML = `${day}`;
+
+        name++;
+        day++;
     }
-}
 
-function diasDS() {
-    let date2 = new Date;
-
-    let name2 = date2.getDay();
-    let day2 = date2.getDate() - name2;
-
-    for(let i = 0;i < 8; i++){
-        let dayText2 = document.getElementById(`dayT${i}`);
-    
-        if(name2 > 6){
-            let aux2 = name2;
-            name2 = 0 + (aux2 - 7);
-        }
-    
-        dayText2.innerHTML = `${day2}`;
-
-        name2++;
-        day2++;
-    }
 }
