@@ -11,3 +11,4 @@
 
 
 ## Yago de Arruda Simões
+Nessa terceira etapa, eu fui o responsável por fazer o html e css das páginas de Agendamento, Perfil, Avaliação e Quem Somos, também fiz um código JavaScript para as telas de Agendamento e Perfil que apesar de ser simples já as deixam mais próxima de suas versões finais, eu também atualizei os projetos de interface da tela de Agendamento e Avaliação e criei o projeto da tela de Perfil e Quem Somos, participei da organização da equipe e ajudei com os membros duvidas envolvendo Github ou detalhes sobre a entrega que eles não haviam entendido.
