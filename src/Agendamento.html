@@ -30,7 +30,8 @@
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-outline-light">Início</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Inicial.html'">Início</button>
           <button type="button" class="btn btn-outline-light"
           onclick="window.location.href = 'Agendamento.html'" disabled>Agendar</button>
           <button type="button" class="btn btn-outline-light"
@@ -43,7 +44,6 @@
     </nav>
 
   </header>
-
   <!--Conteudos-->
   <main class="m-0 d-block">
 
@@ -90,7 +90,7 @@
 
         <div class="col-12 col-lg-4 offset-lg-1 mb-3">
           <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" onclick="limpeza(1)">
-          <label class="btn btn-light border mt-2" for="option1" style="width: 100%;">Limpeza Rapida</label>
+          <label class="btn btn-light border mt-2" for="option1" style="width: 100%;">Limpeza Rápida</label>
           <br>
           <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked
             onclick="limpeza(2)">
@@ -103,9 +103,9 @@
         <!--Descrição-->
         <div class="col-12 col-lg-6 offset-lg-1 border mb-3 rounded">
           <h6 id="limpTitle" class="pt-4">Limpeza Normal</h6>
-          <p id="limpDesc">Limpeza nas maquinas com enxague automatico, Pinheiro aromatico, Aspiração completa,
-            Hidratação do banco e
-            Pretinho no pneu</p>
+          <p id="limpDesc">Limpeza nas máquinas com enxague automático, pinheiro aromático, aspiração completa,
+            hidratação do banco e
+            pretinho no pneu.</p>
         </div>
 
       </div>
@@ -116,7 +116,7 @@
     <div class="row container-fluid justify-content-center">
       <div class="col-12 col-lg-11 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
         <h4>Data</h4>
-        <h6 id="mes">Mes</h6>
+        <h6 id="mes">Mês</h6>
 
         <div class="row col-12 my-4 justify-content-center">
           <input type="radio" class="btn-check" name="dia" id="dia11" autocomplete="off">
@@ -157,7 +157,7 @@
 
           <input type="radio" class="btn-check" name="dia" id="dia17" autocomplete="off">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia17" style="width: 6rem;">
-            <p id="dayNameT6">Sabado</p>
+            <p id="dayNameT6">Sábado</p>
             <p id="dayT6">0</p>
           </label>
 
@@ -169,7 +169,7 @@
     <!--Horarios-->
     <div class="row container-fluid justify-content-center">
       <div class="col-12 col-lg-5 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
-        <h4>Horarios</h4>
+        <h4>Horários</h4>
         <div class="mb-3">
 
           <input type="radio" class="btn-check" name="time" id="time1" autocomplete="off">
@@ -217,7 +217,7 @@
           </div>
         </div>
 
-        <button class="btn btn-outline-primary mb-2" style="width: 10rem;" type="button"
+        <button class="btn btn-outline-info mb-2" style="width: 10rem;" type="button"
           onclick="finalizar()">Finalizar</button>
         <button class="casd btn btn-outline-danger mb-2" style="width: 10rem;" type="button">Cancelar</button>
       </div>
