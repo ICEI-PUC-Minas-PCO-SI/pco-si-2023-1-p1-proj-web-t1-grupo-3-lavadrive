@@ -20,3 +20,7 @@
 ![formas de pagamento](https://user-images.githubusercontent.com/114188220/234692563-555312c3-899f-487a-816f-6745c9e16c23.png)
 ## Avaliação
 ![Avaliação](img/Avaliação.png)
+## Quem Somos
+![Pagina Quem Somos](img/QuemSomos)
+## Perfil
+![Pagina de Perfil](img/Perfil.png)
