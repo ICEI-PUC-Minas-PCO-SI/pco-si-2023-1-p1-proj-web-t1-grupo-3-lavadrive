@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Lava Drive</title>
+  <title>Cadastro do Usuário</title>
 
   <!--Style CSS-->
   <link href="Estilos/template.css" rel="stylesheet" type="text/css" />
@@ -23,7 +23,7 @@
       <div class="container-fluid">
 
         <!--Logo-->
-        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
+        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded"></a>
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
@@ -32,7 +32,7 @@
           <button type="button" class="btn btn-outline-light"
           onclick="window.location.href = 'Agendamento.html'">Agendar</button>
           <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Login.html'">Login</button>
+          onclick="window.location.href = 'Login.html'" disabled>Login</button>
           <button type="button" class="btn btn-outline-light"
             onclick="window.location.href = 'Perfil.html'">Perfil</button>
         </div>
@@ -43,7 +43,53 @@
   </header>
 
   <!--Conteudos-->
-  <main class="m-0 d-block">
+  <main class="m-0 d-block p-3">
+    <h1 class="text-center">Cadastro do Usuário</h1>
+
+    <div class="container-fluid row justify-content-center">
+      <div class="col-lg-6 col-9 border border-black border-2 justify-content-center rounded-4 m-3 p-2">
+
+        <div class="text-center">
+          <img src="/src/img/AvatarPadrão.png" alt="perfil" style="width: 40%;">
+          <p><a href="#"><i class="fa-solid fa-pencil"></i> Editar foto de perfil</a></p>
+          <p></p>
+        </div>
+
+        <!--Nome-->
+        <div class="mb-3 mx-2">
+          <label for="exampleFormControlInput1" class="form-label ms-2">Nome:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome e sobrenome">
+        </div>
+        <!---Email-->
+        <div class="mb-3 mx-2">
+          <label for="exampleFormControlInput1" class="form-label ms-2">Email:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+        </div>
+        <!--Senha-->
+        <div class="mb-3 mx-2">
+          <label for="exampleFormControlInput1" class="form-label ms-2">Senha:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <!--Número-->
+        <div class="mb-3 mx-2">
+          <label for="exampleFormControlInput1" class="form-label ms-2">Número:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(DDD) 9 8765-4321">
+        </div>
+        <!--Usuário-->
+        <div class="mb-3 mx-2">
+          <label for="exampleFormControlInput1" class="form-label ms-2">Usuário:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="lava_drive">
+        </div>
+
+        <!--Botôes-->
+        <input type="checkbox" class="form-check-input ms-3 me-2 p-2" id="exampleCheck1"> Concordo com os termos de
+        privacidade
+        <p></p>
+        <div class="text-center justify-content-center">
+          <button type="button" class="m-2 btn btn-outline-info text-center">Criar </button>
+        </div>
+      </div>
+    </div>
 
   </main>
 

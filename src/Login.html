@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Lava Drive</title>
+  <title>Login</title>
 
   <!--Style CSS-->
   <link href="Estilos/template.css" rel="stylesheet" type="text/css" />
+
   <!--Bootstrap (CSS)-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -32,7 +33,7 @@
           <button type="button" class="btn btn-outline-light"
           onclick="window.location.href = 'Agendamento.html'">Agendar</button>
           <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Login.html'">Login</button>
+          onclick="window.location.href = 'Login.html'" disabled>Login</button>
           <button type="button" class="btn btn-outline-light"
             onclick="window.location.href = 'Perfil.html'">Perfil</button>
         </div>
@@ -42,9 +43,66 @@
 
   </header>
 
-  <!--Conteudos-->
-  <main class="m-0 d-block">
 
+  <!--Conteudos-->
+  <main>
+
+
+
+    <br> </br>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-8 col-lg-4">
+          <div class="card">
+            <img src="img/circulo cinza.png" class="card-img-top" alt="...">
+            <span class="border border-black">
+              <div class="card-body">
+
+                <div class="row">
+
+
+                  <p>Nome de usuário ou nome cadastrado:</p>
+                  <div class="col-9 ">
+                    <input class="form-control" type="text" placeholder="" aria-label="default input example">
+                  </div>
+                </div>
+                <div class="row">
+                  <p>Senha:</p>
+                  <div class="col-9 ">
+                    <input class="form-control" type="text" placeholder="" aria-label="default input example">
+                  </div>
+                </div>
+
+
+
+
+                <div class="col-6 ">
+                  <input type="checkbox"> Manter conectado
+                  <br> </br>
+                </div>
+
+
+
+
+
+
+                <button type="button" class="btn btn-outline-dark" onclick="window.location.href='RecuperarSenha.html'">Esqueci a senha</button>
+
+                <br> </br>
+                <div class=" row d-flex justify-content-center align-content-center "> <a href="http://127.0.0.1:5500/pco-si-2023-1-p1-proj-web-t1-grupo-3-lavadrive/src/Agendamento.html"
+                    class="btn btn-outline-dark col-4">Entrar</a> </div>
+
+
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <br> </br>
   </main>
 
   <!--Rodape-->
