@@ -26,15 +26,17 @@
       <div class="container-fluid">
 
         <!--Logo-->
-        <a href="#"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
+        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-outline-light">Início</button>
-          <button type="button" class="btn btn-outline-light">Perfil</button>
-          <button type="button" class="btn btn-outline-light" disabled>Agendar</button>
           <button type="button" class="btn btn-outline-light"
-            onclick="window.location.href = 'Login.html'">Login</button>
+          onclick="window.location.href = 'Agendamento.html'" disabled>Agendar</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Login.html'">Login</button>
+          <button type="button" class="btn btn-outline-light"
+            onclick="window.location.href = 'Perfil.html'">Perfil</button>
         </div>
 
       </div>
@@ -114,6 +116,8 @@
     <div class="row container-fluid justify-content-center">
       <div class="col-12 col-lg-11 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
         <h4>Data</h4>
+        <h6 id="mes">Mes</h6>
+
         <div class="row col-12 my-4 justify-content-center">
           <input type="radio" class="btn-check" name="dia" id="dia11" autocomplete="off">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia11" style="width: 6rem;">
@@ -203,7 +207,7 @@
     <!--Finalizar-->
     <div class="row container-fluid justify-content-center">
       <div class="col-12 col-lg-5 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
-        <h4>Finalizar</h4>
+        <h4>Finalizar Agendamento</h4>
 
         <div class="d-flex justify-content-center">
           <div class="form-check form-switch" style="width: 15rem;">
@@ -213,9 +217,9 @@
           </div>
         </div>
 
-        <button class="btn btn-light border mb-2" style="width: 10rem;" type="button"
+        <button class="btn btn-outline-primary mb-2" style="width: 10rem;" type="button"
           onclick="finalizar()">Finalizar</button>
-        <button class="casd btn btn-light border mb-2" style="width: 10rem;" type="button">Cancelar</button>
+        <button class="casd btn btn-outline-danger mb-2" style="width: 10rem;" type="button">Cancelar</button>
       </div>
     </div>
 
@@ -263,10 +267,10 @@
           <li>
             <p>Outros links úteis</p>
           </li>
-          <li><a href="#" class="info">Quem somos</a></li>
-          <li><a href="#" class="info">Ajuda</a></li>
-          <li><a href="#" class="info">Dúvidas frequentes</a></li>
-          <li><a href="#" class="info">Termos de privacidade</a></li>
+          <li><a href="QuemSomos.html" class="info">Quem somos</a></li>
+          <li><a href="DúvidasAjuda.html" class="info">Ajuda</a></li>
+          <li><a href="DúvidasAjuda.html" class="info">Dúvidas frequentes</a></li>
+          <li><a href="termosdeprivacidade.html" class="info">Termos de privacidade</a></li>
         </ul>
       </div>
 
