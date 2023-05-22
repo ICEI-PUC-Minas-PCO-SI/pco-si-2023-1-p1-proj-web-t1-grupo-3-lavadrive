@@ -1,5 +1,6 @@
 ## Daniel Vitor Salviano Araújo
-
+Responsável pelas telas de "Login", de "Pagamento" e de "Termos de Privacidade" e teve participação nas decições de design do grupo.
+OBS: Esqueceu de adicionar o que ele fez na ATA.
 
 ## Gabriel Viegas Andrade
 Nessa etapa, desenvolvi as telas "Recuperar a Senha" e "Trocar a Senha", e para codificar as mesmas, usei a ferramenta Visual Studio Code. Utilizei os elementos do Bootstrap e alguns elementos do CSS para estilizar as páginas. Também fiz o link das páginas que desenvolvi as demais, por exemplo, linkei minha tela "Alterar a senha" ao botão "Trocar a senha" da página de Login, e também fiz uma última conferência em todas as referência de uma página a outra, precisando alterar apenas dois links.(tudo em apenas um commit)
