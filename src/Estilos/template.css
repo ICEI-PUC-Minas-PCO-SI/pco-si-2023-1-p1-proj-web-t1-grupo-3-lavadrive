@@ -25,3 +25,13 @@
 .info:hover {
     color: wheat;
 }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    margin-bottom: 12px;
+  }
+  
