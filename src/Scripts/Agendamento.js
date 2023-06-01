@@ -33,64 +33,35 @@ function finalizar() {
 
 //Detecta os dias da semana e o mes
 function diasDS() {
-    let date = new Date;
 
-    let name = date.getDay();
-    let day = date.getDate() - name;
-
-    let mesText = document.getElementById(`mes`);
-
-    switch (date.getMonth()) {
-        case 0:
-            mesText.textContent = "Janeiro";
-            break;
-        case 1:
-            mesText.textContent = "Fevereiro";
-            break;
-        case 2:
-            mesText.textContent = "Março";
-            break;
-        case 3:
-            mesText.textContent = "Abril";
-            break;
-        case 4:
-            mesText.textContent = "Maio";
-            break;
-        case 5:
-            mesText.textContent = "Junho";
-            break;
-        case 6:
-            mesText.textContent = "Julho";
-            break;
-        case 7:
-            mesText.textContent = "Agosto";
-            break;
-        case 8:
-            mesText.textContent = "Setembro";
-            break;
-        case 9:
-            mesText.textContent = "Outubro";
-            break;
-        case 10:
-            mesText.textContent = "Novembro";
-            break;
-        case 11:
-            mesText.textContent = "Dezembro";
-            break;
-    }
-
-    for (let i = 0; i < 8; i++) {
+    // Obter a data atual
+    let dataAtual = new Date();
+    
+    // Obter o dia da semana (0 = Domingo, 1 = Segunda, ...)
+    let diaDaSemana = dataAtual.getDay();
+    
+    // Definir a data de início da semana subtraindo o dia da semana atual da data atual
+    let diaInicial = new Date(dataAtual);
+    diaInicial.setDate(dataAtual.getDate() - diaDaSemana);
+    
+    // Criar um array para armazenar os meses
+    const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Outubro','Novembro','Setembro','Dezembro'];
+    
+    //Define no calendario o mes
+    document.getElementById('mes').textContent =meses[new Date(diaInicial).getMonth()+1];
+    
+    // Criar um loop para definir os dias da semana
+    for (let i = 0; i < 7; i++) {
+        // Calcular a data para cada dia da semana
+        let date = new Date(diaInicial);
+    
+        date.setDate(diaInicial.getDate() + i);
+    
+        // Obter o nome do dia da semana e a data formatada
+        let formattedDate = `${date.getDate()}`;
+    
         let dayText = document.getElementById(`dayT${i}`);
-
-        if (name > 6) {
-            let aux = name;
-            name = 0 + (aux - 7);
-        }
-
-        dayText.innerHTML = `${day}`;
-
-        name++;
-        day++;
+        dayText.innerHTML = `${formattedDate}`;
     }
 
 }
