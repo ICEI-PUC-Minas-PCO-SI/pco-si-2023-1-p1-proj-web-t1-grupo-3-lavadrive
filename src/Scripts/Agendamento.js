@@ -5,15 +5,15 @@ function limpeza(button) {
 
     if (button == 1) {
         Title.textContent = "Limpeza Rapida";
-        Desc.textContent = "Limpeza nas maquinas com enxague automatico, pinheiro aromatico";
+        Desc.textContent = "Limpeza nas máquinas com enxague automático, pinheiro aromático.";
     }
     else if (button == 2) {
         Title.textContent = "Limpeza Normal";
-        Desc.textContent = "Limpeza nas maquinas com enxague automatico, Pinheiro aromatico, Aspiração completa, Hidratação do banco e Pretinho no pneu";
+        Desc.textContent = "Limpeza nas máquinas com enxague automático, pinheiro aromático, aspiração completa, hidratação do banco e pretinho no pneu.";
     }
     else {
         Title.textContent = "Limpeza Completa";
-        Desc.textContent = "Limpeza nas maquinas com enxague automatico, Pinheiro aromatico, Aspiração completa e Pretinho no pneu";
+        Desc.textContent = "Limpeza nas máquinas com enxague automático, pinheiro aromático, aspiração completa e pretinho no pneu.";
     }
 }
 

@@ -23,14 +23,18 @@
       <div class="container-fluid">
 
         <!--Logo-->
-        <a href="#"><img src="img/lavaDriveLogo.png" class="rounded"></a>
+        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded"></a>
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-outline-light">Início</button>
-          <button type="button" class="btn btn-outline-light">Perfil</button>
-          <button type="button" class="btn btn-outline-light">Agendar</button>
-          <button type="button" class="btn btn-outline-light" disabled>Login</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Inicial.html'">Início</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Agendamento.html'">Agendar</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Login.html'" disabled>Login</button>
+          <button type="button" class="btn btn-outline-light"
+            onclick="window.location.href = 'Perfil.html'">Perfil</button>
         </div>
 
       </div>
@@ -40,10 +44,10 @@
 
   <!--Conteudos-->
   <main class="m-0 d-block p-3">
-    <h1>Cadastro do Usuário</h1>
+    <h1 class="text-center">Cadastro do Usuário</h1>
 
-    <div class="container-fluid">
-      <div class="border border-black border-2 justify-content-center rounded-4 m-3 p-2">
+    <div class="container-fluid row justify-content-center">
+      <div class="col-lg-6 col-9 border border-black border-2 justify-content-center rounded-4 m-3 p-2">
 
         <div class="text-center">
           <img src="/src/img/AvatarPadrão.png" alt="perfil" style="width: 40%;">

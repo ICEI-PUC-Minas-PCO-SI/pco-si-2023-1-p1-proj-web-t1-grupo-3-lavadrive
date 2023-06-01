@@ -23,14 +23,18 @@
       <div class="container-fluid">
 
         <!--Logo-->
-        <a href="#"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
+        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-outline-light">Início</button>
-          <button type="button" class="btn btn-outline-light">Perfil</button>
-          <button type="button" class="btn btn-outline-light">Agendar</button>
-          <button type="button" class="btn btn-outline-light" disabled>Login</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Inicial.html'">Início</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Agendamento.html'">Agendar</button>
+          <button type="button" class="btn btn-outline-light"
+          onclick="window.location.href = 'Login.html'" disabled>Login</button>
+          <button type="button" class="btn btn-outline-light"
+            onclick="window.location.href = 'Perfil.html'">Perfil</button>
         </div>
 
       </div>
@@ -40,11 +44,11 @@
 
   <!--Conteudos-->
   <main class="m-0 d-block p-3">
-    <h1>Cadastro do Veículo</h1>
+    <h1 class="text-center">Cadastro do Veículo</h1>
 
     <!--Info do veículo-->
-    <div class="container-fluid">
-      <div class="row border border-black border-2 rounded-4 m-3 p-2">
+    <div class="container-fluid row justify-content-center">
+      <div class="col-lg-3 col-6 row border border-black border-2 rounded-4 m-3 p-2">
         <div class="d-flex justify-content-center text-center mt-2">
           <select class="form-select border-info text-center" style="width: 20rem;">
             <option selected>Categoria do Veículo</option>
@@ -57,22 +61,25 @@
           </select>
         </div>
 
-        <!--Info do veículo-->
+        <!--Modelo-->
         <div class="mb-3 justify-content-center">
           <label for="exampleFormControlInput1" class="form-label">Modelo:</label>
           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex.: Jeep Compass">
         </div>
 
+        <!--Placa-->
         <div class="mb-3 justify-content-center">
           <label for="exampleFormControlInput1" class="form-label">Placa:</label>
           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex.: ABC1C34">
         </div>
 
+        <!--Cor-->
         <div class="mb-3 justify-content-center">
           <label for="exampleFormControlInput1" class="form-label">Cor (Opcional):</label>
           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex.: Branco">
         </div>
 
+        <!--Botoes-->
         <input type="checkbox" class="form-check-input ms-3 me-2 p-2" id="exampleCheck1"> Salvar dados do veículo
         <p></p>
         <div class="text-center">
