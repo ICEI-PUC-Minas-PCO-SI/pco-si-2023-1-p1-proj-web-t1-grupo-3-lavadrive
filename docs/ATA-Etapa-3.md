@@ -1,5 +1,6 @@
 ## Daniel Vitor Salviano Araújo
-
+Nessa etapa, eu desenvolvi as telas de "Login do usuário" e de "Pagamento", e fiz a parte de Termos de serviço, com o intuito de mostrar o motivo de utilizarmos os dados de cada usuário em nossa aplicação. Para colocá-las de maneira funcional no github, programei elas através do programa Visual Studio Code, utilizando auxiliares como o Bootstrap, e programação através de HTML e CSS. Coloquei todas as páginas ligadas uma a outra para ter um userflow de maneira correta
+, e também utilizei recursos do Bootstrap para botões e cards.
 
 ## Gabriel Viegas Andrade
 Nessa etapa, desenvolvi as telas "Recuperar a Senha" e "Trocar a Senha", e para codificar as mesmas, usei a ferramenta Visual Studio Code. Utilizei os elementos do Bootstrap e alguns elementos do CSS para estilizar as páginas. Também fiz o link das páginas que desenvolvi as demais, por exemplo, linkei minha tela "Alterar a senha" ao botão "Trocar a senha" da página de Login, e também fiz uma última conferência em todas as referência de uma página a outra, precisando alterar apenas dois links.(tudo em apenas um commit)
