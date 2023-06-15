@@ -5,11 +5,11 @@
 
 /*Classe dos backgrounds tom normal e tom mais escuro*/
 .bg-blue {
-    background-color: #5b37e8;
+    background-color: #171718;
 }
 
 .bg-darkBlue {
-    background-color: #311abb;
+    background-color: #171718;;
 }
 
 /*Classe dos links, link /link visitado/quando o mouse passa*/
