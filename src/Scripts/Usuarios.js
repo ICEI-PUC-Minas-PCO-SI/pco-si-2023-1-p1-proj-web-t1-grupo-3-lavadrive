@@ -65,6 +65,7 @@ function salvarCadastro() {
             usuarios.cadastrados = usuarios.cadastros.length;
 
             localStorage.setItem('usuarios', JSON.stringify(usuarios));
+            window.location.href = "CadastroCarro.html"
         }
     }
 
