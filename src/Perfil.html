@@ -16,34 +16,35 @@
 
 </head>
 
-<body>
-  <!--Cabecalho-->
-  <header class="m-0 d-block bg-blue">
-    <nav class="navbar">
-      <div class="container-fluid">
+<body onload="initPerfil()">
+    <!--Cabecalho-->
+    <header class="m-0 d-block bg-blue">
+        <nav class="navbar">
+            <div class="container-fluid">
 
-        <!--Logo-->
-        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
+                <!--Logo-->
+                <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
 
-        <!--Opções-->
-        <div class="btn-group d-flex" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Inicial.html'">Início</button>
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Login.html'">Login</button>
-          <button type="button" class="btn btn-outline-light"
-            onclick="window.location.href = 'Perfil.html'">Perfil</button>
-        </div>
+                <!--Opções-->
+                <div class="btn-group d-flex" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-light"
+                        onclick="window.location.href = 'Inicial.html'">Início</button>
+                    <button type="button" class="btn btn-outline-light"
+                        onclick="window.location.href = 'Agendamento.html'">Agendar</button>
+                    <button type="button" class="btn btn-outline-light"
+                        onclick="window.location.href = 'Login.html'">Login</button>
+                    <button type="button" class="btn btn-outline-light"
+                        onclick="window.location.href = 'Perfil.html'">Perfil</button>
+                </div>
 
-      </div>
-    </nav>
+            </div>
+        </nav>
 
-  </header>
+    </header>
 
     <!--Conteudos-->
-    <main class="m-0 d-block">
+    <main class="m-0 d-block p-3">
+
         <div class="row container-fluid justify-content-center my-4">
 
             <div class="border rounded me-3 my-3 text-center" style="width: 94%;">
@@ -69,42 +70,63 @@
 
             </div>
 
-
             <div id="tela" class="col-11 col-lg-8 mx-4 mt-2 border rounded text-center">
-                <img src="img/circulo cinza.png" style="width: 30%;">
 
-                <div class="d-flex justify-content-center my-3">
-                    <input class="form-control text-center border-secondary" type="search" placeholder="Nome"
-                        aria-label="Search" style="width: 20rem;">
+                <div class="mt-2 text-center rounded-circle">
+                    <img id="perfilImage" class="rounded-circle" src="img/circulo cinza.png" alt="perfil"
+                        style="width: 30%;">
+                    <p><i class="fa-solid fa-pencil"></i> Editar foto de perfil</p>
+                    <input type="file" id="inputImagem" accept="image/*">
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
-                    <input class="form-control text-center border-secondary" type="search" placeholder="Nome de Usuario"
-                        aria-label="Search" style="width: 20rem;">
+                    <input id="perfilInputNome" class="form-control text-center border-secondary" type="search"
+                        placeholder="Nome" aria-label="Search" style="width: 20rem;">
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
-                    <input class="form-control text-center border-secondary" type="search" placeholder="E-mail"
-                        aria-label="Search" style="width: 20rem;">
+                    <input id="perfilInputUsuario" class="form-control text-center border-secondary" type="search"
+                        placeholder="Nome de Usuario" aria-label="Search" style="width: 20rem;">
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
-                    <input class="form-control text-center border-secondary" type="search" placeholder="Telefone"
-                        aria-label="Search" style="width: 20rem;">
+                    <input id="perfilInputEmail" class="form-control text-center border-secondary" type="search"
+                        placeholder="E-mail" aria-label="Search" style="width: 20rem;">
+                </div>
+
+                <div class="d-flex justify-content-center my-3">
+                    <input id="perfilInputTelefone" class="form-control text-center border-secondary" type="search"
+                        placeholder="Telefone" aria-label="Search" style="width: 20rem;">
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
                     <input type="radio" class="btn-check" name="options" id="trocarSenha" autocomplete="off">
-                    <label class="btn btn-light border mt-4 me-3" for="trocarSenha" onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar
+                    <label class="btn btn-light border mt-4 me-3" for="trocarSenha"
+                        onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar
                         senha</label>
 
-                    <input type="radio" class="btn-check" name="options" id="salvar" autocomplete="off" disabled>
+                    <button type="radio" class="btn-check" name="options" id="salvar" onclick="salvarAlteracoes()">Salvar</button>
                     <label class="btn btn-light border mt-4 ms-3" for="salvar" style="width: 8rem;">Salvar</label>
                 </div>
 
             </div>
 
         </div>
+
+        <!--Mensagem toast-->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="me-auto">LavaDrive</strong>
+                <small>Agora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                <p id="toastMensage">Mensagem</p>
+              </div>
+            </div>
+          </div>
+          
     </main>
 
     <!--Rodape-->
@@ -113,18 +135,18 @@
         <div class="m-0 mt-2 container-fluid bg-blue text-center row">
 
             <!--Metodos de pagamento-->
-      <div class="col-12 col-lg-4">
-        <ul class="payList">
-          <li>
-            <p>Métodos de pagamento</p>
-          </li>
-          <li><i class="fa-brands fa-cc-visa fs-3"></i></li>
-          <li><i class="fa-brands fa-paypal fs-3"></i></li>
-          <li><i class="fa-brands fa-cc-mastercard fs-3"></i></li>
-          <li><i class="fa-brands fa-pix fs-3"></i></li>
-          <li><i class="fa-brands fa-cc-diners-club fs-3"></i></li>
-        </ul>
-      </div>
+            <div class="col-12 col-lg-4">
+                <ul class="payList">
+                    <li>
+                        <p>Métodos de pagamento</p>
+                    </li>
+                    <li><i class="fa-brands fa-cc-visa fs-3"></i></li>
+                    <li><i class="fa-brands fa-paypal fs-3"></i></li>
+                    <li><i class="fa-brands fa-cc-mastercard fs-3"></i></li>
+                    <li><i class="fa-brands fa-pix fs-3"></i></li>
+                    <li><i class="fa-brands fa-cc-diners-club fs-3"></i></li>
+                </ul>
+            </div>
 
             <!--Contatos-->
             <div class="col-12 col-lg-4">
@@ -166,6 +188,9 @@
         </div>
 
     </footer>
+
+    <!--Script que gerencia as contas e cadastros-->
+    <script src="Scripts/Usuarios.js"></script>
 
     <script src="Scripts/Perfil.js"></script>
 

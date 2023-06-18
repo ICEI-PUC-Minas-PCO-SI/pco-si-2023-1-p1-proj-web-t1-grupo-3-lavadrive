@@ -58,7 +58,7 @@
         <!--Nome-->
         <div class="mb-3 mx-2">
           <label for="InputNomeReal" class="form-label ms-2">Nome:</label>
-          <input type="email" class="form-control" id="InputNomeReal" placeholder="Nome e sobrenome">
+          <input type="name" class="form-control" id="InputNomeReal" placeholder="Nome e sobrenome">
         </div>
         <!---Email-->
         <div class="mb-3 mx-2">
@@ -68,17 +68,17 @@
         <!--Senha-->
         <div class="mb-3 mx-2">
           <label for="InputSenha" class="form-label ms-2">Senha:</label>
-          <input type="email" class="form-control" id="InputSenha" placeholder="">
+          <input type="password" class="form-control" id="InputSenha" placeholder="">
         </div>
         <!--Número-->
         <div class="mb-3 mx-2">
           <label for="InputNumero" class="form-label ms-2">Número:</label>
-          <input type="email" class="form-control" id="InputNumero" placeholder="(DDD) 9 8765-4321">
+          <input type="text" class="form-control" id="InputNumero" placeholder="(31) 9 8765-4321" maxlength="16" onkeypress="return mascaraTelefone()">
         </div>
         <!--Usuário-->
         <div class="mb-3 mx-2">
           <label for="InputNomeUsuario" class="form-label ms-2">Usuário:</label>
-          <input type="email" class="form-control" id="InputNomeUsuario" placeholder="lava_drive">
+          <input type="user" class="form-control" id="InputNomeUsuario" placeholder="lava_drive">
         </div>
 
         <!--Botôes-->
@@ -102,6 +102,7 @@
             </div>
           </div>
         </div>
+        
       </div>
     </div>
 
