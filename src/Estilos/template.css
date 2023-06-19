@@ -9,7 +9,8 @@
 }
 
 .bg-darkBlue {
-    background-color: #171718;;
+    background-color: #171718;
+    ;
 }
 
 /*Classe dos links, link /link visitado/quando o mouse passa*/
@@ -25,16 +26,17 @@
 .info:hover {
     color: wheat;
 }
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .card {
+}
+
+.card {
     margin-bottom: 12px;
-  }
-  
-  .payList {
-      color: white;
-  }
+}
+
+.payList {
+    color: white;
+}
