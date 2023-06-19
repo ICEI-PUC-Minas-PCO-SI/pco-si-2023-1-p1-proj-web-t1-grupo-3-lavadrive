@@ -1,4 +1,13 @@
+var usuariosL = localStorage.getItem('usuarios');
+
+if (usuariosL == null) {
+    usuariosL = inserirDadosBase(usuariosL);
+    localStorage.setItem('usuarios', JSON.stringify(usuariosL));
+}
+
+
 //Usuario
+
 
 //Mascara para preenchimento do numero
 function mascaraTelefone() {
@@ -358,6 +367,49 @@ function imagemAlteracao() {
 
 //Inicialização da pagina de perfil
 function initPerfil() {
+    enviarParaCadastro();
+
     dadosPerfil();
     imagemAlteracao();
+}
+
+function enviarParaCadastro() {
+    var usuario = localStorage.getItem('usuarios');
+
+    if (usuario == null) {
+        window.location.href = 'CadastroUsuário.html';
+    }
+    else if (usuario.usuarioAtual == "nc" && usuario.usuarioAtual == "nl") {
+        window.location.href = 'Login.html';
+    }
+}
+
+var logado = false;
+changeLoginOption();
+//Checa quando esta logado
+function changeLoginOption() {
+
+    let usuario = lerCadastrosSalvos();
+
+    let botao = document.getElementById("perfil/login");
+
+    if (usuario.usuarioAtual != "nc" && usuario.usuarioAtual != "nl") {
+        botao.innerText = "Perfil";
+        logado = true;
+    }
+    else {
+        botao.innerText = "Login";
+        logado = false;
+    }
+}
+
+function irParaTela() {
+
+    if (logado == true) {
+        window.location.href = 'Perfil.html';
+    }
+    else {
+        window.location.href = 'Login.html';
+    }
+
 }

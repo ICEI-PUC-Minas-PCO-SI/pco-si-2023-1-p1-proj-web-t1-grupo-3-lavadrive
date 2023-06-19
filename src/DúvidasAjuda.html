@@ -23,19 +23,17 @@
             <div class="container-fluid">
 
                 <!--Logo-->
-                <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
+                <a href="index.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
 
                 <!--Opções-->
-                <div class="btn-group d-flex" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-outline-light"
-                        onclick="window.location.href = 'Inicial.html'">Início</button>
-                    <button type="button" class="btn btn-outline-light"
-                        onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-                    <button type="button" class="btn btn-outline-light"
-                        onclick="window.location.href = 'Login.html'">Login</button>
-                    <button type="button" class="btn btn-outline-light"
-                        onclick="window.location.href = 'Perfil.html'">Perfil</button>
-                </div>
+        <div class="btn-group d-flex" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-light"
+              onclick="window.location.href = 'index.html'">Início</button>
+            <button type="button" class="btn btn-outline-light"
+              onclick="window.location.href = 'Agendamento.html'">Agendar</button>
+            <button id="perfil/login" type="button" class="btn btn-outline-light"
+              onclick="irParaTela()">Login</button>
+          </div>
 
             </div>
         </nav>
@@ -236,6 +234,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <!--Script que gerencia as contas e cadastros-->
+    <script src="Scripts/Usuarios.js"></script>
 </body>
 
 </html>
