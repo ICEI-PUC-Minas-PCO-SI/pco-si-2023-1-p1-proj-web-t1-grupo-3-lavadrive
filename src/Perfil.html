@@ -66,11 +66,11 @@
 
             <div id="tela" class="col-11 col-lg-8 mx-4 mt-2 border rounded text-center">
 
-                <div class="mt-2 text-center rounded-circle">
+                <div class="mt-2 text-center rounded-circle justify-content-center text-center justify-items-center">
                     <img id="perfilImage" class="rounded-circle" src="img/circulo cinza.png" alt="perfil"
                         style="width: 30%;">
                     <p><i class="fa-solid fa-pencil"></i> Editar foto de perfil</p>
-                    <input type="file" id="inputImagem" accept="image/*" style="width: 54%;">
+                    <input type="file" id="inputImagem" accept="image/*" style="max-width: 54%;">
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
@@ -93,20 +93,19 @@
                         placeholder="Telefone" aria-label="Search" style="width: 20rem;">
                 </div>
 
-                <div class="d-flex justify-content-center my-3">
-                    <input type="radio" class="btn-check" name="options" id="trocarSenha" autocomplete="off">
-                    <label class="btn btn-light border mt-4 me-3" for="trocarSenha"
-                        onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar
-                        senha</label>
+                <div class="d-flex row justify-content-center my-3">
+                    <button type="button" class="btn btn-light border mt-4 ms-3" id="trocarSenha"
+                        onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar Senha</button>
 
-                    <button type="radio" class="btn btn-light border mt-4 ms-3" name="options" id="salvar"
-                        style="width: 8rem;" onclick="salvarAlteracoes()">Salvar</button>
-                    <button type="radio" onclick="sair()" class="btn btn-outline-danger border mt-4 ms-3" name="options" id="logoff"
-                        style="width: 8rem;">Sair</button>
+                    <button type="button" class="btn btn-light border mt-4 ms-3" id="salvar" style="width: 8rem;"
+                        onclick="salvarAlteracoes()">Salvar</button>
 
-                        <!-- Modal de deletar a conta -->
+                    <button type="radio" onclick="sair()" class="btn btn-outline-danger border mt-4 ms-3" name="options"
+                        id="logoff" style="width: 8rem;">Sair</button>
+
+                    <!-- Modal de deletar a conta -->
                     <button type="button" class="btn btn-danger border mt-4 ms-3" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
+                        data-bs-target="#staticBackdrop" style="width: 8rem;">
                         Excluir conta
                     </button>
 
@@ -115,7 +114,8 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Você deseja excluir sua conta?</h1>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Você deseja excluir sua conta?
+                                    </h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>

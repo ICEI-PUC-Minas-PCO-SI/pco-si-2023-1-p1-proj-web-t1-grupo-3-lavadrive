@@ -141,8 +141,8 @@ function eventPagDeCDUsuario() {
 
         convertImageToBase64(file, (base64Image) => {
             // console.log(base64Image);
-            imagem = base64Image
-            document.getElementById("imgPerfil").src = `data:image/png;base64,${imagem}`
+            imagem = "data:image/png;base64," + base64Image
+            document.getElementById("imgPerfil").src = `${imagem}`
             document.getElementById("imgPerfil").style = `width: 170px; height: 170px;`
         });
     });
@@ -236,12 +236,14 @@ function SalvarCarro() {
             cor: corInput,
         }
 
-        if (usuarios.cadastros[usuarios.usuarioAtual].carro.length == 1) {
+
+        if (usuarios.cadastros[usuarios.usuarioAtual].carro.length == 1 && usuarios.cadastros[usuarios.usuarioAtual].carro[0].placa == "nc") {
             usuarios.cadastros[usuarios.usuarioAtual].carro[0] = DadosCarro;
         }
         else {
             usuarios.cadastros[usuarios.usuarioAtual].carro.push(DadosCarro);
         }
+        //usuarios.cadastros[usuarios.usuarioAtual].carro.push(DadosCarro);
 
 
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
@@ -379,8 +381,8 @@ function imagemAlteracao() {
 
         convertImageToBase64(file, (base64Image) => {
             // console.log(base64Image);
-            imagem = base64Image
-            document.getElementById("perfilImage").src = `data:image/png;base64,${imagem}`
+            imagem = "data:image/png;base64," + base64Image
+            document.getElementById("perfilImage").src = `${imagem}`
             document.getElementById("perfilImage").style = `width: 170px; height: 170px;`
         });
     });

@@ -83,28 +83,9 @@ function opcoes(op) {
         dadosPerfil();
     }
     else if (op == 2) {
-        tela.innerHTML = `                
-        <img src="img/circulo cinza.png" style="width: 30%;">
-
-        <div class="d-flex justify-content-center my-3">
-            <input class="form-control text-center border-secondary" type="search" placeholder="Placa do Veiculo"
-                aria-label="Search" style="width: 20rem;">
-        </div>
-
-        <div class="d-flex justify-content-center my-3">
-            <input class="form-control text-center border-secondary" type="search" placeholder="Responsavel pelo Veiculo"
-                aria-label="Search" style="width: 20rem;">
-        </div>
-
-        <div class="d-flex justify-content-center my-3">
-            <input class="form-control text-center border-secondary" type="search" placeholder="Categoria do Veiculo"
-                aria-label="Search" style="width: 20rem;">
-        </div>
-
-        <div class="d-flex justify-content-center my-3">
-            <input type="radio" class="btn-check" name="options" id="salvar" autocomplete="off" disabled>
-            <label class="btn btn-light border mt-4 ms-3" for="salvar" style="width: 8rem;">Salvar</label>
-        </div>`;
+        let usuarios = lerCadastrosSalvos();
+        tela.innerHTML = textoCarro();
+        dadosCarro();
     }
     else if (op == 3) {
         tela.innerHTML = `                
@@ -170,4 +151,103 @@ function mascaraData(num) {
         num.value = text;
     }
 
+}
+
+let carroAMostra = 0;
+//Mostra os dados do carro
+function dadosCarro() {
+    let usuarios = lerCadastrosSalvos()
+
+    document.getElementById("inputPlacaCarro").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].placa;
+    document.getElementById("inputDonoCarro").value = usuarios.cadastros[usuarios.usuarioAtual].nome;
+    document.getElementById("inputCategoriaCarro").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].categoria;
+    document.getElementById("inputCorCarro").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].cor;
+    document.getElementById("inputModeloCarro").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].modelo;
+}
+
+//Salva os dados do carro
+function salvarDadosCarro() {
+    let usuarios = lerCadastrosSalvos()
+
+    usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].placa = document.getElementById("inputPlacaCarro").value
+    usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].categoria = document.getElementById("inputCategoriaCarro").value
+    usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].cor = document.getElementById("inputCorCarro").value
+    usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].modelo = document.getElementById("inputModeloCarro").value
+
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    const toastLiveExample = document.getElementById('liveToast')
+    document.getElementById('toastMensage').textContent = "Alterações salvas com sucesso."
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastBootstrap.show()
+}
+
+//Informações do carro (formatação do texto)
+function textoCarro() {
+    let usuarios = lerCadastrosSalvos();
+
+    let text = `   
+    <div class="d-flex justify-content-center my-3 text-center">
+        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(-1)"><</button>
+        <button class="btn btn-light border mt-4 ms-3" style="width: 3rem;">${carroAMostra + 1}/${usuarios.cadastros[usuarios.usuarioAtual].carro.length}</button>
+        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(+1)">></button>
+    </div>
+    
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputPlacaCarro" class="form-control text-center border-secondary" type="search" placeholder="Placa do Veiculo"
+            aria-label="Search" style="width: 20rem;">
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputDonoCarro" class="form-control text-center border-secondary" type="search" placeholder="Responsavel pelo Veiculo"
+            aria-label="Search" style="width: 20rem;" disabled>
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputModeloCarro" class="form-control text-center border-secondary" type="search" placeholder="Modelo do Veiculo"
+            aria-label="Search" style="width: 20rem;">
+    </div>
+
+    <div class="d-flex justify-content-center text-center mt-2">
+      <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+        <option value="nc" selected>Categoria do Veículo</option>
+        <option value="Hatch">Hatch</option>
+        <option value="Sedan">Sedan</option>
+        <option value="SUV">SUV</option>
+        <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+        <option value="Motocicleta">Motocicleta</option>
+        <option value="Outro">Outro</option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputCorCarro" class="form-control text-center border-secondary" type="search" placeholder="Cor do Veiculo"
+            aria-label="Search" style="width: 20rem;">
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <button class="btn btn-light border mt-4 ms-3" onclick="cadastrarNovoCarro()" >Novo carro</button>
+
+        <button class="btn btn-light border mt-4 ms-3" onclick="salvarDadosCarro()" style="width: 6rem;">Salvar</button>
+    </div>
+    `;
+    return text;
+}
+
+//A tualiza as informações do carro quando troca de veiculo cadastrado(na tela)
+function verOutroCarro(entrada) {
+    let usuarios = lerCadastrosSalvos()
+    if ((carroAMostra + entrada) > usuarios.cadastros[usuarios.usuarioAtual].carro.length - 1) {
+        carroAMostra = 0;
+    }
+    else if ((carroAMostra + entrada) < 0) {
+        carroAMostra = usuarios.cadastros[usuarios.usuarioAtual].carro.length - 1;
+    }
+    else {
+        carroAMostra = carroAMostra + entrada;
+    }
+    opcoes(2);
+}
+
+function cadastrarNovoCarro(){
+    window.location.href="CadastroCarro.html"
 }
