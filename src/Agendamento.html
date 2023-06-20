@@ -186,7 +186,11 @@
 
           <input type="radio" class="btn-check" name="time" id="time9" autocomplete="off">
           <label class="btn btn-light border my-1" for="time9" style="width: 10rem;">17:00h - 17:50h</label>
-
+           
+          <h5>Horário que o automóvel estará disponível:</h5>
+          <label onclick= "time()" class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded"style="width: 6rem;">Mostrar o horário</label>
+          <p id="texto"></p>
+          
         </div>
 
       </div>
@@ -273,6 +277,8 @@
   <script src="https://kit.fontawesome.com/ee6502c5bc.js" crossorigin="anonymous"></script>
   <!--Script que gerencia as contas e cadastros-->
   <script src="Scripts/Usuarios.js"></script>
+     <!--Script que mostra o tempo atual-->
+     <script src="Scripts/tempo.js"></script>
 </body>
 
 </html>
