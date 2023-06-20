@@ -6,10 +6,10 @@ if (usuariosL == null) {
 }
 
 
-//Usuario
+// USUÁRIO
 
 
-//Mascara para preenchimento do numero
+// Máscara para preenchimento do número
 function mascaraTelefone() {
     elemento = document.getElementById("InputNumero");
     var conteudo = elemento.value;
@@ -30,7 +30,7 @@ function mascaraTelefone() {
 
 }
 
-//Le os cadastros salvos localmente
+// Lê os cadastros salvos localmente
 function lerCadastrosSalvos() {
     var usuarios = localStorage.getItem('usuarios')
 
@@ -45,7 +45,7 @@ function lerCadastrosSalvos() {
 
 var imagem = "nc";
 
-//Salva od dados do cadastro
+// Salva os dados do cadastro
 function salvarCadastro() {
 
     let nomeReal = document.getElementById("InputNomeReal").value
@@ -131,9 +131,9 @@ function salvarCadastro() {
 
 }
 
-//acionado quando na pagina de cadastro de usuario
+// Acionado quando na página de cadastro de usuário
 function eventPagDeCDUsuario() {
-    //Detecta alterações no input da imagem
+    // Detecta alterações no input da imagem
     const inputElement = document.getElementById('inputImagem');
 
     inputElement.addEventListener('change', (event) => {
@@ -148,7 +148,7 @@ function eventPagDeCDUsuario() {
     });
 }
 
-//Converte a imagem para texto (base64) para permitir salvar no json
+// Converte a imagem para texto (base64) para permitir salvar no json
 function convertImageToBase64(file, callback) {
     const reader = new FileReader();
 
@@ -211,9 +211,9 @@ function inserirDadosBase(usuarios) {
 
 
 
-//Veiculo
+// VEÍCULO
 
-//Salva os dados do carro em cadastro
+// Salva os dados do carro em cadastro
 function SalvarCarro() {
     let usuarios = lerCadastrosSalvos()
 
@@ -253,7 +253,7 @@ function SalvarCarro() {
 
 
 
-//Login
+// Login
 function logar() {
     let usuarios = lerCadastrosSalvos()
 
@@ -276,8 +276,29 @@ function logar() {
 
 
 
+// Excluir conta
+function deletar() {
+    var usuario = lerCadastrosSalvos();
+    
+    for (let i = 1; i < usuario.cadastros.length - 1; i++)
+        usuario.cadastros[i] = usuario.cadastros[i + 1];
 
-//Perfil
+    usuario.cadastros.pop();
+    usuario.usuarioAtual = "nl"
+    localStorage.setItem('usuarios', JSON.stringify(usuario));
+    window.location.href = "index.html"
+}
+
+// Sair da conta
+function sair() {
+    let usuarios = lerCadastrosSalvos();
+    usuarios.usuarioAtual = "nl";
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    window.location.href = "index.html";
+}
+
+
+// Perfil
 function dadosPerfil() {
     let usuarios = lerCadastrosSalvos()
 
@@ -293,7 +314,7 @@ function dadosPerfil() {
 }
 
 
-//detecta as alterações nas informações //desativado temporariamente
+// Detecta as alterações nas informações //desativado temporariamente
 function alteracoes() {
     let usuarios = lerCadastrosSalvos()
 
@@ -322,7 +343,7 @@ function alteracoes() {
 
 }
 
-//Salva as alterações feitas pelo o usuario
+// Salva as alterações feitas pelo o usuario
 function salvarAlteracoes() {
     let usuarios = lerCadastrosSalvos()
 
@@ -348,7 +369,7 @@ function salvarAlteracoes() {
     toastBootstrap.show()
 }
 
-//Acionado quando na pagina de perfil
+// Acionado quando na pagina de perfil
 function imagemAlteracao() {
     //Detecta alterações no input da imagem
     const inputElement = document.getElementById('inputImagem');
@@ -365,7 +386,7 @@ function imagemAlteracao() {
     });
 }
 
-//Inicialização da pagina de perfil
+// Inicialização da pagina de perfil
 function initPerfil() {
     enviarParaCadastro();
 
@@ -386,7 +407,7 @@ function enviarParaCadastro() {
 
 var logado = false;
 changeLoginOption();
-//Checa quando esta logado
+// Checa quando esta logado
 function changeLoginOption() {
 
     let usuario = lerCadastrosSalvos();

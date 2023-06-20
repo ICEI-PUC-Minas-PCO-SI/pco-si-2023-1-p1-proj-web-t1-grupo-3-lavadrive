@@ -26,14 +26,14 @@
                 <a href="index.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 75%;"></a>
 
                 <!--Opções-->
-        <div class="btn-group d-flex" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-outline-light"
-              onclick="window.location.href = 'index.html'">Início</button>
-            <button type="button" class="btn btn-outline-light"
-              onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-            <button id="perfil/login" type="button" class="btn btn-outline-light"
-              onclick="irParaTela()">Login</button>
-          </div>
+                <div class="btn-group d-flex" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-light"
+                        onclick="window.location.href = 'index.html'">Início</button>
+                    <button type="button" class="btn btn-outline-light"
+                        onclick="window.location.href = 'Agendamento.html'">Agendar</button>
+                    <button id="perfil/login" type="button" class="btn btn-outline-light"
+                        onclick="irParaTela()">Login</button>
+                </div>
 
             </div>
         </nav>
@@ -61,10 +61,6 @@
                 <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off"
                     onclick="opcoes(3)">
                 <label class="btn btn-light border mt-4" for="option3" style="width: 80%;">Histórico</label>
-
-                <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off"
-                    onclick="opcoes(4)">
-                <label class="btn btn-light border my-4" for="option4" style="width: 80%;">Excluir conta</label>
 
             </div>
 
@@ -103,9 +99,36 @@
                         onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar
                         senha</label>
 
-                    <button type="radio" class="btn-check" name="options" id="salvar"
-                        onclick="salvarAlteracoes()">Salvar</button>
-                    <label class="btn btn-light border mt-4 ms-3" for="salvar" style="width: 8rem;">Salvar</label>
+                    <button type="radio" class="btn btn-light border mt-4 ms-3" name="options" id="salvar"
+                        style="width: 8rem;" onclick="salvarAlteracoes()">Salvar</button>
+                    <button type="radio" onclick="sair()" class="btn btn-outline-danger border mt-4 ms-3" name="options" id="logoff"
+                        style="width: 8rem;">Sair</button>
+
+                        <!-- Modal de deletar a conta -->
+                    <button type="button" class="btn btn-danger border mt-4 ms-3" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Excluir conta
+                    </button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Você deseja excluir sua conta?</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esteja ciente que esta ação é permanente e irreversível.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" onclick="deletar()" class="btn btn-danger">Sim</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

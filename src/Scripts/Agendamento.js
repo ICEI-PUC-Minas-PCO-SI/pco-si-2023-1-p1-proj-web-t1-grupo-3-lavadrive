@@ -17,13 +17,6 @@ function limpeza(button) {
     }
 }
 
-//Altera o valor pra saber se a opção de pagamento adiantado esta ativa ou não
-var pagAdiantado;
-
-function pagarAdiantado() {
-    pagAdiantado = !pagAdiantado;
-}
-
 //Caso a opção de pagamento adiantado estaja ativa envia para a tela de pagamento
 function finalizar() {
     if (pagAdiantado == true) {
