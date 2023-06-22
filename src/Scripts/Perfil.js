@@ -88,20 +88,60 @@ function opcoes(op) {
         dadosCarro();
     }
     else if (op == 3) {
-        tela.innerHTML = `                
-        <h3 class="mt-3">Ultimos Agendamentos</h3>
-
-        <div class="d-flex justify-content-center my-3">
+        tela.innerHTML = `
+          <h3 class="mt-3">Últimos Agendamentos</h3>
+      
+          <div class="d-flex justify-content-center my-3">
             <input id="filtroData" class="form-control text-center border-secondary" type="search" placeholder="00/00/0000"
-                aria-label="Search" style="width: 20rem;" onkeypress="return data(event)" maxlength="10">
-        </div>
-        
-        <div class="justify-content-center my-3 rounded border">
-        <h5 class="m-0 my-1">00/00/0000</h5>
-        <p class="m-0 my-1">API6527 - Lavagem Rapida</p>
-        <p class="m-0 my-1">Avaliação</p>
-        </div>`;
-    }
+              aria-label="Search" style="width: 20rem;" maxlength="10">
+          </div>
+      
+          <div id="agendamentosDiv" class="justify-content-center my-3 rounded border">
+            <!-- Aqui serão inseridos os agendamentos -->
+          </div>
+        `;
+      
+        function filtrarAgendamentos(event) {
+          if (event.key === 'Enter') {
+            const filtroData = document.getElementById('filtroData').value;
+            const agendamentosDiv = document.getElementById('agendamentosDiv');
+      
+            const agendamentos = [
+              { data: '2023-06-18', horario: '09:00' },
+              { data: '2023-06-19', horario: '14:30' },
+              { data: '2023-06-20', horario: '11:15' }
+            ];
+      
+            // Filtra os agendamentos com base na data
+            const agendamentosFiltrados = agendamentos.filter(agendamento => agendamento.data === filtroData);
+      
+            // Limpa o conteúdo atual da div de agendamentos
+            agendamentosDiv.innerHTML = '';
+      
+            if (agendamentosFiltrados.length > 0) {
+              // Se houver agendamentos, exibir  na div
+              agendamentosFiltrados.forEach(agendamento => {
+                const agendamentoElement = document.createElement('p');
+                agendamentoElement.textContent = `Data: ${agendamento.data}, Horário: ${agendamento.horario}`;
+                agendamentosDiv.appendChild(agendamentoElement);
+              });
+            } else {
+              // Se não houver agendamentos, exibe a mensagem correspondente
+              const mensagemElement = document.createElement('p');
+              mensagemElement.textContent = 'Não há agendamentos para a data selecionada.';
+              agendamentosDiv.appendChild(mensagemElement);
+            }
+          }
+        }
+      
+        const filtroDataInput = document.getElementById('filtroData');
+      
+        filtroDataInput.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+            filtrarAgendamentos(event);
+          }
+        });
+      }
 }
 
 function dadosPerfil() {

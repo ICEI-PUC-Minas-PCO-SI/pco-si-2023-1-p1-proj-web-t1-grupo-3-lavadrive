@@ -4,16 +4,20 @@ function limpeza(button) {
     let Desc = document.getElementById("limpDesc");
 
     if (button == 1) {
-        Title.textContent = "Limpeza Rapida";
-        Desc.textContent = "Limpeza nas máquinas com enxague automático, pinheiro aromático.";
+        Title.textContent = "Ducha";
+        Desc.textContent = "Ducha refrescante, ideal para uma rápida remoção de sujeira superficial e uma sensação renovadora.";
     }
     else if (button == 2) {
         Title.textContent = "Limpeza Normal";
-        Desc.textContent = "Limpeza nas máquinas com enxague automático, pinheiro aromático, aspiração completa, hidratação do banco e pretinho no pneu.";
-    }
-    else {
+        Desc.textContent = "Uma higienização mais detalhada e cuidadosa, garantindo um carro impecável.";
+        }
+        else if (button == 3){
         Title.textContent = "Limpeza Completa";
-        Desc.textContent = "Limpeza nas máquinas com enxague automático, pinheiro aromático, aspiração completa e pretinho no pneu.";
+        Desc.textContent = "Tratamento minucioso que abrange desde a lavagem externa até a higienização interna, deixando seu veículo como novo.";
+    }
+    else if (button == 4){
+        Title.textContent = "Polimento e Enceramento";
+        Desc.textContent = "Aplicação de uma camada de cera protetora na pintura do veículo e remoção de imperfeições, deixando o veículo com um aspecto mais brilhante e renovado."
     }
 }
 
