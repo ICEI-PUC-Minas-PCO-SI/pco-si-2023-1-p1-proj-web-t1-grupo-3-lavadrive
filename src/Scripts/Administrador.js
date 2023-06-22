@@ -36,3 +36,38 @@ $(document).ready(function () {
         
     });
 });
+
+function Mostrar(){
+
+    let usuarios = lerCadastrosSalvos()
+
+    let tela = document.getElementById('tela');
+    let str = '';
+    let categorias= ["Hatch","Sedan","SUV","Picape/Caminhonete","Motocicleta","Outro"]
+    
+    for (let k=0;k<categorias.length;k++){
+
+      for (let j=0;j<usuarios.cadastros.length;j++){
+        for (let i=0;i<usuarios.cadastros[j].carro.length;i++){ 
+            if (categorias[k]==usuarios.cadastros[j].carro[i].categoria){
+               
+        str+= `<div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+          <h5 class="card-title">Categoria: ${usuarios.cadastros[j].carro[i].categoria}</h5>
+          <p class="card-text">Modelo: ${usuarios.cadastros[j].carro[i].modelo}</p>
+          <p class="card-text">Placa: ${usuarios.cadastros[j].carro[i].placa}</p>
+          <p class="card-text">Cor: ${usuarios.cadastros[j].carro[i].cor}</p>
+          <p class="card-text">Dia marcado: </p>
+          <p class="card-text">Hora marcada: </p>
+          <button class="btn btn-primary">Editar</button>
+        </div>
+      </div>`
+            }
+        }
+    }
+  }
+        tela.innerHTML=str
+        
+    }
+

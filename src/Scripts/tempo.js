@@ -1,17 +1,41 @@
-function time() {
-    let today = new Date();
-    today.setMinutes(today.getMinutes() + 50);
-    let h = today.getHours().toString().padStart(2, '0');
-    let m = today.getMinutes().toString().padStart(2, '0');
-    let s = today.getSeconds().toString().padStart(2, '0');
-    document.getElementById('texto').innerHTML = `${h}:${m}:${s}`;
-}
+function tempos(button) {
+    
+    let Desc = document.getElementById("tempo");
 
-function timeatual() {
-    let today = new Date();
-    today.setMinutes(today.getMinutes());
-    let h = today.getHours().toString().padStart(2, '0');
-    let m = today.getMinutes().toString().padStart(2, '0');
-    let s = today.getSeconds().toString().padStart(2, '0');
-    document.getElementById('text').innerHTML = `${h}:${m}:${s}`;
+    if (button == 1) {
+        
+        Desc.textContent = "8:50";
+    }
+     if (button == 2) {
+        
+        Desc.textContent = "9:50";
+    }
+    if (button == 3){
+        
+        Desc.textContent = "10:50";
+    }
+    if (button == 4){
+        
+        Desc.textContent = "11:50";
+    }
+    if (button == 5){
+        
+        Desc.textContent = "13:50";
+    }
+    if (button == 6){
+        
+        Desc.textContent = "14:50";
+    }
+    if (button == 7){
+        
+        Desc.textContent = "15:50";
+    }
+    if (button == 8){
+        
+        Desc.textContent = "16:50";
+    }
+    if (button == 9){
+        
+        Desc.textContent = "17:50";
+    }
 }
