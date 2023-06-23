@@ -43,15 +43,52 @@ function Mostrar(){
 
     let tela = document.getElementById('tela');
     let str = '';
+    
     let categorias= ["Hatch","Sedan","SUV","Picape/Caminhonete","Motocicleta","Outro"]
     
     for (let k=0;k<categorias.length;k++){
-
       for (let j=0;j<usuarios.cadastros.length;j++){
         for (let i=0;i<usuarios.cadastros[j].carro.length;i++){ 
             if (categorias[k]==usuarios.cadastros[j].carro[i].categoria){
-               
-        str+= `<div class="card" style="width: 18rem;">
+            if (categorias[k]=="Hatch"){
+            `<div class="col-2">
+              
+            </div>`
+        }
+        if (categorias[k]=="Sedan"){
+          str+=
+            `<div class="col-2">
+            <div class="card" class="row" style="width: 18rem;">
+        
+            <div class="card-body">
+             
+              <p class="card-text">Dia marcado: </p>
+              <p class="card-text">Hora marcada: </p>
+              <button class="btn btn-primary">Editar</button>
+            </div>
+          </div>
+            </div>`
+        }
+        if (categorias[k]=="SUV"){
+            `<div class="col-2">
+           
+            </div>`
+        }
+        if (categorias[k]=="Picape/Caminhonete"){
+            `<div class="col-2">
+            </div>`
+        }
+        if (categorias[k]=="Motocicleta"){
+            `<div class="col-2">
+            </div>`
+        }
+        if (categorias[k]=="Outro"){
+            `<div class="col-2">
+            </div>`
+        }
+        str+= 
+        `
+        <div class="card" class="row" style="width: 18rem;">
         
         <div class="card-body">
           <h5 class="card-title">Categoria: ${usuarios.cadastros[j].carro[i].categoria}</h5>
