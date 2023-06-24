@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     return u.email === email && u.senha === senhaAntiga;
                 });
 
-
                 if (usuarioExistente) {
 
                     usuarioExistente.senha = novaSenha;
