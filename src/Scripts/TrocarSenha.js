@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        var deucerto = false;
         var email = document.getElementById('email').value;
         var senhaAntiga = document.getElementById('old-password').value;
         var novaSenha = document.getElementById('new-password').value;
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('usuarios', JSON.stringify(usuariosArmazenados));
 
                     console.log("Senha alterada com sucesso!");
-                    deucerto = true;
                 } else {
                     console.log("Email ou senha antiga inválidos.");
                 }
