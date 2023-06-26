@@ -387,9 +387,9 @@ function imagemAlteracao() {
         });
     });
 }
+
 function mostrar(){
     let usuarios= lerCadastrosSalvos();
-    var tela = document.getElementById("tela");
 
     document.getElementById("inputplaca").value = usuarios.cadastros[usuarios.usuarioAtual].carro[0].placa;
     

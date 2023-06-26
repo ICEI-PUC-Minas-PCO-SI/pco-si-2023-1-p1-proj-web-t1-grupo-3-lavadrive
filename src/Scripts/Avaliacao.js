@@ -33,7 +33,7 @@ for (let user of usuarios.cadastros) {
   }
 }
 
-const placa = use.cadastros[user.usuarioAtual].carro[0].placa;
+//const placa = usuario.cadastros[usuario.usuarioAtual].carro[0].placa;
 
 botaoFinalizar.addEventListener("click", () => {
   const descricao = descricaoInput.value;

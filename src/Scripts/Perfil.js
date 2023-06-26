@@ -198,6 +198,7 @@ function mascaraData(num) {
     }
 
 }
+
 function mostrarmais(){
     var tela = document.getElementById("tela");
     let usuarios = lerCadastrosSalvos();
@@ -205,6 +206,7 @@ function mostrarmais(){
     dadosCarro();
 
 }
+
 function textCarro() {
     let usuarios = lerCadastrosSalvos();
 
@@ -310,6 +312,7 @@ function textoCarro() {
     return text;
 }
 
+//Cria um dropdown com a categoria cadastrada do carro selecionada
 function categoriaCadastrada() {
     let usuarios = lerCadastrosSalvos();
     let divRetorno;

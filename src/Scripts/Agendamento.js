@@ -82,14 +82,18 @@ function finalizar() {
     let dataAtual = new Date();
 
     dataDoAgendamento = dia+"/"+(dataAtual.getMonth()+1)+"/"+dataAtual.getFullYear();
+    
+    placaDoAgendamento = document.getElementById("inputplaca").value;
+    categoriaDoAgendamento = document.getElementById("inputcategoria").value;
+    responsavelDoAgendamento = document.getElementById("InputNomeReal").value;
 
     let novoAgendamento= [
         tipoDeLimpeza = tipoDeLimpeza,
         data = dataDoAgendamento,
         hora = hora,
-        placa = "nc",
-        categoria = "nc",
-        responsavel = "nc",
+        placa = placaDoAgendamento,
+        categoria = categoriaDoAgendamento,
+        responsavel = responsavelDoAgendamento,
     ]
     //Remover apos os testes
     console.log(novoAgendamento)
