@@ -100,6 +100,8 @@ function opcoes(op) {
             <!-- Aqui serão inseridos os agendamentos -->
           </div>
         `;
+
+        
       
         function filtrarAgendamentos(event) {
           if (event.key === 'Enter') {
@@ -158,6 +160,8 @@ function dadosPerfil() {
     }
 }
 
+
+
 function data(event) {
     let campoData = document.getElementById("filtroData");
 
@@ -192,6 +196,61 @@ function mascaraData(num) {
     }
 
 }
+function mostrarmais(){
+    var tela = document.getElementById("tela");
+    let usuarios = lerCadastrosSalvos();
+    tela.innerHTML = textCarro();
+    dadosCarro();
+
+}
+function textCarro() {
+    let usuarios = lerCadastrosSalvos();
+
+    let text = `   
+    <div class="d-flex justify-content-center my-3 text-center">
+        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(-1)"><</button>
+        <button class="btn btn-light border mt-4 ms-3" style="width: 3rem;">${carroAMostra + 1}/${usuarios.cadastros[usuarios.usuarioAtual].carro.length}</button>
+        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(+1)">></button>
+    </div>
+    
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputPlacaCarro" class="form-control text-center border-secondary" type="search" placeholder="Placa do Veiculo"
+            aria-label="Search" style="width: 20rem;">
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputDonoCarro" class="form-control text-center border-secondary" type="search" placeholder="Responsavel pelo Veiculo"
+            aria-label="Search" style="width: 20rem;" disabled>
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputModeloCarro" class="form-control text-center border-secondary" type="search" placeholder="Modelo do Veiculo"
+            aria-label="Search" style="width: 20rem;">
+    </div>
+
+    <div class="d-flex justify-content-center text-center mt-2">
+      <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+        <option value="nc" selected>Categoria do Veículo</option>
+        <option value="Hatch">Hatch</option>
+        <option value="Sedan">Sedan</option>
+        <option value="SUV">SUV</option>
+        <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+        <option value="Motocicleta">Motocicleta</option>
+        <option value="Outro">Outro</option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputCorCarro" class="form-control text-center border-secondary" type="search" placeholder="Cor do Veiculo"
+            aria-label="Search" style="width: 20rem;">
+    </div>
+
+   
+    `;
+    return text;
+}
+
+
 
 let carroAMostra = 0;
 //Mostra os dados do carro

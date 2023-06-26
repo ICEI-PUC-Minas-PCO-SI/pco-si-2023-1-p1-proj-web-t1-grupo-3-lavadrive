@@ -85,3 +85,4 @@ function finalizar() {
         window.location.href = "Pagamento.html";
     }
 }
+

@@ -387,6 +387,19 @@ function imagemAlteracao() {
         });
     });
 }
+function mostrar(){
+    let usuarios= lerCadastrosSalvos();
+    var tela = document.getElementById("tela");
+
+    document.getElementById("inputplaca").value = usuarios.cadastros[usuarios.usuarioAtual].carro[0].placa;
+    
+    document.getElementById("inputcategoria").value= usuarios.cadastros[usuarios.usuarioAtual].carro[0].categoria;
+
+    document.getElementById("InputNomeReal").value = usuarios.cadastros[usuarios.usuarioAtual].nome;
+  
+}
+
+
 
 // Inicialização da pagina de perfil
 function initPerfil() {

@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="diasDS()">
+<body onload="diasDS();mostrar()">
   <!--Cabecalho-->
   <header class="m-0 d-block bg-blue">
     <nav class="navbar">
@@ -44,26 +44,29 @@
     <div class="row container-fluid justify-content-center my-4">
 
       <!--Informações do Carro-->
-      <div class="col-12 col-lg-5 mx-0 mx-lg-4 ms-4 ms-lg-0 pt-1 border text-center rounded">
-        <h4>Veículo</h4>
+      <div class="col-12 col-lg-5 mx-0 mx-lg-4 ms-4 ms-lg-0 pt-1 border text-center rounded" id="tela">
+          <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off"
+                    onclick="mostrarmais()">
+                <label class="btn btn-light border mt-4" for="option2" style="width: 80%;">Veículo</label>
         <div class="mb-3">
 
           <div class="d-flex justify-content-center">
             <input class="form-control text-center border-secondary" type="search" placeholder="Placa do Veículo"
-              aria-label="Search" style="width: 20rem;" disabled>
+            id="inputplaca" aria-label="Search" style="width: 20rem;" disabled>
           </div>
 
           <div class="d-flex justify-content-center mt-2">
             <input class="form-control text-center border-secondary" type="search" placeholder="Categoria do Veículo"
-              aria-label="Search" style="width: 20rem;" disabled>
+              id="inputcategoria" aria-label="Search" style="width: 20rem;" disabled>
           </div>
 
           <div class="d-flex justify-content-center mt-2">
             <input class="form-control text-center border-secondary" type="search"
-              placeholder="Responsavel pelo Veículo" aria-label="Search" style="width: 20rem;" disabled>
+               id="InputNomeReal"placeholder="Responsavel pelo Veículo" aria-label="Search" style="width: 20rem;" disabled>
           </div>
 
         </div>
+       
       </div>
 
     </div>
@@ -293,6 +296,8 @@
   <script src="Scripts/Usuarios.js"></script>
   <!--Script que mostra o tempo atual-->
   <script src="Scripts/tempo.js"></script>
+
+  <script src="Scripts/Perfil.js"></script>
 </body>
 
 </html>
