@@ -1,26 +1,3 @@
-/*const descricao = document.getElementsByClassName("obs").value;
-const botaoFinalizar = document.getElementById("submit");
-const usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
-let usuario;
-
-for (let user of usuarios.cadastros) {
-    if (+user.id === +usuarios.usuarioAtual) {
-        usuario = user;
-    }
-}
-
-botaoFinalizar.addEventListener("click", async () => {
-    const avaliacaoJSON = {
-      nome: usuario.nome,
-      placa: usuario.carro.placa,
-      descricao: descricao
-    };
-    await fetch("http://192.168.15.12/avaliacao",  {
-        method: "POST",
-        body: JSON.stringify(avaliacaoJSON),
-      });
-});
-*/
 const descricaoInput = document.getElementsByClassName("obs")[0];
 const botaoFinalizar = document.getElementById("submit");
 const usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
@@ -33,9 +10,7 @@ for (let user of usuarios.cadastros) {
   }
 }
 
-const placa = use.cadastros[user.usuarioAtual].carro[0].placa;
-
-botaoFinalizar.addEventListener("click", () => {
+botaoFinalizar.addEventListener("click", async() => {
   const descricao = descricaoInput.value;
 
   const avaliacaoJSON = {
@@ -44,14 +19,12 @@ botaoFinalizar.addEventListener("click", () => {
     descricao: descricao
   };
 
-  // Obtém as avaliações armazenadas na localStorage
-  const avaliacoes = JSON.parse(localStorage.getItem("avaliacoes")) || [];
-
-  // Adiciona a nova avaliação
-  avaliacoes.push(avaliacaoJSON);
-
-  // Salva as avaliações atualizadas na localStorage
-  localStorage.setItem("avaliacoes", JSON.stringify(avaliacoes));
-
-  console.log('Avaliação adicionada com sucesso!');
+  await fetch("http://localhost:3000/avaliacao", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(avaliacaoJSON),
+      }).then(response => response.json())
+      .then(data => console.log(data))
 });
