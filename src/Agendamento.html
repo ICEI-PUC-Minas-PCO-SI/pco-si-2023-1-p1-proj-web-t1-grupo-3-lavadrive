@@ -30,8 +30,7 @@
             onclick="window.location.href = 'index.html'">Início</button>
           <button type="button" class="btn btn-outline-light"
             onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-          <button id="perfil/login" type="button" class="btn btn-outline-light"
-            onclick="irParaTela()">Login</button>
+          <button id="perfil/login" type="button" class="btn btn-outline-light" onclick="irParaTela()">Login</button>
         </div>
 
       </div>
@@ -78,14 +77,18 @@
 
         <div class="col-12 col-lg-4 offset-lg-1 mb-3">
           <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" onclick="limpeza(1)">
-          <label class="btn btn-light border mt-2" for="option1" style="width: 100%;">Limpeza Rápida</label>
+          <label class="btn btn-light border mt-2" for="option1" style="width: 100%;">Ducha</label>
           <br>
           <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked
             onclick="limpeza(2)">
           <label class="btn btn-light border mt-2" for="option2" style="width: 100%;">Limpeza Normal</label>
           <br>
-          <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" onclick="limpeza(3)">
+          <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off"
+            onclick="limpeza(3)">
           <label class="btn btn-light border mt-2" for="option3" style="width: 100%;">Limpeza Completa</label>
+          <br>
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" onclick="limpeza(4)">
+          <label class="btn btn-light border mt-2" for="option4" style="width: 100%;">Polimento e Enceramento</label>
         </div>
 
         <!--Descrição-->
@@ -107,43 +110,43 @@
         <h6 id="mes">Mês</h6>
 
         <div class="row col-12 my-4 justify-content-center">
-          <input type="radio" class="btn-check" name="dia" id="dia11" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia11" autocomplete="off" onclick="definirdia(0)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia11" style="width: 6rem;">
             <p id="dayNameT0">Domingo</p>
             <p id="dayT0">0</p>
           </label>
 
-          <input type="radio" class="btn-check" name="dia" id="dia12" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia12" autocomplete="off" onclick="definirdia(1)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia12" style="width: 6rem;">
             <p id="dayNameT1">Segunda</p>
             <p id="dayT1">0</p>
           </label>
 
-          <input type="radio" class="btn-check" name="dia" id="dia13" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia13" autocomplete="off" onclick="definirdia(2)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia13" style="width: 6rem;">
             <p id="dayNameT2">Terça</p>
             <p id="dayT2">0</p>
           </label>
 
-          <input type="radio" class="btn-check" name="dia" id="dia14" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia14" autocomplete="off" onclick="definirdia(3)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia14" style="width: 6rem;">
             <p id="dayNameT3">Quarta</p>
             <p id="dayT3">0</p>
           </label>
 
-          <input type="radio" class="btn-check" name="dia" id="dia15" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia15" autocomplete="off" onclick="definirdia(4)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia15" style="width: 6rem;">
             <p id="dayNameT4">Quinta</p>
             <p id="dayT4">0</p>
           </label>
 
-          <input type="radio" class="btn-check" name="dia" id="dia16" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia16" autocomplete="off" onclick="definirdia(5)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia16" style="width: 6rem;">
             <p id="dayNameT5">Sexta</p>
             <p id="dayT5">0</p>
           </label>
 
-          <input type="radio" class="btn-check" name="dia" id="dia17" autocomplete="off">
+          <input type="radio" class="btn-check" name="dia" id="dia17" autocomplete="off" onclick="definirdia(6)">
           <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia17" style="width: 6rem;">
             <p id="dayNameT6">Sábado</p>
             <p id="dayT6">0</p>
@@ -153,47 +156,58 @@
       </div>
 
     </div>
- <!--Horarios-->
- <div class="row container-fluid justify-content-center">
-  <div class="col-12 col-lg-5 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
-    <h4>Horários</h4>
-    <div class="mb-3">
 
-      <input type="radio" class="btn-check" name="time" id="time1" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(1)" id="time1 "for="time1" style="width: 10rem;">8:00h</label>
+    <!--Horarios-->
+    <div class="row container-fluid justify-content-center">
+      <div class="col-12 col-lg-5 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
+        <h4>Horários</h4>
+        <div class="mb-3">
 
-      <input type="radio" class="btn-check" name="time" id="time2" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(2)" id="time2 "for="time2" style="width: 10rem;">9:00h</label>
+          <input type="radio" class="btn-check" name="time1" id="time1" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(1)" onclick="definirhora(1)"id="timea1 " for="time1"
+            style="width: 10rem;">8:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time3" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(3)" id="time3 " for="time3" style="width: 10rem;">10:00h</label>
+          <input type="radio" class="btn-check" name="time2" id="time2" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(2)" id="timea2 " for="time2"
+            style="width: 10rem;">9:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time4" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(4)" id="time4 " for="time4" style="width: 10rem;">11:00h</label>
+          <input type="radio" class="btn-check" name="time3" id="time3" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(3)" id="timea3 " for="time3"
+            style="width: 10rem;">10:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time5" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(5)" id="time5 " for="time5" style="width: 10rem;">13:00h</label>
+          <input type="radio" class="btn-check" name="time4" id="time4" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(4)" id="timea4 " for="time4"
+            style="width: 10rem;">11:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time6" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(6)" id="time6 " for="time6" style="width: 10rem;">14:00h</label>
+          <input type="radio" class="btn-check" name="time5" id="time5" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(5)" id="timea5 " for="time5"
+            style="width: 10rem;">13:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time7" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(7)" id="time7 " for="time7" style="width: 10rem;">15:00h</label>
+          <input type="radio" class="btn-check" name="time6" id="time6" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(6)" id="timea6 " for="time6"
+            style="width: 10rem;">14:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time8" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(8)" id="time8 " for="time8" style="width: 10rem;">16:00h</label>
+          <input type="radio" class="btn-check" name="time7" id="time7" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(7)" id="timea7 " for="time7"
+            style="width: 10rem;">15:00h</label>
 
-      <input type="radio" class="btn-check" name="time" id="time9" autocomplete="off">
-      <label class="btn btn-light border my-1" onclick="tempos(9)" id="time9 " for="time9" style="width: 10rem;">17:00h</label>
-       
-      <h5>Horário que o automóvel estará disponível:</h5>
-      <label onclick= "tempos()" id="tempo" class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded"style="width: 6rem;"> </label>
-      
-      
+          <input type="radio" class="btn-check" name="time8" id="time8" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(8)" id="timea8 " for="time8"
+            style="width: 10rem;">16:00h</label>
+
+          <input type="radio" class="btn-check" name="time9" id="time9" autocomplete="off">
+          <label class="btn btn-light border my-1" onclick="tempos(9)" id="timea9 " for="time9"
+            style="width: 10rem;">17:00h</label>
+
+          <h5>Horário que o automóvel estará disponível:</h5>
+          <label onclick="tempos()" id="tempo" class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded"
+            style="width: 6rem;"> </label>
+
+
+        </div>
+
+      </div>
     </div>
-
-  </div>
-</div>
 
 
     <!--Finalizar-->
@@ -277,8 +291,8 @@
   <script src="https://kit.fontawesome.com/ee6502c5bc.js" crossorigin="anonymous"></script>
   <!--Script que gerencia as contas e cadastros-->
   <script src="Scripts/Usuarios.js"></script>
-     <!--Script que mostra o tempo atual-->
-     <script src="Scripts/tempo.js"></script>
+  <!--Script que mostra o tempo atual-->
+  <script src="Scripts/tempo.js"></script>
 </body>
 
 </html>

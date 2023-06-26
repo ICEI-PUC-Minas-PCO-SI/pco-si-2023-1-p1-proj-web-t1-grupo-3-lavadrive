@@ -281,7 +281,7 @@ function logar() {
 // Excluir conta
 function deletar() {
     var usuario = lerCadastrosSalvos();
-    
+
     for (let i = 1; i < usuario.cadastros.length - 1; i++)
         usuario.cadastros[i] = usuario.cadastros[i + 1];
 
