@@ -6,22 +6,22 @@ function limpeza(button) {
     if (button == 1) {
         Title.textContent = "Ducha";
         Desc.textContent = "Ducha refrescante, ideal para uma rápida remoção de sujeira superficial e uma sensação renovadora.";
-        lavagem = "Ducha";
+        tipoDeLimpeza = "Ducha";
     }
     else if (button == 2) {
         Title.textContent = "Limpeza Normal";
         Desc.textContent = "Uma higienização mais detalhada e cuidadosa, garantindo um carro impecável.";
-        lavagem = "Limpeza Normal";
+        tipoDeLimpeza = "Limpeza Normal";
     }
     else if (button == 3) {
         Title.textContent = "Limpeza Completa";
         Desc.textContent = "Tratamento minucioso que abrange desde a lavagem externa até a higienização interna, deixando seu veículo como novo.";
-        lavagem = "Limpeza Completa";
+        tipoDeLimpeza = "Limpeza Completa";
     }
     else if (button == 4) {
         Title.textContent = "Polimento e Enceramento";
         Desc.textContent = "Aplicação de uma camada de cera protetora na pintura do veículo e remoção de imperfeições, deixando o veículo com um aspecto mais brilhante e renovado."
-        lavagem = "Polimento e Enceramento";
+        tipoDeLimpeza = "Polimento e Enceramento";
     }
 }
 
@@ -62,26 +62,35 @@ function diasDS() {
 
 
 let dia;
-let lavagem;
+let tipoDeLimpeza;
 let hora;
 
 //Definir dados do agendamento
+
+//Define o dia do agendamento
 function definirdia(entrada) {
     dia = document.getElementById("dayT" + entrada).textContent;
-    console.log(dia);
-    console.log(lavagem);
-    console.log(hora);
 }
 
+//Define a hora do agendamento
 function definirhora(entrada){
-    hora = document.getElementById("timea" + entrada).value;
+    hora = entrada + ":00h";
 }
 
-//Caso a opção de pagamento adiantado estaja ativa envia para a tela de pagamento
+//Salva o agendamento e envia para a tela inicial
 function finalizar() {
+    let dataAtual = new Date();
 
+    dataDoAgendamento = dia+"/"+(dataAtual.getMonth()+1)+"/"+dataAtual.getFullYear();
 
-    if (pagAdiantado == true) {
-        window.location.href = "Pagamento.html";
-    }
+    let novoAgendamento= [
+        tipoDeLimpeza = tipoDeLimpeza,
+        data = dataDoAgendamento,
+        hora = hora,
+        placa = "nc",
+        categoria = "nc",
+        responsavel = "nc",
+    ]
+    //Remover apos os testes
+    console.log(novoAgendamento)
 }
