@@ -19,7 +19,7 @@ botaoFinalizar.addEventListener("click", async() => {
     descricao: descricao
   };
 
-  await fetch("http://localhost:3000/avaliacao", {
+  await fetch("https://api-avaliacao.vercel.app/avaliacao", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
