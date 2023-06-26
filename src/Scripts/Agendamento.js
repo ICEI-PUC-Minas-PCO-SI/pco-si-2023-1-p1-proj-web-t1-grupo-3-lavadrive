@@ -61,11 +61,11 @@ function diasDS() {
 }
 
 
+//Definir dados do agendamento
+
 let dia;
 let tipoDeLimpeza;
 let hora;
-
-//Definir dados do agendamento
 
 //Define o dia do agendamento
 function definirdia(entrada) {
