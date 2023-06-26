@@ -15,11 +15,12 @@ function opcoes(op) {
 
     if (op == 1) {
         tela.innerHTML = `                
-        <div class="mt-2 text-center rounded-circle">
+        
+        <div class="mt-2 text-center rounded-circle justify-content-center text-center justify-items-center">
         <img id="perfilImage" class="rounded-circle" src="img/circulo cinza.png" alt="perfil"
             style="width: 30%;">
         <p><i class="fa-solid fa-pencil"></i> Editar foto de perfil</p>
-        <input type="file" id="inputImagem" accept="image/*" style="width: 54%;">
+        <input type="file" id="inputImagem" accept="image/*" style="max-width: 54%;">
     </div>
 
     <div class="d-flex justify-content-center my-3">
@@ -42,20 +43,19 @@ function opcoes(op) {
             placeholder="Telefone" aria-label="Search" style="width: 20rem;">
     </div>
 
-    <div class="d-flex justify-content-center my-3">
-        <input type="radio" class="btn-check" name="options" id="trocarSenha" autocomplete="off">
-        <label class="btn btn-light border mt-4 me-3" for="trocarSenha"
-            onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar
-            senha</label>
+    <div class="d-flex row justify-content-center my-3">
+        <button type="button" class="btn btn-light border mt-4 ms-3" id="trocarSenha"
+            onclick="window.location.href = 'TrocarSenha.html'" style="width: 8rem;">Trocar Senha</button>
 
-        <button type="radio" class="btn btn-light border mt-4 ms-3" name="options" id="salvar"
-            style="width: 8rem;" onclick="salvarAlteracoes()">Salvar</button>
-        <button type="radio" onclick="sair()" class="btn btn-outline-danger border mt-4 ms-3" name="options" id="logoff"
-            style="width: 8rem;">Sair</button>
+        <button type="button" class="btn btn-light border mt-4 ms-3" id="salvar" style="width: 8rem;"
+            onclick="salvarAlteracoes()">Salvar</button>
 
-            <!-- Modal de deletar a conta -->
+        <button type="radio" onclick="sair()" class="btn btn-outline-danger border mt-4 ms-3" name="options"
+            id="logoff" style="width: 8rem;">Sair</button>
+
+        <!-- Modal de deletar a conta -->
         <button type="button" class="btn btn-danger border mt-4 ms-3" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop">
+            data-bs-target="#staticBackdrop" style="width: 8rem;">
             Excluir conta
         </button>
 
@@ -64,7 +64,8 @@ function opcoes(op) {
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Você deseja excluir sua conta?</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Você deseja excluir sua conta?
+                        </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
@@ -100,48 +101,48 @@ function opcoes(op) {
             <!-- Aqui serão inseridos os agendamentos -->
           </div>
         `;
-      
+
         function filtrarAgendamentos(event) {
-          if (event.key === 'Enter') {
-            const filtroData = document.getElementById('filtroData').value;
-            const agendamentosDiv = document.getElementById('agendamentosDiv');
-      
-            const agendamentos = [
-              { data: '2023-06-18', horario: '09:00' },
-              { data: '2023-06-19', horario: '14:30' },
-              { data: '2023-06-20', horario: '11:15' }
-            ];
-      
-            // Filtra os agendamentos com base na data
-            const agendamentosFiltrados = agendamentos.filter(agendamento => agendamento.data === filtroData);
-      
-            // Limpa o conteúdo atual da div de agendamentos
-            agendamentosDiv.innerHTML = '';
-      
-            if (agendamentosFiltrados.length > 0) {
-              // Se houver agendamentos, exibir  na div
-              agendamentosFiltrados.forEach(agendamento => {
-                const agendamentoElement = document.createElement('p');
-                agendamentoElement.textContent = `Data: ${agendamento.data}, Horário: ${agendamento.horario}`;
-                agendamentosDiv.appendChild(agendamentoElement);
-              });
-            } else {
-              // Se não houver agendamentos, exibe a mensagem correspondente
-              const mensagemElement = document.createElement('p');
-              mensagemElement.textContent = 'Não há agendamentos para a data selecionada.';
-              agendamentosDiv.appendChild(mensagemElement);
+            if (event.key === 'Enter') {
+                const filtroData = document.getElementById('filtroData').value;
+                const agendamentosDiv = document.getElementById('agendamentosDiv');
+
+                const agendamentos = [
+                    { data: '2023-06-18', horario: '09:00' },
+                    { data: '2023-06-19', horario: '14:30' },
+                    { data: '2023-06-20', horario: '11:15' }
+                ];
+
+                // Filtra os agendamentos com base na data
+                const agendamentosFiltrados = agendamentos.filter(agendamento => agendamento.data === filtroData);
+
+                // Limpa o conteúdo atual da div de agendamentos
+                agendamentosDiv.innerHTML = '';
+
+                if (agendamentosFiltrados.length > 0) {
+                    // Se houver agendamentos, exibir  na div
+                    agendamentosFiltrados.forEach(agendamento => {
+                        const agendamentoElement = document.createElement('p');
+                        agendamentoElement.textContent = `Data: ${agendamento.data}, Horário: ${agendamento.horario}`;
+                        agendamentosDiv.appendChild(agendamentoElement);
+                    });
+                } else {
+                    // Se não houver agendamentos, exibe a mensagem correspondente
+                    const mensagemElement = document.createElement('p');
+                    mensagemElement.textContent = 'Não há agendamentos para a data selecionada.';
+                    agendamentosDiv.appendChild(mensagemElement);
+                }
             }
-          }
         }
-      
+
         const filtroDataInput = document.getElementById('filtroData');
-      
-        filtroDataInput.addEventListener('keypress', function(event) {
-          if (event.key === 'Enter') {
-            filtrarAgendamentos(event);
-          }
+
+        filtroDataInput.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                filtrarAgendamentos(event);
+            }
         });
-      }
+    }
 }
 
 function dadosPerfil() {
@@ -226,8 +227,8 @@ function textoCarro() {
     let usuarios = lerCadastrosSalvos();
 
     let text = `   
-    <div class="d-flex justify-content-center my-3 text-center">
-        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(-1)"><</button>
+    <div class="d-flex justify-content-center text-center my-3">
+        <button class="btn btn-light border mt-4 ms-0" style="width: 2rem;" onclick="verOutroCarro(-1)"><</button>
         <button class="btn btn-light border mt-4 ms-3" style="width: 3rem;">${carroAMostra + 1}/${usuarios.cadastros[usuarios.usuarioAtual].carro.length}</button>
         <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(+1)">></button>
     </div>
@@ -245,21 +246,9 @@ function textoCarro() {
     <div class="d-flex justify-content-center my-3">
         <input id="inputModeloCarro" class="form-control text-center border-secondary" type="search" placeholder="Modelo do Veiculo"
             aria-label="Search" style="width: 20rem;">
-    </div>
-
-    <div class="d-flex justify-content-center text-center mt-2">
-      <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
-        <option value="nc" selected>Categoria do Veículo</option>
-        <option value="Hatch">Hatch</option>
-        <option value="Sedan">Sedan</option>
-        <option value="SUV">SUV</option>
-        <option value="Picape/Caminhonete">Picape/Caminhonete</option>
-        <option value="Motocicleta">Motocicleta</option>
-        <option value="Outro">Outro</option>
-      </select>
-    </div>
-
-    <div class="d-flex justify-content-center my-3">
+    </div>`
+        + categoriaCadastrada() +
+        `<div class="d-flex justify-content-center my-3">
         <input id="inputCorCarro" class="form-control text-center border-secondary" type="search" placeholder="Cor do Veiculo"
             aria-label="Search" style="width: 20rem;">
     </div>
@@ -271,6 +260,90 @@ function textoCarro() {
     </div>
     `;
     return text;
+}
+
+function categoriaCadastrada() {
+    let usuarios = lerCadastrosSalvos();
+    let divRetorno;
+
+    let carro = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAMostra].categoria;
+
+    switch (carro) {
+        case "Hatch":
+            divRetorno = `<div class="d-flex justify-content-center text-center mt-2">
+            <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+            <option value="Hatch" selected>Hatch</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+            <option value="Motocicleta">Motocicleta</option>
+            <option value="Outro">Outro</option>
+            </select>
+            </div>`;
+            break;
+        case "Sedan":
+            divRetorno = `<div class="d-flex justify-content-center text-center mt-2">
+            <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+            <option value="Hatch">Hatch</option>
+            <option value="Sedan" selected>Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+            <option value="Motocicleta">Motocicleta</option>
+            <option value="Outro">Outro</option>
+            </select>
+            </div>`;
+            break;
+        case "SUV":
+            divRetorno = `<div class="d-flex justify-content-center text-center mt-2">
+            <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+            <option value="Hatch">Hatch</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV" selected>SUV</option>
+            <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+            <option value="Motocicleta">Motocicleta</option>
+            <option value="Outro">Outro</option>
+            </select>
+            </div>`;
+            break;
+        case "Picape / Caminhonete":
+            divRetorno = `<div class="d-flex justify-content-center text-center mt-2">
+            <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+            <option value="Hatch">Hatch</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Picape/Caminhonete" selected>Picape/Caminhonete</option>
+            <option value="Motocicleta">Motocicleta</option>
+            <option value="Outro">Outro</option>
+            </select>
+            </div>`;
+            break;
+        case "Motocicleta":
+            divRetorno = `<div class="d-flex justify-content-center text-center mt-2">
+            <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+            <option value="Hatch">Hatch</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+            <option value="Motocicleta" selected>Motocicleta</option>
+            <option value="Outro">Outro</option>
+            </select>
+            </div>`;
+            break;
+        case "Outro":
+            divRetorno = `<div class="d-flex justify-content-center text-center mt-2">
+            <select id="inputCategoriaCarro" class="form-select border-info text-center my-1" style="width: 20rem;">
+            <option value="Hatch">Hatch</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Picape/Caminhonete">Picape/Caminhonete</option>
+            <option value="Motocicleta">Motocicleta</option>
+            <option value="Outro" selected>Outro</option>
+            </select>
+            </div>`;
+            break;
+    }
+
+    return divRetorno;
 }
 
 //A tualiza as informações do carro quando troca de veiculo cadastrado(na tela)
@@ -288,6 +361,6 @@ function verOutroCarro(entrada) {
     opcoes(2);
 }
 
-function cadastrarNovoCarro(){
-    window.location.href="CadastroCarro.html"
+function cadastrarNovoCarro() {
+    window.location.href = "CadastroCarro.html"
 }
