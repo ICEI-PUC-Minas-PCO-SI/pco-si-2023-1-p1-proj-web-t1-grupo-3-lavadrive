@@ -1,18 +1,23 @@
-const descricao = document.querySelector('.form-control.mb-3.obs').value;
-const usuario = window.localStorage.getItem('usuarioAtual');
+const descricao = document.getElementsByClassName("obs").value;
+const botaoFinalizar = document.getElementById("submit");
+const usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
+let usuario;
 
-
-const avaliacaoJSON = {
-    nome:usuario.nome,
-    placa:usuario.placa,
-    descricao:descricao
+for (let user of usuarios.cadastros) {
+    if (+user.id === +usuarios.usuarioAtual) {
+        usuario = user;
+    }
 }
 
-
-const botaoFinalizar = document.querySelector('.btn.btn-outline-info.mb-2');
-botaoFinalizar.addEventListener('click', async () => {
-  const response = await fetch('https://192.168.15.12/avaliacao', {
-    method: 'POST',
-    body: JSON.stringify(avaliacaoJSON)
+botaoFinalizar.addEventListener("click", async () => {
+    const avaliacaoJSON = {
+      nome: usuario.nome,
+      placa: usuario.carro.placa,
+      descricao: descricao
+    };
+    await fetch("http://192.168.15.12/avaliacao", {
+        method: "POST",
+        body: JSON.stringify(avaliacaoJSON)
+      });
   });
-});
+  
