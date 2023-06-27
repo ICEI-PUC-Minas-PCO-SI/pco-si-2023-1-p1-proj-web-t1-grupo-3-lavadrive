@@ -6,12 +6,12 @@ $(document).ready(function () {
     var cardsToShow = 0;
 
     $("#ver-mais").click(function () {
-        cardsToShow += 3;
+        cardsToShow += 10000;
 
         $(".card-hidden").slice(0, cardsToShow).show(); /* Mostra os primeiros cards */
 
         if (cardsToShow >= cardCount) {
-            $(this).hide(); /* Esconde o botão "Ver mais" quando não tiver mais cards para mostrar */
+            $(this).hide(); /* Esconde o botão "Ver mais" quando não tiver mais cards para mostrar*/ 
         }
 
         var $toggleButtons = $(".toggle-buttons");
@@ -77,4 +77,59 @@ function Mostrar() {
   
     tela.innerHTML = str;
   }
+
+  fetch('https://api-avaliacao.vercel.app/avaliacao')
+  .then(response => response.json())
+  .then(data => {
+    
+    for (let i = 0; i < data.length; i++) {
+      
+      var colDiv = document.createElement('div');
+      colDiv.className = 'col-md-4';
+
+      var cardHiddenDiv = document.createElement('div');
+      cardHiddenDiv.className = 'card-hidden';
+  
+      var cardBody = document.createElement('div');
+      cardBody.className = 'card-body';
+
+      var cardTitle = document.createElement('h5');
+      cardTitle.className = 'card-title';
+      cardTitle.textContent = data[i].nome;
+
+      var placaCarro = document.createElement('p');
+      placaCarro.className = 'card-text';
+      placaCarro.textContent = 'Placa do Carro: ' + data[i].placa;
+
+      var textareaDiv = document.createElement('div');
+      textareaDiv.className = 'mt-4';
+
+
+      var textarea = document.createElement('textarea');
+      textarea.className = 'form-control';
+      textarea.rows = 3;
+      textarea.textContent = data[i].descricao;
+
+      textareaDiv.appendChild(textarea);
+      cardBody.appendChild(cardTitle);
+      cardBody.appendChild(placaCarro);
+      cardBody.appendChild(textareaDiv);
+      cardHiddenDiv.appendChild(cardBody);
+      colDiv.appendChild(cardHiddenDiv);
+
+
+      var container = document.getElementById('cardContainer');
+      container.appendChild(colDiv);
+    }
+  })
+  .catch(error => {
+    console.log('Ocorreu um erro:', error);
+  });
+
+
+
+
+
+
+
 
