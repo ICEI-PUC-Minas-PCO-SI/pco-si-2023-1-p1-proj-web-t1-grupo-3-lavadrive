@@ -6,12 +6,12 @@ $(document).ready(function () {
     var cardsToShow = 0;
 
     $("#ver-mais").click(function () {
-        cardsToShow += 3;
+        cardsToShow += 10000;
 
         $(".card-hidden").slice(0, cardsToShow).show(); /* Mostra os primeiros cards */
 
         if (cardsToShow >= cardCount) {
-            $(this).hide(); /* Esconde o botão "Ver mais" quando não tiver mais cards para mostrar */
+            $(this).hide(); /* Esconde o botão "Ver mais" quando não tiver mais cards para mostrar*/ 
         }
 
         var $toggleButtons = $(".toggle-buttons");
