@@ -42,7 +42,7 @@ function diasDS() {
     const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Outubro', 'Novembro', 'Setembro', 'Dezembro'];
 
     //Define no calendario o mes
-    document.getElementById('mes').textContent = meses[new Date(diaInicial).getMonth() + 1];
+    document.getElementById('mes').textContent = meses[new Date(diaInicial).getMonth()];
 
     // Criar um loop para definir os dias da semana
     for (let i = 0; i < 7; i++) {
