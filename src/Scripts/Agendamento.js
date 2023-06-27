@@ -44,6 +44,14 @@ function diasDS() {
     //Define no calendario o mes
     document.getElementById('mes').textContent = meses[new Date(diaInicial).getMonth()];
 
+    const diasNomes = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado']
+
+    let dias = "";
+    let calend = document.getElementById("dias");
+
+
+    let compareDias = true;
+
     // Criar um loop para definir os dias da semana
     for (let i = 0; i < 7; i++) {
         // Calcular a data para cada dia da semana
@@ -54,18 +62,60 @@ function diasDS() {
         // Obter o nome do dia da semana e a data formatada
         let formattedDate = `${date.getDate()}`;
 
-        let dayText = document.getElementById(`dayT${i}`);
-        dayText.innerHTML = `${formattedDate}`;
-    }
+        //Compara se o dia de hoje e igual ao dia sendo comparado
+        if (dataAtual.getDate() == date.getDate()) {
+            compareDias = false;
+        }
 
+        //Compara se o dia de hoje e maior que os outros da semana
+        if (dataAtual.getDate() > date.getDate() && compareDias == true) {
+            dias += `
+            <input type="radio" class="btn-check" name="dia" id="dia1${i + 1}" autocomplete="off" onclick="definirdia(${i})" disabled>
+            <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia1${i + 1}" style="width: 6rem;">
+              <p id="dayNameT${i}">${diasNomes[date.getDay()]}</p>
+              <p id="dayT${i}">${formattedDate}</p>
+            </label>`
+        }
+        else {
+            dias += `
+            <input type="radio" class="btn-check" name="dia" id="dia1${i + 1}" autocomplete="off" onclick="definirdia(${i})">
+            <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia1${i + 1}" style="width: 6rem;">
+              <p id="dayNameT${i}">${diasNomes[date.getDay()]}</p>
+              <p id="dayT${i}">${formattedDate}</p>
+            </label>`
+        }
+    }
+    calend.innerHTML = dias;
+    horasDS();
 }
 
+function horasDS() {
+
+    let horarios = document.getElementById("horas");
+    let horariosNumber = ["8", "9", "10", "11", "13", "14", "15", "16", "17"];
+    let horariosText = ["8:00h", "9:00h", "10:00h", "11:00h", "13:00h", "14:00h", "15:00h", "16:00h", "17:00h"];
+    str = "";
+
+    for (let i = 0; i < 9; i++) {
+
+
+        str += `<input type="radio" class="btn-check" name="time" id="time${i + 1}" autocomplete="off">
+        <label class="btn btn-light border my-1" onclick="tempos(${i + 1});definirhora(${horariosNumber[i]})" id="timea${i + 1} " for="time${i + 1}"
+        style="width: 10rem;">${horariosNumber[i]}:00h</label>`;
+    }
+
+    str += `<h5>Horário que o automóvel estará disponível:</h5>
+    <p onclick="tempos()" id="tempo" class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded"
+      style="width: 6rem;">00:00h</p>`;
+
+    horarios.innerHTML = str;
+}
 
 //Definir dados do agendamento
 
-let dia;
+let dia = " ";
 let tipoDeLimpeza = "Limpeza Normal";
-let hora;
+let hora = " ";
 
 //Define o dia do agendamento
 function definirdia(entrada) {
@@ -87,22 +137,28 @@ function finalizar() {
     categoriaDoAgendamento = document.getElementById("inputcategoria").value;
     responsavelDoAgendamento = document.getElementById("inputNomeReal").value;
 
-    let novoAgendamento = {
-        "tipoDeLimpeza": tipoDeLimpeza,
-        "data": dataDoAgendamento,
-        "hora": hora,
-        "placa": placaDoAgendamento,
-        "categoria": categoriaDoAgendamento,
-        "responsavel": responsavelDoAgendamento,
+    if (dia != " " && hora != " ") {
+        let novoAgendamento = {
+            "tipoDeLimpeza": tipoDeLimpeza,
+            "data": dataDoAgendamento,
+            "hora": hora,
+            "placa": placaDoAgendamento,
+            "categoria": categoriaDoAgendamento,
+            "responsavel": responsavelDoAgendamento,
+        }
+
+        fetch("https://api-avaliacao.vercel.app/agendamentos", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(novoAgendamento),
+        }).then(window.location.href = "Avaliacao.html")
     }
-
-    fetch("https://api-avaliacao.vercel.app/agendamentos", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(novoAgendamento),
-    }).then(response => response.json())
-        .then(data => console.log(data))
+    else {
+        const toastLiveExample = document.getElementById('liveToast')
+        document.getElementById('toastMensage').textContent = "Para agendar um horário preencha todos os campos"
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastBootstrap.show()
+    }
 }
-
