@@ -13,7 +13,7 @@ $(document).ready(function () {
     var $toggleButtons = $(".toggle-buttons");
     $toggleButtons.empty();
 
-    if (cardsToShow >= 3) {
+    if (cardsToShow >= 2) {
       var $verMenosButton = $("<button>").text("Ver menos").attr("id", "ver-menos");
       $toggleButtons.append($verMenosButton);
     }
