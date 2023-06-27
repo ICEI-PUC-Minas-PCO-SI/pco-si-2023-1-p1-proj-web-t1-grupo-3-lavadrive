@@ -42,7 +42,7 @@ function diasDS() {
     const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Outubro', 'Novembro', 'Setembro', 'Dezembro'];
 
     //Define no calendario o mes
-    document.getElementById('mes').textContent = meses[new Date(diaInicial).getMonth() + 1];
+    document.getElementById('mes').textContent = meses[new Date(diaInicial).getMonth()];
 
     // Criar um loop para definir os dias da semana
     for (let i = 0; i < 7; i++) {
@@ -64,7 +64,7 @@ function diasDS() {
 //Definir dados do agendamento
 
 let dia;
-let tipoDeLimpeza;
+let tipoDeLimpeza = "Limpeza Normal";
 let hora;
 
 //Define o dia do agendamento
@@ -73,7 +73,7 @@ function definirdia(entrada) {
 }
 
 //Define a hora do agendamento
-function definirhora(entrada){
+function definirhora(entrada) {
     hora = entrada + ":00h";
 }
 
@@ -81,21 +81,28 @@ function definirhora(entrada){
 function finalizar() {
     let dataAtual = new Date();
 
-    dataDoAgendamento = dia+"/"+(dataAtual.getMonth()+1)+"/"+dataAtual.getFullYear();
-    
-    placaDoAgendamento = document.getElementById("inputplaca").value;
-    categoriaDoAgendamento = document.getElementById("inputcategoria").value;
-    responsavelDoAgendamento = document.getElementById("InputNomeReal").value;
+    dataDoAgendamento = dia + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
 
-    let novoAgendamento= [
-        tipoDeLimpeza = tipoDeLimpeza,
-        data = dataDoAgendamento,
-        hora = hora,
-        placa = placaDoAgendamento,
-        categoria = categoriaDoAgendamento,
-        responsavel = responsavelDoAgendamento,
-    ]
-    //Remover apos os testes
-    console.log(novoAgendamento)
+    placaDoAgendamento = document.getElementById("inputPlaca").value;
+    categoriaDoAgendamento = document.getElementById("inputcategoria").value;
+    responsavelDoAgendamento = document.getElementById("inputNomeReal").value;
+
+    let novoAgendamento = {
+        "tipoDeLimpeza": tipoDeLimpeza,
+        "data": dataDoAgendamento,
+        "hora": hora,
+        "placa": placaDoAgendamento,
+        "categoria": categoriaDoAgendamento,
+        "responsavel": responsavelDoAgendamento,
+    }
+
+    fetch("https://api-avaliacao.vercel.app/agendamentos", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoAgendamento),
+    }).then(response => response.json())
+        .then(data => console.log(data))
 }
 

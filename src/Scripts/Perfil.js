@@ -102,8 +102,8 @@ function opcoes(op) {
           </div>
         `;
 
-        
-      
+
+
 
         function filtrarAgendamentos(event) {
             if (event.key === 'Enter') {
@@ -199,47 +199,62 @@ function mascaraData(num) {
 
 }
 
-function mostrarmais(){
-    var tela = document.getElementById("tela");
-    let usuarios = lerCadastrosSalvos();
-    tela.innerHTML = textCarro();
-    dadosCarro();
+let carroAgendando = 0;
+function mostrarmais() {
+    textCarro()
+}
 
+function dadosCarroAgend() {
+    let usuarios = lerCadastrosSalvos()
+
+    document.getElementById("inputPlaca").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAgendando].placa;
+    document.getElementById("inputNomeReal").value = usuarios.cadastros[usuarios.usuarioAtual].nome;
+    document.getElementById("inputcategoria").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAgendando].categoria;
 }
 
 function textCarro() {
     let usuarios = lerCadastrosSalvos();
+    var tela = document.getElementById("tela");
 
     let text = `   
     <div class="d-flex justify-content-center text-center my-3">
-        <button class="btn btn-light border mt-4 ms-0" style="width: 2rem;" onclick="verOutroCarro(-1)"><</button>
-        <button class="btn btn-light border mt-4 ms-3" style="width: 3rem;">${carroAMostra + 1}/${usuarios.cadastros[usuarios.usuarioAtual].carro.length}</button>
-        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="verOutroCarro(+1)">></button>
+        <button class="btn btn-light border mt-4 ms-0" style="width: 2rem;" onclick="agendarOutroCarro(-1)"><</button>
+        <button class="btn btn-light border mt-4 ms-3" style="width: 3rem;">${carroAgendando + 1}/${usuarios.cadastros[usuarios.usuarioAtual].carro.length}</button>
+        <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;" onclick="agendarOutroCarro(+1)">></button>
     </div>
     
     <div class="d-flex justify-content-center my-3">
-        <input id="inputPlacaCarro" class="form-control text-center border-secondary" type="search" placeholder="Placa do Veiculo"
-            aria-label="Search" style="width: 20rem;">
-    </div>
-
-    <div class="d-flex justify-content-center my-3">
-        <input id="inputDonoCarro" class="form-control text-center border-secondary" type="search" placeholder="Responsavel pelo Veiculo"
+        <input id="inputPlaca" class="form-control text-center border-secondary" type="search" placeholder="Placa do Veiculo"
             aria-label="Search" style="width: 20rem;" disabled>
     </div>
 
     <div class="d-flex justify-content-center my-3">
-        <input id="inputModeloCarro" class="form-control text-center border-secondary" type="search" placeholder="Modelo do Veiculo"
-            aria-label="Search" style="width: 20rem;">
-    </div>`
-        + categoriaCadastrada() +
-        `<div class="d-flex justify-content-center my-3">
-        <input id="inputCorCarro" class="form-control text-center border-secondary" type="search" placeholder="Cor do Veiculo"
-            aria-label="Search" style="width: 20rem;">
+        <input id="inputcategoria" class="form-control text-center border-secondary" type="search" placeholder="Modelo do Veiculo"
+            aria-label="Search" style="width: 20rem;" disabled>
     </div>
 
-   
-    `;
-    return text;
+    <div class="d-flex justify-content-center my-3">
+        <input id="inputNomeReal" class="form-control text-center border-secondary" type="search" placeholder="Responsavel pelo Veiculo"
+            aria-label="Search" style="width: 20rem;" disabled>
+    </div>`
+
+    tela.innerHTML = text;
+    dadosCarroAgend();
+}
+
+function agendarOutroCarro(entrada) {
+    let usuarios = lerCadastrosSalvos()
+    if ((carroAgendando + entrada) > usuarios.cadastros[usuarios.usuarioAtual].carro.length - 1) {
+        carroAgendando = 0;
+    }
+    else if ((carroAgendando + entrada) < 0) {
+        carroAgendando = usuarios.cadastros[usuarios.usuarioAtual].carro.length - 1;
+    }
+    else {
+        carroAgendando = carroAgendando + entrada;
+    }
+    textCarro();
+    dadosCarroAgend();
 }
 
 
