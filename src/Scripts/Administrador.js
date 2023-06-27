@@ -2,11 +2,11 @@ $(document).ready(function () {
   $("#botao").click(function () {
     $(".card-hidden").toggle();
   });
-  
+
   var cardsToShow = 0;
 
   $("#ver-mais").click(function () {
-    cardsToShow += 3;
+    cardsToShow += 2;
 
     $(".card-hidden").slice(0, cardsToShow).show(); /* Mostra os primeiros cards */
 
@@ -29,7 +29,6 @@ $(document).ready(function () {
     var $toggleButtons = $(".toggle-buttons");
     $toggleButtons.empty();
   });
-});
 
 function Mostrar() {
   fetch("https://api-avaliacao.vercel.app/agendamentos")
@@ -83,47 +82,21 @@ function Mostrar() {
 fetch('https://api-avaliacao.vercel.app/avaliacao')
   .then(response => response.json())
   .then(data => {
-
+    let str = '';
     for (let i = 0; i < data.length; i++) {
+      str += `
+        <div class="card-hidden mb-3" style="width: 45%">
+          <div class="card-body style="width: 33%; max-width: 20rem; height: 10rem; ">
+            <p class="card-text">Cliente: ${data[i].nome}</p>
+            <p class="card-text">Placa do carro: ${data[i].placa}</p>
+            <p class="text-area" style="max-height: 6rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Feedback: ${data[i].descricao}</p>
+          </div>
+        </div>`;
 
-      var colDiv = document.createElement('div');
-      colDiv.className = 'col-md-4';
-
-      var cardHiddenDiv = document.createElement('div');
-      cardHiddenDiv.className = 'card-hidden';
-
-      var cardBody = document.createElement('div');
-      cardBody.className = 'card-body';
-
-      var cardTitle = document.createElement('h5');
-      cardTitle.className = 'card-title';
-      cardTitle.textContent = data[i].nome;
-
-      var placaCarro = document.createElement('p');
-      placaCarro.className = 'card-text';
-      placaCarro.textContent = 'Placa do Carro: ' + data[i].placa;
-
-      var textareaDiv = document.createElement('div');
-      textareaDiv.className = 'mt-4';
-
-
-      var textarea = document.createElement('textarea');
-      textarea.className = 'form-control';
-      textarea.rows = 3;
-      textarea.textContent = data[i].descricao;
-
-      textareaDiv.appendChild(textarea);
-      cardBody.appendChild(cardTitle);
-      cardBody.appendChild(placaCarro);
-      cardBody.appendChild(textareaDiv);
-      cardHiddenDiv.appendChild(cardBody);
-      colDiv.appendChild(cardHiddenDiv);
-
-
-      var container = document.getElementById('cardContainer');
-      container.appendChild(colDiv);
+      cardContainer.innerHTML = str;
     }
   })
   .catch(error => {
     console.log('Ocorreu um erro:', error);
   });
+})
