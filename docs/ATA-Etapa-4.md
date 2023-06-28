@@ -3,6 +3,7 @@
 ## Gabriel Viegas Andrade
 
 ## Gustavo Augusto Santos Perdigão
+Nessa etapa, fui responsável pela funcionalidade de sair e excluir a conta e auxiliei na codificação nas funcionalidades de integração da API, na página de avaliação. Também hospedei nossa página na AWS Server, atualizei os projetos de interface, editei a página inicial (otimizei o carrosel e adicionei botões facilitadores), auxiliei em escolhas visuais do site (a cor dos botões por exemplo), e, por fim, antes da entrega dessa etapa, passei navegando pelas páginas para procurar possíveis falhas.
 
 ## Pedro Antônio Silva Neto
 
