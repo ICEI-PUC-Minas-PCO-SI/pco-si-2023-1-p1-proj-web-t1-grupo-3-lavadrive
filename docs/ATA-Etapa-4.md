@@ -1,4 +1,5 @@
 ## Daniel Vitor Salviano Araújo
+Nessa etapa, eu fiz o código que mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado, o qual fiz com base em funções JavaScript dentro dos scripts no Visual Studio Code, fiz a aplicação que mostra os agendamentos feitos por categoria do automóvel dentro da tela de administrador, pelo Visual Studio Code, utilizando funções e pegando as informações por ID para mostrá-las como Agendamentos Pendentes na tela, como horário, nome, placa e categoria do automóvel, deixei a parte de agendamentos pendentes no html de maneira responsiva e ajudei os membros do grupo em determinadas partes que ficaram em dúvida e partes que se relacionavam as minhas funcionalidades.
 
 ## Gabriel Viegas Andrade
 
