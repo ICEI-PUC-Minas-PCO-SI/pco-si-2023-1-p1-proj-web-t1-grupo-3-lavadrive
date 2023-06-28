@@ -152,15 +152,25 @@ botaoFinalizar.addEventListener("click", async () => {
             "responsavel": responsavelDoAgendamento,
         }
 
-        await fetch("https://api-avaliacao.vercel.app/agendamentos", {
+        
+        
+        fetch("https://api-avaliacao.vercel.app/agendamentos", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(novoAgendamento),
         }).then(response => response.json())
+        
+        
 
+           
+
+     
+        
     }
+
+
     else {
         const toastLiveExample = document.getElementById('liveToast')
         document.getElementById('toastMensage').textContent = "Para agendar um horário preencha todos os campos"
