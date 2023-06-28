@@ -460,7 +460,7 @@ function loginADM(){
 
     if(usuario.usuarioAtual != "nl" && usuario.usuarioAtual != "nc"){
         if(usuario.cadastros[usuario.usuarioAtual].id == 0){
-            botao.innerText = "Agendamentos";
+            botao.innerText = "Agenda";
             Adm  = true;
         }
         else{
