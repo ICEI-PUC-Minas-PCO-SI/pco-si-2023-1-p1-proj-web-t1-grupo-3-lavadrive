@@ -30,53 +30,33 @@ $(document).ready(function () {
     $toggleButtons.empty();
   });
 
-  function Mostrar(){
+  
+
+  let str='';
     fetch("https://api-avaliacao.vercel.app/agendamentos")
-                .then(res=>res.json())
-                .then(data=>{
-                 
-                  let usuarios = lerCadastrosSalvos();
-    
-                  let tela = document.getElementById('tela');
-                  let str = '';
-                
-                  let categorias = ["Hatch", "Sedan", "SUV", "Picape/Caminhonete", "Motocicleta", "Outro"];
-                
-                  str += `<div class="container">`;
-                  str += `<div class="row">`;
-                 
-                  for (let k = 0; k < categorias.length; k++) {
-                    str += `<div class="col-lg-2 col-md-4 col-sm-6 col-12">`;
-                    
-                    for (let j = 0; j < usuarios.cadastros.length; j++) {
-                      for (let i = 0; i < usuarios.cadastros[j].carro.length; i++) {
-                        if (categorias[k] == usuarios.cadastros[j].carro[i].categoria) {
-                          str +=
-                            `
-                            <div class="card mb-3" style="max-width: 16rem;">
-                              <div class="card-body">
-                              <p class="card-text">Modelo: ${usuarios.cadastros[j].carro[i].categoria}</p>
-                                <p class="card-text">Modelo: ${usuarios.cadastros[j].carro[i].modelo}</p>
-                                <p class="card-text">Placa: ${usuarios.cadastros[j].carro[i].placa}</p>
-                                <p class="card-text">Cor: ${usuarios.cadastros[j].carro[i].cor}</p>
-                                <p class="card-text">Dia marcado: </p>
-                                <p class="card-text">Hora marcada: </p>
-                                <button class="btn btn-primary">Editar</button>
-                              </div>
-                            </div>`;
-                        }
-                      }
-                    }
-                    str += `</div>`;
-                  }
-                
-                  str += `</div>`;
-                  str += `</div>`;
-                
-                  tela.innerHTML = str;
-              }
-              )
-    }
+    .then(response=>response.json())
+    .then(data=>{
+      
+      for (let i=0;i<data.length;i++){
+        str+=`
+        <div class="card mb-3" style="width: 45%">
+          <div class="card-body style="width: 33%; max-width: 20rem; height: 10rem; ">
+            <p class="card-text">Categoria: ${data[i].categoria}</p>
+         
+            <p class="card-text">Placa: ${data[i].placa}</p>
+           
+            <p class="card-text">Tipo de limpeza: ${data[i].tipoDeLimpeza}</p>
+            <p class="card-text">Data: ${data[i].data} Hora: ${data[i].hora}</p>
+            <p class="card-text">Responsável: ${data[i].responsavel} </p>
+            
+          </div>
+        </div>
+
+        `;
+        tela.innerHTML=str;
+      }
+    })
+
 fetch('https://api-avaliacao.vercel.app/avaliacao')
   .then(response => response.json())
   .then(data => {
