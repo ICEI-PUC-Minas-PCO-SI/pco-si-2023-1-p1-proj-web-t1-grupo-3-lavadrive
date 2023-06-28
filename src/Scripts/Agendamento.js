@@ -60,7 +60,10 @@ function diasDS() {
         date.setDate(diaInicial.getDate() + i);
 
         // Obter o nome do dia da semana e a data formatada
-        let formattedDate = `${date.getDate()}`;
+
+        let dateForm = date.toLocaleString().substr(0, 10)
+
+        let formattedDate = `${dateForm}`;
 
         //Compara se o dia de hoje e igual ao dia sendo comparado
         if (dataAtual.getDate() == date.getDate()) {
@@ -71,17 +74,17 @@ function diasDS() {
         if (dataAtual.getDate() > date.getDate() && compareDias == true) {
             dias += `
             <input type="radio" class="btn-check" name="dia" id="dia1${i + 1}" autocomplete="off" onclick="definirdia(${i})" disabled>
-            <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia1${i + 1}" style="width: 6rem;">
+            <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded text-center" for="dia1${i + 1}" style="width: 6rem;">
               <p id="dayNameT${i}">${diasNomes[date.getDay()]}</p>
-              <p id="dayT${i}">${formattedDate}</p>
+              <p id="dayT${i}" style="font-size: 0.9rem;">${formattedDate}</p>
             </label>`
         }
         else {
             dias += `
             <input type="radio" class="btn-check" name="dia" id="dia1${i + 1}" autocomplete="off" onclick="definirdia(${i})">
-            <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded" for="dia1${i + 1}" style="width: 6rem;">
+            <label class="btn btn-light border my-1 col-2 col-lg-1 m-1 border rounded text-center" for="dia1${i + 1}" style="width: 6rem;">
               <p id="dayNameT${i}">${diasNomes[date.getDay()]}</p>
-              <p id="dayT${i}">${formattedDate}</p>
+              <p id="dayT${i}"  style="font-size: 0.9rem;">${formattedDate}</p>
             </label>`
         }
     }
@@ -127,33 +130,36 @@ function definirhora(entrada) {
     hora = entrada + ":00h";
 }
 
-//Salva o agendamento e envia para a tela inicial
-function finalizar() {
-    let dataAtual = new Date();
 
-    dataDoAgendamento = dia + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
+//Salva o agendamento e envia para a tela inicial
+const botaoFinalizar = document.getElementById("finalizar");
+
+botaoFinalizar.addEventListener("click", async () => {
+    let dataAtual = new Date();
 
     placaDoAgendamento = document.getElementById("inputPlaca").value;
     categoriaDoAgendamento = document.getElementById("inputcategoria").value;
     responsavelDoAgendamento = document.getElementById("inputNomeReal").value;
 
     if (dia != " " && hora != " ") {
+
         let novoAgendamento = {
             "tipoDeLimpeza": tipoDeLimpeza,
-            "data": dataDoAgendamento,
+            "data": dia,
             "hora": hora,
             "placa": placaDoAgendamento,
             "categoria": categoriaDoAgendamento,
             "responsavel": responsavelDoAgendamento,
         }
 
-        fetch("https://api-avaliacao.vercel.app/agendamentos", {
+        await fetch("https://api-avaliacao.vercel.app/agendamentos", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(novoAgendamento),
-        })
+        }).then(response => response.json())
+
     }
     else {
         const toastLiveExample = document.getElementById('liveToast')
@@ -161,6 +167,4 @@ function finalizar() {
         const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
         toastBootstrap.show()
     }
-}
-
-
+});
