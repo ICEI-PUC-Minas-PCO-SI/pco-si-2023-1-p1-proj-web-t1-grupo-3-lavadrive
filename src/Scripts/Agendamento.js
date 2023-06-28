@@ -153,7 +153,7 @@ function finalizar() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(novoAgendamento),
-        }).then(window.location.href = "Avaliacao.html")
+        })
     }
     else {
         const toastLiveExample = document.getElementById('liveToast')
