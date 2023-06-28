@@ -449,3 +449,37 @@ function irParaTela() {
     }
 
 }
+
+
+var Adm = false;
+loginADM();
+function loginADM(){
+    let usuario = lerCadastrosSalvos();
+
+    botao = document.getElementById("agend/adm");
+
+    if(usuario.usuarioAtual != "nl" && usuario.usuarioAtual != "nc"){
+        if(usuario.cadastros[usuario.usuarioAtual].id == 0){
+            botao.innerText = "Agendamentos";
+            Adm  = true;
+        }
+        else{
+            botao.innerText = "Agendar";
+            Adm  = false;
+        }
+    }
+    else{
+        botao.innerText = "Agendar";
+        Adm  = false;
+    }
+    
+}
+
+function irAgendOuAdm(){
+    if (Adm == true) {
+        window.location.href = 'Administrador.html';
+    }
+    else {
+        window.location.href = 'Agendamentos.html';
+    }
+}
