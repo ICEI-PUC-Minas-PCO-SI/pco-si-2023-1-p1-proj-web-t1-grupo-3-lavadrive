@@ -480,6 +480,6 @@ function irAgendOuAdm(){
         window.location.href = 'Administrador.html';
     }
     else {
-        window.location.href = 'Agendamentos.html';
+        window.location.href = 'Agendamento.html';
     }
 }
