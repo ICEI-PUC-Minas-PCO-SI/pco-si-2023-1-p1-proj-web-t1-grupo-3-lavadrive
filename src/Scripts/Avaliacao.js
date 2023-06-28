@@ -3,7 +3,7 @@ const botaoFinalizar = document.getElementById("submit");
 const usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
 let usuario;
 
-
+//for de conferência do usuário
 for (let user of usuarios.cadastros) {
   if (+user.id === +usuarios.usuarioAtual) {
     usuario = user;
@@ -11,6 +11,7 @@ for (let user of usuarios.cadastros) {
 }
 const ratingStars = document.getElementsByClassName("rate")[0];
 
+//função para tratar as variáveis e realizar o fetch POST ao clicar no botão
 ratingStars.addEventListener('change', function(event) {
   const rating = event.target.value;
 

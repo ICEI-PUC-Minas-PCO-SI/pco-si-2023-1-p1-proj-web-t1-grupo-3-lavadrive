@@ -186,17 +186,17 @@ function inserirDadosBase(usuarios) {
                 id: 0,
                 imagem: "nc",
                 usuario: "Administrador",
-                nome: "LavaDriveADM",
+                nome: "LavaDrive",
                 email: "lavadrive@gmail.com",
                 senha: "ADM27742",
                 telefone: "(31) 3392-1187",
                 termos: "true",
                 manterConectado: "true",
                 carro: [{
-                    categoria: "nc",
-                    modelo: "nc",
-                    placa: "nc",
-                    cor: "nc",
+                    categoria: "SUV",
+                    modelo: "ModeloTeste",
+                    placa: "ADMT08",
+                    cor: "Azul",
                 }]
 
             }
@@ -448,4 +448,38 @@ function irParaTela() {
         window.location.href = 'Login.html';
     }
 
+}
+
+
+var Adm = false;
+loginADM();
+function loginADM(){
+    let usuario = lerCadastrosSalvos();
+
+    botao = document.getElementById("agend/adm");
+
+    if(usuario.usuarioAtual != "nl" && usuario.usuarioAtual != "nc"){
+        if(usuario.cadastros[usuario.usuarioAtual].id == 0){
+            botao.innerText = "Agenda";
+            Adm  = true;
+        }
+        else{
+            botao.innerText = "Agendar";
+            Adm  = false;
+        }
+    }
+    else{
+        botao.innerText = "Agendar";
+        Adm  = false;
+    }
+    
+}
+
+function irAgendOuAdm(){
+    if (Adm == true) {
+        window.location.href = 'Administrador.html';
+    }
+    else {
+        window.location.href = 'Agendamentos.html';
+    }
 }
