@@ -25,6 +25,21 @@
       border-radius: 5px;
     }
 
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+      z-index: 9999;
+    }
+
     @media (max-width: 576px) {
       .main-content {
         padding: 1.5rem;
@@ -90,10 +105,15 @@
               <label for="confirm-password">Confirme a nova senha:</label>
               <input type="password" class="form-control" id="confirm-password" placeholder="Confirme sua nova senha">
             </div>
-            <button type="submit" class="btn btn-primary">Trocar Senha</button>
+            <button type="submit" class="btn btn-primary" onclick="exibirPopup()">Trocar Senha</button>
           </form>
         </div>
       </div>
+    </div>
+    <div id="meuPopup" class="popup">
+      <h2>Atenção</h2>
+      <p>Senha alterada com sucesso!</p>
+      <button onclick="fecharPopup()">Fechar</button>
     </div>
   </main>
 
@@ -104,7 +124,7 @@
     <div class="m-0 mt-2 container-fluid bg-blue text-center row">
 
       <!--Metodos de pagamento-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Métodos de pagamento</p>
@@ -118,7 +138,7 @@
       </div>
 
       <!--Contatos-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Métodos de contato</p>
@@ -137,7 +157,7 @@
       </div>
 
       <!--Outros-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Outros links úteis</p>
@@ -164,6 +184,7 @@
     crossorigin="anonymous"></script>
     <!--Script que gerencia as contas e cadastros-->
   <script src="Scripts/Usuarios.js"></script>
+  <script src="Scripts/TrocarSenha.js"></script>
 </body>
 
 </html>

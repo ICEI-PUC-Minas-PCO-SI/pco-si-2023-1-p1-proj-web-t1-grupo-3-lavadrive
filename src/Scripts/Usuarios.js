@@ -281,7 +281,7 @@ function logar() {
 // Excluir conta
 function deletar() {
     var usuario = lerCadastrosSalvos();
-    
+
     for (let i = 1; i < usuario.cadastros.length - 1; i++)
         usuario.cadastros[i] = usuario.cadastros[i + 1];
 
@@ -387,6 +387,19 @@ function imagemAlteracao() {
         });
     });
 }
+
+function mostrar(){
+    let usuarios= lerCadastrosSalvos();
+
+    document.getElementById("inputplaca").value = usuarios.cadastros[usuarios.usuarioAtual].carro[0].placa;
+    
+    document.getElementById("inputcategoria").value= usuarios.cadastros[usuarios.usuarioAtual].carro[0].categoria;
+
+    document.getElementById("InputNomeReal").value = usuarios.cadastros[usuarios.usuarioAtual].nome;
+  
+}
+
+
 
 // Inicialização da pagina de perfil
 function initPerfil() {

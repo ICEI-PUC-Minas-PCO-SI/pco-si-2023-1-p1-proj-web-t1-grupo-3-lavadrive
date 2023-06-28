@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LavaDrive - Pagina Inicial</title>
   <!--Style CSS-->
@@ -14,208 +15,14 @@
 
 
 
-  <!--Style CSS-->
-  <link href="Estilos/template.css" rel="stylesheet" type="text/css" />
-  <!--Bootstrap (CSS)-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <!--FontAwesome-->
-  <script src="https://kit.fontawesome.com/ee6502c5bc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
-  <!--Cabecalho-->
-  <header class="m-0 d-block bg-blue">
-    <nav class="navbar">
-      <div class="container-fluid">
-
-        <!--Logo-->
-        <a href="index.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 75%;"></a>
-
-        <!--Opções-->
-        <div class="btn-group d-flex" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-outline-light"
-            onclick="window.location.href = 'index.html'">Início</button>
-          <button type="button" class="btn btn-outline-light"
-            onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-          <button id="perfil/login" type="button" class="btn btn-outline-light" onclick="irParaTela()">Login</button>
-        </div>
-
-      </div>
-    </nav>
-
-  </header>
-
-  <!--Conteudos-->
-  <main class="m-0 d-block bg-image">
-    <div class="content text-white" style="top: 10px; left: 10px; transform: none;">
-      <h1
-        style="font-size: 36px; font-weight: bold; color: #171718; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">
-        SOLUÇÕES EM LIMPEZA E ESTÉTICA AUTOMOTIVA</h1>
-      <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-      <div class="container-flex">
-        <div class="row">
-          <div class="col-9">
-            <div class="slideshow-container">
-
-              <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="https://www.revendedor.com.br/wp-content/uploads/2020/11/lava-car.jpg" style="width:80%">
-                <div class="text"></div>
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img
-                  src="https://www.area17.com.br/admin/fotos/estabelecimentos/lava-rapido-santa-fe-do-sul-20294_5ede7fba18fab.jpg"
-                  style="width:80%">
-                <div class="text"></div>
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="https://s.zst.com.br/cms-assets/2021/06/como-limpar-banco-de-carro.jpg" style="width:80%">
-                <div class="text"></div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="width: 12rem; height: 35rem; border-color:#2a2a2b; margin-right: 12px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3554/3554364.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text" style="color: #000000; font-size:small;">No Lavadrive, o comprometimento é a essência
-                de nosso negócio. Nossa equipe está empenhada em fornecer serviços de lavagem excepcionais. </p>
-            </div>
-          </div>
-
-          <div class="card" style="width: 12rem; height: 35rem; border-color: #121213; margin-left: 12px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3967/3967132.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text" style="color: #000000; font-size: small; ">Ao agendar pelo site do Lavadrive, você
-                pode economizar tempo valioso, evitando filas e esperas desnecessárias. <a
-                  href="Agendamento.html ">Clique aqui</a> para agendar! </p>
-            </div>
-          </div>
-
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title" style="color: black;">Deseja se tornar um cliente?</h5>
-              <p class="card-text" style="color: #000000;">Clique no botão abaixo para criar seu perfil e ter acesso a
-                todas as promoções e ficar por dentro de tudo que o site disponibiliza para você!</p>
-              <a href="CadastroUsuário.html" class="btn btn-primary">Crie sua conta</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!--Rodape-->
-      <footer class="m-0 p-0 d-block text-white container-fluid">
-
-        <div class="m-0 mt-2 container-fluid bg-blue text-center row">
-
-          <!--Metodos de pagamento-->
-          <div class="col-12 col-lg-4">
-            <ul class="payList">
-              <li>
-                <p>Métodos de pagamento</p>
-              </li>
-              <li><i class="fa-brands fa-cc-visa fs-3"></i></li>
-              <li><i class="fa-brands fa-paypal fs-3"></i></li>
-              <li><i class="fa-brands fa-cc-mastercard fs-3"></i></li>
-              <li><i class="fa-brands fa-pix fs-3"></i></li>
-              <li><i class="fa-brands fa-cc-diners-club fs-3"></i></li>
-            </ul>
-          </div>
-
-          <!--Contatos-->
-          <div class="col-12 col-lg-4">
-            <ul class="payList">
-              <li>
-                <p>Métodos de contato</p>
-              </li>
-              <li><a href="#" class="info"><i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i> Rua C
-                  N°65
-                  Água Branca</a></li>
-              <li><a href="#" class="info"><i class="fa-brands fa-instagram fs-5" style="color: #ffffff;"></i>
-                  @LavaDrive</a></li>
-              <li><a href="#" class="info"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> (31) 3392-1187</a>
-              </li>
-              <li><a href="#" class="info"><i class="fa-regular fa-envelope fs-5" style="color: #ffffff;"></i>
-                  lavadrive@gmail.com</a></li>
-            </ul>
-          </div>
-
-
-          <!--Outros-->
-          <div class="col-12 col-lg-4">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="payList purple-links">
-                  <li>
-                    <p>Outros links úteis</p>
-                  </li>
-                  <li><a href="QuemSomos.html" class="info">Quem somos</a></li>
-                  <li><a href="DúvidasAjuda.html" class="info">Ajuda</a></li>
-                  <li><a href="DúvidasAjuda.html" class="info">Dúvidas frequentes</a></li>
-                  <li><a href="termosdeprivacidade.html" class="info">Termos de privacidade</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="payList">
-                  <li>
-                    <p>&nbsp;</p>
-                  </li>
-                  <!-- Adicione aqui o conteúdo extra -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <aside>
-
-        </aside>
-
-        <!--Copyright-->
-        <div class="m-0 container-fluid bg-darkBlue text-center row">
-          <p>Copyright LavaDrive 2023</p>
-        </div>
-
-      </footer>
-
-      <!--Bootstrap (Java)-->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    </div>
-    </div>
-    <aside>
-
-    </aside>
-
-
-
-
-    </footer>
-
-
-
-
-    </div>
-  </main>
-
-
-
-
-
-  <!--Bootstrap (Java)-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <!--Script que gerencia as contas e cadastros-->
-  <script src="Scripts/Usuarios.js"></script>
   <style>
     html,
     body {
@@ -320,16 +127,16 @@
 
     .fade {
       animation-name: fade;
-      animation-duration: 1.5s;
+      animation-duration: 2.5s;
     }
 
     @keyframes fade {
       from {
-        opacity: .4
+        opacity: 0.9
       }
 
       to {
-        opacity: 1
+        opacity: 0.9
       }
     }
 
@@ -349,12 +156,219 @@
       font-family: "Times New Roman", Times, serif;
 
     }
+
+
+    .carousel {
+      background-color: #f5f5f5;
+    }
+
+    .carousel-indicators li {
+      background-color: #555;
+    }
+
+    .carousel-indicators .active {
+      background-color: #007bff;
+    }
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: #007bff;
+      border: none;
+      width: 50px;
+      height: 50px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      font-size: 24px;
+      color: #fff;
+    }
   </style>
 
-  </style>
 </head>
 
 <body>
+
+  <!--Cabecalho-->
+  <header class="m-0 d-block bg-blue">
+    <nav class="navbar">
+      <div class="container-fluid">
+
+        <!--Logo-->
+        <a href="index.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 75%;"></a>
+
+        <!--Opções-->
+        <div class="btn-group d-flex" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-light"
+            onclick="window.location.href = 'index.html'">Início</button>
+          <button type="button" class="btn btn-outline-light"
+            onclick="window.location.href = 'Agendamento.html'">Agendar</button>
+          <button id="perfil/login" type="button" class="btn btn-outline-light" onclick="irParaTela()">Login</button>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+  <!--Conteudos-->
+  <main class="m-0 d-block bg-image">
+    <div class="content text-white" style="top: 10px; left: 10px; transform: none;">
+      <h1
+        style="font-size: 36px; font-weight: bold; color: #171718; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">
+        SOLUÇÕES EM LIMPEZA E ESTÉTICA AUTOMOTIVA</h1>
+
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 60%;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/imgCarrosel.jpeg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="img/imgCarrosel (2).jpeg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="img/imgCarrosel (3).jpeg" class="d-block w-100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div
+            class="row col-10 col-sm-4 col-md-4 col-lg-2 text-center justify-content-center border rounded mx-2 my-1">
+
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center justify-content-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/3554/3554364.png" class="card-img-top" alt="...">
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12 card-body text-center">
+              <p class="card-text" style="color: #000000; font-size:small;">No Lavadrive, o comprometimento é a essência
+                de nosso negócio. Nossa equipe está empenhada em fornecer serviços de lavagem excepcionais. </p>
+            </div>
+
+          </div>
+
+          <div
+            class="row col-10 col-sm-4 col-md-4 col-lg-2 text-center justify-content-center border rounded mx-2 my-1">
+
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center justify-content-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/3967/3967132.png" class="card-img-top" alt="...">
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12 card-body text-center">
+              <p class="card-text" style="color: #000000; font-size:small;">Com uma equipe altamente
+                <strong>organizada</strong> e um
+                sistema de logística <strong>eficiente</strong>, a Lavadrive garante que seus clientes recebam sejam
+                atentidos no prazo
+                estabelecido, demonstrando assim um serviço <strong>confiável e pontual</strong>. </p>
+            </div>
+
+          </div>
+
+          <div class="col-5 m-2 card text-center">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Deseja se tornar um cliente?</h5>
+              <p class="card-text" style="color: #000000;">Não perca tempo e crie seu cadastro na Lavadrive para aproveitar benefícios exclusivos e facilidade no agendamento dos serviços!</p>
+              <a href="CadastroUsuário.html" class="btn btn-dark">Crie sua conta</a>
+            </div>
+          </div>
+
+          <div class="col-5 m-2 card text-center">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Já utiliza a LavaDrive?</h5>
+              <p class="card-text" style="color: #000000;">Agende agora mesmo e desfrute de um tratamento VIP para o seu
+                veículo. Vamos deixá-lo impecável de dentro para fora! Não perca tempo, reserve seu horário e sinta o
+                prazer de dirigir um carro completamente limpo e renovado.!</p>
+              <a href="Agendamento.html" class="btn btn-dark">Agendar um horário</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--Rodape-->
+      <footer class="m-0 p-0 d-block text-white container-fluid">
+
+        <div class="m-0 mt-2 container-fluid bg-blue text-center row">
+
+          <!--Metodos de pagamento-->
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+            <ul class="payList">
+              <li>
+                <p>Métodos de pagamento</p>
+              </li>
+              <li><i class="fa-brands fa-cc-visa fs-3"></i></li>
+              <li><i class="fa-brands fa-paypal fs-3"></i></li>
+              <li><i class="fa-brands fa-cc-mastercard fs-3"></i></li>
+              <li><i class="fa-brands fa-pix fs-3"></i></li>
+              <li><i class="fa-brands fa-cc-diners-club fs-3"></i></li>
+            </ul>
+          </div>
+
+          <!--Contatos-->
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+            <ul class="payList">
+              <li>
+                <p>Métodos de contato</p>
+              </li>
+              <li><a href="#" class="info"><i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i> Rua C
+                  N°65
+                  Água Branca</a></li>
+              <li><a href="#" class="info"><i class="fa-brands fa-instagram fs-5" style="color: #ffffff;"></i>
+                  @LavaDrive</a></li>
+              <li><a href="#" class="info"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> (31) 3392-1187</a>
+              </li>
+              <li><a href="#" class="info"><i class="fa-regular fa-envelope fs-5" style="color: #ffffff;"></i>
+                  lavadrive@gmail.com</a></li>
+            </ul>
+          </div>
+
+
+          <!--Outros-->
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="payList purple-links">
+                  <li>
+                    <p>Outros links úteis</p>
+                  </li>
+                  <li><a href="QuemSomos.html" class="info">Quem somos</a></li>
+                  <li><a href="DúvidasAjuda.html" class="info">Ajuda</a></li>
+                  <li><a href="DúvidasAjuda.html" class="info">Dúvidas frequentes</a></li>
+                  <li><a href="termosdeprivacidade.html" class="info">Termos de privacidade</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Copyright-->
+        <div class="m-0 container-fluid bg-darkBlue text-center row">
+          <p>Copyright LavaDrive 2023</p>
+        </div>
+
+      </footer>
+
+      <!--Bootstrap (Java)-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    </div>
+
+  </main>
+
+
 
 
 
@@ -377,11 +391,29 @@
       }
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 3000); // mudar imagem a cada 3 segundos
+      setTimeout(showSlides, 2000); // mudar imagem a cada 3 segundos
     }
 
   </script>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!--Script que gerencia as contas e cadastros-->
+  <script src="Scripts/Usuarios.js"></script>
+  <!--Bootstrap (Java)-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
