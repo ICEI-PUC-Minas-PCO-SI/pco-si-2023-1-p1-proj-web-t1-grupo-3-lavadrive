@@ -15,6 +15,22 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/ee6502c5bc.js" crossorigin="anonymous"></script>
+    <style>
+        .rating-stars {
+            display: inline-block;
+        }
+
+        .rating-stars .star {
+            font-size: 20px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .rating-stars .star.checked {
+            color: gold;
+        }
+
+    </style>
 
 </head>
 
@@ -52,7 +68,7 @@
                 </div>
 
                 <!--Estrelas-->
-                <div class="rate justify-content-start">
+                <div class="rate justify-content-start" id="ratingStars">
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label for="star5" title="text">5 stars</label>
                     <input type="radio" id="star4" name="rate" value="4" />

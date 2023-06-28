@@ -9,6 +9,10 @@ for (let user of usuarios.cadastros) {
     usuario = user;
   }
 }
+const ratingStars = document.getElementsByClassName("rate")[0];
+
+ratingStars.addEventListener('change', function(event) {
+  const rating = event.target.value;
 
 botaoFinalizar.addEventListener("click", async() => {
   const descricao = descricaoInput.value;
@@ -16,7 +20,8 @@ botaoFinalizar.addEventListener("click", async() => {
   const avaliacaoJSON = {
     nome: usuario.nome,
     placa: usuario.carro[0].placa,
-    descricao: descricao
+    descricao: descricao,
+    estrelas:rating
   };
 
   await fetch("https://api-avaliacao.vercel.app/avaliacao", {
@@ -27,4 +32,4 @@ botaoFinalizar.addEventListener("click", async() => {
         body: JSON.stringify(avaliacaoJSON),
       }).then(response => response.json())
       .then(data => console.log(data))
-});
+});})
