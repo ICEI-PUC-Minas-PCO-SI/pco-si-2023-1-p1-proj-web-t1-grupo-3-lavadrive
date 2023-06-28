@@ -1,3 +1,4 @@
+//função para validar usuário e alterar a senha do mesmo
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.querySelector('form');
     form.addEventListener('submit', function (event) {

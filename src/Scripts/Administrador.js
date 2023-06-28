@@ -1,3 +1,4 @@
+//função para deixar as avaliações ocultas e mostrá-las de 2 em 2 ao clique
 $(document).ready(function () {
   $("#botao").click(function () {
     $(".card-hidden").toggle();
@@ -30,9 +31,8 @@ $(document).ready(function () {
     $toggleButtons.empty();
   });
 
-  
-
-  let str='';
+//função para mostrar cards de agendamentos
+let str='';
     fetch("https://api-avaliacao.vercel.app/agendamentos")
     .then(response=>response.json())
     .then(data=>{
@@ -54,6 +54,8 @@ $(document).ready(function () {
       }
     })
 
+
+//função para mostrar cards de avaliação
 fetch('https://api-avaliacao.vercel.app/avaliacao')
   .then(response => response.json())
   .then(data => {
