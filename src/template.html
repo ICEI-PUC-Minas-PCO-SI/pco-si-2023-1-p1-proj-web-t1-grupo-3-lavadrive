@@ -23,18 +23,15 @@
       <div class="container-fluid">
 
         <!--Logo-->
-        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 80%;"></a>
+        <a href="index.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 75%;"></a>
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Inicial.html'">Início</button>
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Login.html'">Login</button>
-          <button type="button" class="btn btn-outline-light"
-            onclick="window.location.href = 'Perfil.html'">Perfil</button>
+            onclick="window.location.href = 'index.html'">Início</button>
+            <button id="agend/adm" type="button" class="btn btn-outline-light" onclick="irAgendOuAdm()">Agendar</button>
+          <button id="perfil/login" type="button" class="btn btn-outline-light"
+            onclick="irParaTela()">Login</button>
         </div>
 
       </div>
@@ -53,38 +50,38 @@
     <div class="m-0 mt-2 container-fluid bg-blue text-center row">
 
       <!--Metodos de pagamento-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Métodos de pagamento</p>
           </li>
-          <li><i class="fa-brands fa-cc-visa fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-paypal fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-cc-mastercard fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-pix fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-cc-diners-club fs-3" style="color: #000000;"></i></li>
+          <li><i class="fa-brands fa-cc-visa fs-3" style="color: #ffffff;"></i></li>
+          <li><i class="fa-brands fa-paypal fs-3" style="color: #ffffff;"></i></li>
+          <li><i class="fa-brands fa-cc-mastercard fs-3" style="color: #ffffff;"></i></li>
+          <li><i class="fa-brands fa-pix fs-3" style="color: #ffffff;"></i></li>
+          <li><i class="fa-brands fa-cc-diners-club fs-3" style="color: #ffffff;"></i></li>
         </ul>
       </div>
 
       <!--Contatos-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Métodos de contato</p>
           </li>
-          <li><a href="#" class="info"><i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i> Rua C N°65
+          <li><a href="#" class="info"><i class="fa-solid fa-map-location-dot"></i> Rua C N°65
               Água Branca</a></li>
-          <li><a href="#" class="info"><i class="fa-brands fa-instagram fs-5" style="color: #ffffff;"></i>
+          <li><a href="#" class="info"><i class="fa-brands fa-instagram fs-5"></i>
               @LavaDrive</a></li>
-          <li><a href="#" class="info"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> (31) 3392-1187</a>
+          <li><a href="#" class="info"><i class="fa-solid fa-phone"></i> (31) 3392-1187</a>
           </li>
-          <li><a href="#" class="info"><i class="fa-regular fa-envelope fs-5" style="color: #ffffff;"></i>
+          <li><a href="#" class="info"><i class="fa-regular fa-envelope fs-5"></i>
               lavadrive@gmail.com</a></li>
         </ul>
       </div>
 
       <!--Outros-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Outros links úteis</p>
@@ -109,6 +106,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+    <!--Script que gerencia as contas e cadastros-->
+  <script src="Scripts/Usuarios.js"></script>
 </body>
 
 </html>

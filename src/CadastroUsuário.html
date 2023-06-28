@@ -16,25 +16,22 @@
 
 </head>
 
-<body>
+<body onload="eventPagDeCDUsuario()">
   <!--Cabecalho-->
-  <header class="m-0 d-block bg-blue">
+  <header class="m-0 d-block bg-blue">      
     <nav class="navbar">
       <div class="container-fluid">
 
         <!--Logo-->
-        <a href="Inicial.html"><img src="img/lavaDriveLogo.png" class="rounded"></a>
+        <a href="index.html"><img src="img/lavaDriveLogo.png" class="rounded" style="width: 75%;"></a>
 
         <!--Opções-->
         <div class="btn-group d-flex" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Inicial.html'">Início</button>
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Agendamento.html'">Agendar</button>
-          <button type="button" class="btn btn-outline-light"
-          onclick="window.location.href = 'Login.html'" disabled>Login</button>
-          <button type="button" class="btn btn-outline-light"
-            onclick="window.location.href = 'Perfil.html'">Perfil</button>
+            onclick="window.location.href = 'index.html'">Início</button>
+            <button id="agend/adm" type="button" class="btn btn-outline-light" onclick="irAgendOuAdm()">Agendar</button>
+          <button id="perfil/login" type="button" class="btn btn-outline-light"
+            onclick="irParaTela()">Login</button>
         </div>
 
       </div>
@@ -47,47 +44,62 @@
     <h1 class="text-center">Cadastro do Usuário</h1>
 
     <div class="container-fluid row justify-content-center">
-      <div class="col-lg-6 col-9 border border-black border-2 justify-content-center rounded-4 m-3 p-2">
+      <div class="col-lg-6 col-9 border border-black border-2 justify-content-center rounded-4 m-3 p-2  bg-body-secondary">
 
         <div class="text-center">
-          <img src="/src/img/AvatarPadrão.png" alt="perfil" style="width: 40%;">
-          <p><a href="#"><i class="fa-solid fa-pencil"></i> Editar foto de perfil</a></p>
-          <p></p>
+          <img id="imgPerfil" class="rounded-circle" src="/src/img/AvatarPadrão.png" alt="perfil" style="width: 40%;">
+          <p><i class="fa-solid fa-pencil"></i> Editar foto de perfil</p>
+          <input type="file" id="inputImagem" accept="image/*">
         </div>
 
         <!--Nome-->
         <div class="mb-3 mx-2">
-          <label for="exampleFormControlInput1" class="form-label ms-2">Nome:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome e sobrenome">
+          <label for="InputNomeReal" class="form-label ms-2">Nome:</label>
+          <input type="name" class="form-control" id="InputNomeReal" placeholder="Nome e sobrenome">
         </div>
         <!---Email-->
         <div class="mb-3 mx-2">
-          <label for="exampleFormControlInput1" class="form-label ms-2">Email:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+          <label for="InputEmail" class="form-label ms-2">Email:</label>
+          <input type="email" class="form-control" id="InputEmail" placeholder="nome@exemplo.com">
         </div>
         <!--Senha-->
         <div class="mb-3 mx-2">
-          <label for="exampleFormControlInput1" class="form-label ms-2">Senha:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+          <label for="InputSenha" class="form-label ms-2">Senha:</label>
+          <input type="password" class="form-control" id="InputSenha" placeholder="">
         </div>
         <!--Número-->
         <div class="mb-3 mx-2">
-          <label for="exampleFormControlInput1" class="form-label ms-2">Número:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(DDD) 9 8765-4321">
+          <label for="InputNumero" class="form-label ms-2">Número:</label>
+          <input type="text" class="form-control" id="InputNumero" placeholder="(31) 9 8765-4321" maxlength="16" onkeypress="return mascaraTelefone()">
         </div>
         <!--Usuário-->
         <div class="mb-3 mx-2">
-          <label for="exampleFormControlInput1" class="form-label ms-2">Usuário:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="lava_drive">
+          <label for="InputNomeUsuario" class="form-label ms-2">Usuário:</label>
+          <input type="user" class="form-control" id="InputNomeUsuario" placeholder="lava_drive">
         </div>
 
         <!--Botôes-->
-        <input type="checkbox" class="form-check-input ms-3 me-2 p-2" id="exampleCheck1"> Concordo com os termos de
+        <input type="checkbox" class="form-check-input ms-3 me-2 p-2" id="CheckTermos"> Concordo com os termos de
         privacidade
-        <p></p>
+        <p id="avisoTermos" class="text-red"></p>
         <div class="text-center justify-content-center">
-          <button type="button" class="m-2 btn btn-outline-info text-center">Criar </button>
+          <button type="button" class="m-2 btn btn-outline-info text-center" onclick="salvarCadastro()">Criar</button>
         </div>
+
+        <!--Mensagem toast-->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">LavaDrive</strong>
+              <small>Agora</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              <p id="toastMensage">Mensagem</p>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
 
@@ -99,21 +111,21 @@
     <div class="m-0 mt-2 container-fluid bg-blue text-center row">
 
       <!--Metodos de pagamento-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Métodos de pagamento</p>
           </li>
-          <li><i class="fa-brands fa-cc-visa fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-paypal fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-cc-mastercard fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-pix fs-3" style="color: #000000;"></i></li>
-          <li><i class="fa-brands fa-cc-diners-club fs-3" style="color: #000000;"></i></li>
+          <li><i class="fa-brands fa-cc-visa fs-3"></i></li>
+          <li><i class="fa-brands fa-paypal fs-3"></i></li>
+          <li><i class="fa-brands fa-cc-mastercard fs-3"></i></li>
+          <li><i class="fa-brands fa-pix fs-3"></i></li>
+          <li><i class="fa-brands fa-cc-diners-club fs-3"></i></li>
         </ul>
       </div>
 
       <!--Contatos-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Métodos de contato</p>
@@ -130,7 +142,7 @@
       </div>
 
       <!--Outros-->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4">
         <ul class="payList">
           <li>
             <p>Outros links úteis</p>
@@ -153,8 +165,10 @@
 
   <!--Bootstrap (Java)-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+  crossorigin="anonymous"></script>
+  <!--Script que gerencia as contas e cadastros-->
+  <script src="Scripts/Usuarios.js"></script>
 </body>
 
 </html>
