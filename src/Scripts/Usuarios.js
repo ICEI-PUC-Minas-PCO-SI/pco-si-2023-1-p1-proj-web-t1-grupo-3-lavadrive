@@ -186,17 +186,17 @@ function inserirDadosBase(usuarios) {
                 id: 0,
                 imagem: "nc",
                 usuario: "Administrador",
-                nome: "LavaDriveADM",
+                nome: "LavaDrive",
                 email: "lavadrive@gmail.com",
                 senha: "ADM27742",
                 telefone: "(31) 3392-1187",
                 termos: "true",
                 manterConectado: "true",
                 carro: [{
-                    categoria: "nc",
-                    modelo: "nc",
-                    placa: "nc",
-                    cor: "nc",
+                    categoria: "SUV",
+                    modelo: "ModeloTeste",
+                    placa: "ADMT08",
+                    cor: "Azul",
                 }]
 
             }

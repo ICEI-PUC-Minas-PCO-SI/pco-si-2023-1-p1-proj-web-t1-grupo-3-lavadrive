@@ -212,6 +212,7 @@ function dadosCarroAgend() {
     document.getElementById("inputcategoria").value = usuarios.cadastros[usuarios.usuarioAtual].carro[carroAgendando].categoria;
 }
 
+//teste de validação
 function textCarro() {
     let usuarios = lerCadastrosSalvos();
     var tela = document.getElementById("tela");
