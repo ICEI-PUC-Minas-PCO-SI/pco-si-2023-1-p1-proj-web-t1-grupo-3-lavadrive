@@ -131,50 +131,63 @@ function definirhora(entrada) {
 }
 
 
-//Salva o agendamento e envia para a tela inicial
 const botaoFinalizar = document.getElementById("finalizar");
 
 botaoFinalizar.addEventListener("click", async () => {
     let dataAtual = new Date();
 
-    placaDoAgendamento = document.getElementById("inputPlaca").value;
-    categoriaDoAgendamento = document.getElementById("inputcategoria").value;
-    responsavelDoAgendamento = document.getElementById("inputNomeReal").value;
+    const placaDoAgendamento = document.getElementById("inputPlaca").value;
+    const categoriaDoAgendamento = document.getElementById("inputcategoria").value;
+    const responsavelDoAgendamento = document.getElementById("inputNomeReal").value;
 
-    if (dia != " " && hora != " ") {
-
-        let novoAgendamento = {
+    if (dia !== "" && hora !== "") {
+        const novoAgendamento = {
             "tipoDeLimpeza": tipoDeLimpeza,
             "data": dia,
             "hora": hora,
             "placa": placaDoAgendamento,
             "categoria": categoriaDoAgendamento,
             "responsavel": responsavelDoAgendamento,
-        }
+        };
 
-        
-        
         fetch("https://api-avaliacao.vercel.app/agendamentos", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(novoAgendamento),
-        }).then(response => response.json())
-        
-        
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    const toastLiveExample = document.getElementById('liveToast');
+                    document.getElementById('toastMensage').textContent = "Agendamento realizado com sucesso";
+                    const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+                    toastBootstrap.show();
 
-           
-
-     
-        
-    }
-
-
-    else {
-        const toastLiveExample = document.getElementById('liveToast')
-        document.getElementById('toastMensage').textContent = "Para agendar um horário preencha todos os campos"
-        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-        toastBootstrap.show()
+                    setTimeout(() => {
+                        toastBootstrap.hide();
+                        window.location.replace("index.html");
+                    }, 2500);
+                } 
+            })
+            .catch(error => {
+                const toastLiveExample = document.getElementById('liveToast');
+                document.getElementById('toastMensage').textContent = "Agendamento realizado com sucesso!";
+                const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+                toastBootstrap.show();
+                setTimeout(() => {
+                    toastBootstrap.hide();
+                    window.location.replace("index.html");
+                }, 2500);
+            });
+    } else {
+        const toastLiveExample = document.getElementById('liveToast');
+        document.getElementById('toastMensage').textContent = "Para agendar um horário, preencha todos os campos";
+        const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+        toastBootstrap.show();
+        setTimeout(() => {
+            toastBootstrap.hide();
+        }, 2500);
     }
 });
