@@ -70,7 +70,7 @@
         <!--Número-->
         <div class="mb-3 mx-2">
           <label for="InputNumero" class="form-label ms-2">Número:</label>
-          <input type="text" class="form-control" id="InputNumero" placeholder="(31) 9 8765-4321" maxlength="16" onkeypress="return mascaraTelefone()">
+          <input type="text" class="form-control" id="InputNumero" placeholder="(31) 9 8765-4321" maxlength="16" onkeypress="return validarNumero(event), mascaraTelefone()">
         </div>
         <!--Usuário-->
         <div class="mb-3 mx-2">
