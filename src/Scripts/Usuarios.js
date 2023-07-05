@@ -483,3 +483,23 @@ function irAgendOuAdm(){
         window.location.href = 'Agendamento.html';
     }
 }
+
+function confirmarLogin(){
+    let usuarios = lerCadastrosSalvos();
+
+    alert(`Para acessar essa pagina entre ou crie uma conta`)
+
+    if(usuarios.usuarioAtual == "nl" || usuarios.usuarioAtual == "nc"){
+        window.location.href = "Login.html"
+    }
+}
+
+function confirmarAdm(){
+    let usuarios = lerCadastrosSalvos();
+
+    alert(`Sua conta não tem permição de acessar essa pagina`)
+    
+    if(usuarios.usuarioAtual != 0 ){
+        window.location.href = "index.html"
+    }
+}
