@@ -23,7 +23,7 @@ function Mostrar() {
                     str += `
        
         
-        <div class="card" class="m-2" style="width: 18rem;">
+        <div class="card" style="width: 16rem;">
 
                <div class="card-body">
     
@@ -135,7 +135,7 @@ function opcoes(op) {
                   aria-label="Search" style="width: 20rem;" maxlength="10">
               </div>
           
-              <div id="agendamentosDiv" class="d-flex gap-2 p-2 text-center justify-content-center my-3 rounded border">
+              <div id="agendamentosDiv" class="d-flex flex-wrap gap-2 p-2 text-center justify-content-center my-3 rounded border">
                 
               </div>
             `;
