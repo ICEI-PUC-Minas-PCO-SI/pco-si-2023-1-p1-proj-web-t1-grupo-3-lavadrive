@@ -1,5 +1,5 @@
 ## Daniel Vitor Salviano Araújo
-
+ Nessa etapa, fiquei responsável por fazer todos os agendamentos específicos da pessoa logada aparecem no histórico do perfil, como o dia e a hora que foram marcadas no agendamento realizado e a categoria do veículo através de funções do javascript no VS Code, e pequenas alterações no html para ficar mais dinâmico e o relatório sobre tudo que todos os integrantes do grupo fizeram, me incluíndo, e suas funcionalidades dentro do trabalho.
 
 ## Gabriel Viegas Andrade
 Nesta etapa final, fizemos os ajuestes finos do projeto, e fiquei responsável pela validação dos campos, como por exemplo, email, senha, placa do veículo, número de telefone.
