@@ -501,3 +501,32 @@ function confirmarAdm(){
         window.location.href = "index.html"
     }
 }
+
+//validar email
+function validateEmail() {
+    const emailInput = document.getElementById('InputEmail');
+    const email = emailInput.value;
+
+    //regex para definir o escopo do email a ser validado
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+    if (regex.test(email)) {
+        return salvarCadastro();
+    }
+    return alert('Insira um email válido (exemplo: nome@exemplo.com)');
+}
+
+//validar placa
+function validatePlaca() {
+    const placaInput = document.getElementById('inputplaca');
+    const placa = placaInput.value;
+
+    //regex para definir o escopo da placa a ser validada (padrões convencional e mercosul)
+    const regex = /^[A-z]{3}\d[A-j0-9]\d{2}$/g;
+
+    if (regex.test(placa)) {
+      window.location.href = "index.html"
+      return SalvarCarro();
+    }
+    return alert('Insira uma placa válida (exemplo: ABC1234)');
+}
