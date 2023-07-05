@@ -487,19 +487,17 @@ function irAgendOuAdm(){
 function confirmarLogin(){
     let usuarios = lerCadastrosSalvos();
 
-    alert(`Para acessar essa pagina entre ou crie uma conta`)
-
     if(usuarios.usuarioAtual == "nl" || usuarios.usuarioAtual == "nc"){
+        alert(`Para acessar essa página entre ou crie uma conta`)
         window.location.href = "Login.html"
     }
 }
 
 function confirmarAdm(){
     let usuarios = lerCadastrosSalvos();
-
-    alert(`Sua conta não tem permição de acessar essa pagina`)
     
     if(usuarios.usuarioAtual != 0 ){
+        alert(`Sua conta não tem permissão de acessar essa página`)
         window.location.href = "index.html"
     }
 }
