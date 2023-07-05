@@ -98,11 +98,12 @@
             </div>
             <div class="form-group mb-3">
               <label for="new-password">Nova senha:</label>
-              <input type="password" class="form-control" id="new-password" placeholder="Digite sua nova senha">
+              <input type="password" class="form-control" id="new-password" placeholder="Digite sua nova senha" maxlength="15">
+              <small class="form-text text-muted">Máximo de 15 caracteres</small>
             </div>
             <div class="form-group mb-3">
               <label for="confirm-password">Confirme a nova senha:</label>
-              <input type="password" class="form-control" id="confirm-password" placeholder="Confirme sua nova senha">
+              <input type="password" class="form-control" id="confirm-password" placeholder="Confirme sua nova senha" maxlength="15"> 
             </div>
             <button type="submit" class="btn btn-primary" onclick="exibirPopup()">Trocar Senha</button>
           </form>
