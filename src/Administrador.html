@@ -28,7 +28,8 @@
         .toggle-buttons button {
             margin-right: 10px;
         }
-        #cardContainer{
+
+        #cardContainer {
             max-width: 98%;
             margin-left: 10px;
             justify-content: space-between;
@@ -49,7 +50,8 @@
                 <div class="btn-group d-flex" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-outline-light"
                         onclick="window.location.href = 'index.html'">Início</button>
-                        <button id="agend/adm" type="button" class="btn btn-outline-light" onclick="irAgendOuAdm()">Agendar</button>
+                    <button id="agend/adm" type="button" class="btn btn-outline-light"
+                        onclick="irAgendOuAdm()">Agendar</button>
                     <button id="perfil/login" type="button" class="btn btn-outline-light"
                         onclick="irParaTela()">Login</button>
                 </div>
@@ -61,27 +63,34 @@
 
     <!--Conteudos-->
     <main class="m-0 d-block">
-       
-        <h1>Agendamentos Pendentes</h1>
-      
-   
-      
+
+        <div class="row justify-content-center container-fluid">
+            <div class="col-9">
+                <h1>Agendamentos Pendentes</h1>
+
+
+
                 <div id="tela" class="row">
 
                 </div>
-                
-              
 
-            <h1>Serviços Concluídos</h1>
-            <div id="cardContainer" class="row"></div>
-                
-            <div class="mt-4">
-                <button class="btn btn-primary" id="ver-mais">Ver Avaliações</button>
-            </div>
-            <div class="toggle-buttons">
+
+
+                <h1>Serviços Concluídos</h1>
+                <div id="cardContainer" class="row">
+
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary" id="ver-mais">Ver Avaliações</button>
+                </div>
+                <div class="toggle-buttons">
+
+                </div>
 
             </div>
         </div>
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
