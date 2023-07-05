@@ -2,7 +2,9 @@
 
 
 ## Gabriel Viegas Andrade
-Nesta etapa final, fizemos os ajuestes finos do projeto, e fiquei responsável pela validação dos campos, como por exemplo, email, senha, placa do veículo...também, como todos os outros integrantes, fiz algumas alterações html visando a melhora da responsividade de algumas telas do projeto.
+Nesta etapa final, fizemos os ajuestes finos do projeto, e fiquei responsável pela validação dos campos, como por exemplo, email, senha, placa do veículo, número de telefone.
+Validei tembém os campos de alteração do cadastro na tela de Perfil, como o email, placa do veículo, número de telefone.
+Também, como todos os outros integrantes, fiz algumas alterações html visando a melhora da responsividade de algumas telas do projeto.
 
 ## Gustavo Augusto Santos Perdigão
 
