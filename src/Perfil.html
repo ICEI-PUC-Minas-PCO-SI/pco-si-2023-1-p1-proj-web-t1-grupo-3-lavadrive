@@ -16,7 +16,7 @@
 
 </head>
 
-<body onload="initPerfil()">
+<body onload="confirmarLogin();initPerfil()">
     <!--Cabecalho-->
     <header class="m-0 d-block bg-blue">
         <nav class="navbar">
@@ -89,7 +89,7 @@
 
                 <div class="d-flex justify-content-center my-3">
                     <input id="perfilInputTelefone" class="form-control text-center border-secondary" type="search"
-                        placeholder="Telefone" aria-label="Search" style="width: 20rem;">
+                        placeholder="Telefone" aria-label="Search" style="width: 20rem;" onkeypress="return validarNumero(event), mascaraTelefone()" maxlength="16">
                 </div>
 
                 <div class="d-flex row justify-content-center my-3">
@@ -195,7 +195,6 @@
                         <p>Outros links úteis</p>
                     </li>
                     <li><a href="QuemSomos.html" class="info">Quem somos</a></li>
-                    <li><a href="DúvidasAjuda.html" class="info">Ajuda</a></li>
                     <li><a href="DúvidasAjuda.html" class="info">Dúvidas frequentes</a></li>
                     <li><a href="termosdeprivacidade.html" class="info">Termos de privacidade</a></li>
                 </ul>
