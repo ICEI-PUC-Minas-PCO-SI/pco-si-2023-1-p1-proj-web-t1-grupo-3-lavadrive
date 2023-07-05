@@ -23,7 +23,7 @@ function Mostrar() {
                     str += `
        
         
-        <div class="card" style="width: 18rem;">
+        <div class="card" class="m-2" style="width: 18rem;">
 
                <div class="card-body">
     
@@ -135,7 +135,7 @@ function opcoes(op) {
                   aria-label="Search" style="width: 20rem;" maxlength="10">
               </div>
           
-              <div id="agendamentosDiv" class="justify-content-center my-3 rounded border">
+              <div id="agendamentosDiv" class="d-flex gap-2 p-2 text-center justify-content-center my-3 rounded border">
                 
               </div>
             `;
@@ -177,7 +177,6 @@ function filtrarAgendamentos() {
     const filtroData = document.getElementById('filtroData').value;
     const agendamentosDiv = document.getElementById('agendamentosDiv');
     if (filtroData == "") {
-
         Mostrar();
     } else {
         buscarAgendamentos().then(agendamentos => {
