@@ -47,29 +47,30 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsavel |
 |------|-------------------------|------------|-------------|
-|RF-001| A aplicação mostra o agendamento da limpeza pelo horário e pela data na qual foram feitas. | ALTA | Daniel |
-|RF-002| A aplicação tem a divisão de filas por categoria do automóvel. | ALTA | Gustavo |
-|RF-003| A aplicação tem pagamento via dinheiro, pix ou cartão que é feita para diversos tipos de recebimento. | ALTA | Yago |
-|RF-004| A aplicação mostra várias opções de limpeza do veículo.| MÉDIA | Gustavo |
-|RF-005| A aplicação mostra a avaliação do usuário após o serviço. | MÉDIA | Daniel |
-|RF-006| A aplicação deixa as pessoas fazerem observações antes e depois da lavagem. | MÉDIA | Yago |
-|RF-007| O sistema deixa fazer o gerenciamento de cadastros de usuários. | MÉDIA | Yago |
-|RF-008| O sistema deixa fazer o gerenciamento de cadastros de carros (placa, modelo, etc.) | MÉDIA | Daniel |
-|RF-009| O sistema deixa o pagamento ser adiantado pelo usuário. | MÉDIA | Pedro |
-|RF-010| A aplicação mostra uma notificação quando o carro estiver pronto após a lavagem. | MÉDIA | Gabriel |
-|RF-011| O sistema mostra uma estimativa do tempo de conclusão da limpeza com base no tempo que foi enviado. | MÉDIA | Gabriel |
-|RF-012| O sistema notifica ao término da limpeza. | BAIXA | Pedro |
+|RF-001| A aplicação possibilita o cadastro de usuários. | ALTA | Yago |
+|RF-002| A aplicação possibilita o cadastro de veículos. | ALTA | Yago |
+|RF-003| A aplicação permite o usuário a logar. | ALTA | Yago |
+|RF-004| A aplicação permite a alteração de dados do usuário e do veículo. | MÉDIA | Yago |
+|RF-005| A aplicação possibilita a avaliação do usuário após o atendimento. | MÉDIA | Gabriel |
+|RF-006| A aplicação permite o agendamento de limpezas. | ALTA | Daniel |
+|RF-007| A aplicação exibe a estimativa de tempo para conclusão da limpeza. | BAIXA | Yago |
+|RF-008| A aplicação possibilita a visualização dos agendamentos realizados. | MÉDIA | Pedro |
+|RF-009| A conta de administrador consegue visualizar todas as avaliações. | BAIXO | Gabriel |
+|RF-010|  A conta de administrador consegue visualizar todos os agendamentos. | ALTA | Daniel |
+|RF-011| A aplicação permite a exclusão da conta. | MÉDIA | Gustavo |
+|RF-012| A aplicação possibilita o logout. | MÉDIA | Gustavo |
+|RF-013| A aplicação valida os campos de informações pessoais. | ALTA | Gabriel |
+|RF-014| A aplicação possiblita a seleção dos tipos de limpeza. | MÉDIA | Pedro |
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|-----------|
-|RNF-001| O site deve ter boa responsividade nas diferentes plataformas.| ALTO |
-|RNF-002| O site deve possuir boa usabilidade em suas funções. | ALTO |
-|RNF-003| O site deve estar online 20 horas por dia (das 4:00 as 24:00), 7 dias por semana e 360 dias por ano | BAIXA | 
-|RNF-004| Compatível com todos os sistemas operacionais | BAIXA |
-|RNF-005| O site deve ter confiabilidade para seus clientes poderem colocar suas informações sem problemas. | BAIXA |
-|RNF-006| O site deve ser simples e prático em suas obrigações. | BAIXA |
-|RNF-007| O site deve processar requisições dentro de 5 segundos para coloca-lás em ordem. | BAIXA |
+|RNF-001| O site deve ter boa responsividade nas diferentes plataformas. | ALTO | Todos |
+|RNF-002| O site deve possuir boa usabilidade em suas funções. | ALTO | Todos |
+|RNF-003| O projeto deve estar hospedado na Amazon Web Services | ALTA | Gustavo |
+|RNF-004| Compatível com todos os sistemas operacionais | BAIXA | Todos |
+|RNF-005| O site deve comunicar-se com uma API externa. | ALTA | Gabriel |
+|RNF-006| O site deve processar requisições dentro de 5 segundos para coloca-lás em ordem. | BAIXA |
 
 ## Restrições 
 
@@ -82,5 +83,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |03| A aplicação deve se restringir às tecnologias básicas da Web no Frontend |
 |04| A equipe não pode subcontratar o desenvolvimento do trabalho |
 |05| Não pode usar as informações já demonstradas como exemplos de outras aplicações |
-
-
+|06| O site deve rodar na Amazon Web Services |
+|07| A API deve rodar corretamente no Vercel |
