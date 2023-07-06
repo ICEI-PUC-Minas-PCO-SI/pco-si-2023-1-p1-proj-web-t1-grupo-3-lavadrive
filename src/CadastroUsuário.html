@@ -65,17 +65,20 @@
         <!--Senha-->
         <div class="mb-3 mx-2">
           <label for="InputSenha" class="form-label ms-2">Senha:</label>
-          <input type="password" class="form-control" id="InputSenha" placeholder="">
+          <input type="password" class="form-control" id="InputSenha" placeholder=""
+          maxlength="15">
+          <small class="form-text text-muted">Máximo de 15 caracteres</small>
         </div>
         <!--Número-->
         <div class="mb-3 mx-2">
           <label for="InputNumero" class="form-label ms-2">Número:</label>
-          <input type="text" class="form-control" id="InputNumero" placeholder="(31) 9 8765-4321" maxlength="16" onkeypress="return mascaraTelefone()">
+          <input type="text" class="form-control" id="InputNumero" placeholder="(31) 9 8765-4321" maxlength="16" onkeypress="return validarNumeroCadastro(event)">
         </div>
         <!--Usuário-->
         <div class="mb-3 mx-2">
           <label for="InputNomeUsuario" class="form-label ms-2">Usuário:</label>
-          <input type="user" class="form-control" id="InputNomeUsuario" placeholder="lava_drive">
+          <input type="user" class="form-control" id="InputNomeUsuario" placeholder="lava_drive" maxlength="15">
+          <small class="form-text text-muted">Máximo de 15 caracteres</small>
         </div>
 
         <!--Botôes-->
@@ -83,7 +86,7 @@
         privacidade
         <p id="avisoTermos" class="text-red"></p>
         <div class="text-center justify-content-center">
-          <button type="button" class="m-2 btn btn-outline-dark text-center" onclick="salvarCadastro()">Criar</button>
+          <button type="button" class="m-2 btn btn-outline-dark text-center" onclick="validateEmail()" onChange="salvarCadastro()">Criar</button>
         </div>
 
         <!--Mensagem toast-->
@@ -148,7 +151,6 @@
             <p>Outros links úteis</p>
           </li>
           <li><a href="QuemSomos.html" class="info">Quem somos</a></li>
-          <li><a href="DúvidasAjuda.html" class="info">Ajuda</a></li>
           <li><a href="DúvidasAjuda.html" class="info">Dúvidas frequentes</a></li>
           <li><a href="termosdeprivacidade.html" class="info">Termos de privacidade</a></li>
         </ul>

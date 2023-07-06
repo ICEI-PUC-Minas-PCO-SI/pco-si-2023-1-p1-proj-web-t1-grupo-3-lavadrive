@@ -30,6 +30,7 @@ function mascaraTelefone() {
 
 }
 
+
 // Lê os cadastros salvos localmente
 function lerCadastrosSalvos() {
     var usuarios = localStorage.getItem('usuarios')
@@ -337,12 +338,14 @@ function alteracoes() {
     let botao = document.getElementById("salvar");
 
     if (nome != nomeCad || usuario != usuarioCad || email != emailCad || telefone != telefoneCad || imagem != imagemCad) {
-        botao.disabled = false;
+        const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        if(regex.test(email)){
+            botao.disabled = false;
+        }else {
+            botao.disabled = true;
+        }
     }
-    else {
-        botao.disabled = true;
-    }
-
+    
 }
 
 // Salva as alterações feitas pelo o usuario
@@ -356,11 +359,16 @@ function salvarAlteracoes() {
     let email = document.getElementById("perfilInputEmail").value;
     let telefone = document.getElementById("perfilInputTelefone").value;
 
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        if(regex.test(email)){
+            usuarios.cadastros[usuarios.usuarioAtual].email = email;
+        }else {
+            return alert('Insira um email válido (exemplo: nome@exemplo.com)');
+        }
     usuarios.cadastros[usuarios.usuarioAtual].nome = nome;
     usuarios.cadastros[usuarios.usuarioAtual].usuario = usuario;
-    usuarios.cadastros[usuarios.usuarioAtual].email = email;
+    //usuarios.cadastros[usuarios.usuarioAtual].email = email;
     usuarios.cadastros[usuarios.usuarioAtual].telefone = telefone;
-
     usuarios.cadastros[usuarios.usuarioAtual].imagem = imagem;
 
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
@@ -482,4 +490,119 @@ function irAgendOuAdm(){
     else {
         window.location.href = 'Agendamento.html';
     }
+}
+
+function confirmarLogin(){
+    let usuarios = lerCadastrosSalvos();
+
+    if(usuarios.usuarioAtual == "nl" || usuarios.usuarioAtual == "nc"){
+        alert(`Para acessar essa página entre ou crie uma conta`)
+        window.location.href = "Login.html"
+    }
+}
+
+function confirmarAdm(){
+    let usuarios = lerCadastrosSalvos();
+    
+    if(usuarios.usuarioAtual != 0 ){
+        alert(`Sua conta não tem permissão de acessar essa página`)
+        window.location.href = "index.html"
+    }
+}
+
+//validar email
+function validateEmail() {
+    const emailInput = document.getElementById('InputEmail');
+    const email = emailInput.value;
+   
+    //regex para definir o escopo do email a ser validado
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+   
+    if (regex.test(email)) {
+        return salvarCadastro();
+    }
+    return alert('Insira um email válido (Exemplo: nome@gmail.com)');
+}
+
+//validar placa
+function validatePlaca() {
+    const placaInput = document.getElementById('inputplaca');
+    const placa = placaInput.value;
+
+    //regex para definir o escopo da placa a ser validada (padrões convencional e mercosul)
+    const regex = /^[A-z]{3}\d[A-j0-9]\d{2}$/g;
+
+    if (regex.test(placa)) {
+      window.location.href = "index.html"
+      return SalvarCarro();
+    }
+    return alert('Insira uma placa válida (exemplo: ABC1234)');
+}
+
+function validatePlacaPerfil() {
+    const placaInput = document.getElementById('inputPlacaCarro');
+    const placa = placaInput.value;
+
+    //regex para definir o escopo da placa a ser validada (padrões convencional e mercosul)
+    const regex = /^[A-z]{3}\d[A-j0-9]\d{2}$/g;
+
+    if (regex.test(placa)) {
+      return salvarDadosCarro();
+    }
+    return alert('Insira uma placa válida (exemplo: ABC1234)');
+}
+
+//validar número de contato (aceitar apenas caracteres numéricos)
+function validarNumeroPerfil(event) {
+    elemento = document.getElementById("perfilInputTelefone");
+    var conteudo = elemento.value;
+    var text;
+
+    if (conteudo.length == 2) {
+        text = "(" + conteudo.charAt(0) + conteudo.charAt(1) + ")" + " ";
+        elemento.value = text;
+    }
+    if (conteudo.length == 6) {
+        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " ";
+        elemento.value = text;
+    }
+    if (conteudo.length == 11) {
+        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " " + conteudo.charAt(7) + conteudo.charAt(8) + conteudo.charAt(9) + conteudo.charAt(10) + "-";
+        elemento.value = text;
+    }
+
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      event.preventDefault();
+      return false;
+    }
+    return true;
+    
+}
+
+function validarNumeroCadastro(event) {
+    elemento = document.getElementById("InputNumero");
+    var conteudo = elemento.value;
+    var text;
+
+    if (conteudo.length == 2) {
+        text = "(" + conteudo.charAt(0) + conteudo.charAt(1) + ")" + " ";
+        elemento.value = text;
+    }
+    if (conteudo.length == 6) {
+        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " ";
+        elemento.value = text;
+    }
+    if (conteudo.length == 11) {
+        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " " + conteudo.charAt(7) + conteudo.charAt(8) + conteudo.charAt(9) + conteudo.charAt(10) + "-";
+        elemento.value = text;
+    }
+
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      event.preventDefault();
+      return false;
+    }
+    return true;
+    
 }

@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="diasDS();mostrarmais()">
+<body onload="confirmarLogin();diasDS();mostrarmais()">
   <!--Cabecalho-->
   <header class="m-0 d-block bg-blue">
     <nav class="navbar">
@@ -47,10 +47,10 @@
 
         <div class="d-flex justify-content-center text-center my-3">
           <button class="btn btn-light border mt-4 ms-0" style="width: 2rem;"
-            onclick="agendarOutroCarro(-1)">menos</button>
+            onclick="agendarOutroCarro(-1)"><</button>
           <button class="btn btn-light border mt-4 ms-3" style="width: 3rem;">1/1</button>
           <button class="btn btn-light border mt-4 ms-3" style="width: 2rem;"
-            onclick="agendarOutroCarro(+1)">mais</button>
+            onclick="agendarOutroCarro(+1)">></button>
         </div>
 
         <div class="d-flex justify-content-center my-3">
@@ -232,12 +232,11 @@
       <div class="col-12 col-lg-5 ms-4 ms-lg-0 pt-1 my-2 border text-center rounded">
         <h4>Finalizar Agendamento</h4>
 
-        <button id="finalizar" class="btn btn-outline-black mb-2" style="width: 10rem;" type="button"
+        <button class="casd btn btn-outline-danger mb-2 m-1" style="width: 10rem;" type="button"
+        onclick="window.location.href=`index.html`">Cancelar</button>
+
+        <button id="finalizar" class="btn btn-outline-dark mb-2 m-1" style="width: 10rem;" type="button"
         >Finalizar</button>
-        <button class="casd btn btn-outline-danger mb-2" style="width: 10rem;" type="button"
-          onclick="window.location.href=`index.html`">Cancelar</button>
-          <button class="btn btn-outline-black mb-2" style="width: 10rem;" type="button"
-          onclick="window.location.href=`Avaliacao.html`">Avaliar</button>
       </div>
     </div>
 
@@ -286,7 +285,6 @@
             <p>Outros links úteis</p>
           </li>
           <li><a href="QuemSomos.html" class="info">Quem somos</a></li>
-          <li><a href="DúvidasAjuda.html" class="info">Ajuda</a></li>
           <li><a href="DúvidasAjuda.html" class="info">Dúvidas frequentes</a></li>
           <li><a href="termosdeprivacidade.html" class="info">Termos de privacidade</a></li>
         </ul>
