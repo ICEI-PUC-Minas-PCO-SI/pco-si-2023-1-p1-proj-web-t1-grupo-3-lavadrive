@@ -30,26 +30,6 @@ function mascaraTelefone() {
 
 }
 
-//função para validar o telefone na alteração no perfil
-function mascaraTelefonePerfil() {
-    elemento = document.getElementById("perfilInputTelefone");
-    var conteudo = elemento.value;
-    var text;
-
-    if (conteudo.length == 2) {
-        text = "(" + conteudo.charAt(0) + conteudo.charAt(1) + ")" + " ";
-        elemento.value = text;
-    }
-    if (conteudo.length == 6) {
-        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " ";
-        elemento.value = text;
-    }
-    if (conteudo.length == 11) {
-        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " " + conteudo.charAt(7) + conteudo.charAt(8) + conteudo.charAt(9) + conteudo.charAt(10) + "-";
-        elemento.value = text;
-    }
-
-}
 
 // Lê os cadastros salvos localmente
 function lerCadastrosSalvos() {
@@ -574,10 +554,28 @@ function validatePlacaPerfil() {
 
 //validar número de contato (aceitar apenas caracteres numéricos)
 function validarNumero(event) {
+    elemento = document.getElementById("perfilInputTelefone");
+    var conteudo = elemento.value;
+    var text;
+
+    if (conteudo.length == 2) {
+        text = "(" + conteudo.charAt(0) + conteudo.charAt(1) + ")" + " ";
+        elemento.value = text;
+    }
+    if (conteudo.length == 6) {
+        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " ";
+        elemento.value = text;
+    }
+    if (conteudo.length == 11) {
+        text = "(" + conteudo.charAt(1) + conteudo.charAt(2) + ")" + " " + conteudo.charAt(5) + " " + conteudo.charAt(7) + conteudo.charAt(8) + conteudo.charAt(9) + conteudo.charAt(10) + "-";
+        elemento.value = text;
+    }
+
     var charCode = (event.which) ? event.which : event.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
       event.preventDefault();
       return false;
     }
     return true;
+    
 }

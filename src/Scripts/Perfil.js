@@ -77,7 +77,7 @@ function opcoes(op) {
 
     <div class="d-flex justify-content-center my-3">
         <input id="perfilInputTelefone" class="form-control text-center border-secondary" type="search"
-            placeholder="Telefone" aria-label="Search" style="width: 20rem;" onkeypress="return validarNumero(event), mascaraTelefonePerfil()">
+            placeholder="Telefone" aria-label="Search" style="width: 20rem;" onkeypress="return validarNumero(event)">
     </div>
 
     <div class="d-flex row justify-content-center my-3">
@@ -403,7 +403,7 @@ function textoCarro() {
     <div class="d-flex justify-content-center my-3">
         <button class="btn btn-light border mt-4 ms-3" onclick="cadastrarNovoCarro()" >Novo carro</button>
 
-        <button class="btn btn-light border mt-4 ms-3" onclick="validatePlacaPerfil(); salvarDadosCarro()" style="width: 6rem;">Salvar</button>
+        <button class="btn btn-light border mt-4 ms-3" onclick="validatePlacaPerfil()" style="width: 6rem;">Salvar</button>
     </div>
     `;
     return text;

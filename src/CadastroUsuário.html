@@ -77,7 +77,8 @@
         <!--Usuário-->
         <div class="mb-3 mx-2">
           <label for="InputNomeUsuario" class="form-label ms-2">Usuário:</label>
-          <input type="user" class="form-control" id="InputNomeUsuario" placeholder="lava_drive">
+          <input type="user" class="form-control" id="InputNomeUsuario" placeholder="lava_drive" maxlength="15">
+          <small class="form-text text-muted">Máximo de 15 caracteres</small>
         </div>
 
         <!--Botôes-->
@@ -85,7 +86,7 @@
         privacidade
         <p id="avisoTermos" class="text-red"></p>
         <div class="text-center justify-content-center">
-          <button type="button" class="m-2 btn btn-outline-info text-center" onclick="validateEmail()" onChange="salvarCadastro()">Criar</button>
+          <button type="button" class="m-2 btn btn-outline-dark text-center" onclick="validateEmail()" onChange="salvarCadastro()">Criar</button>
         </div>
 
         <!--Mensagem toast-->

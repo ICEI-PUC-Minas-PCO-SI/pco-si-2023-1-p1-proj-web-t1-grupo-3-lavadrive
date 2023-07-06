@@ -167,7 +167,7 @@ botaoFinalizar.addEventListener("click", async () => {
 
                     setTimeout(() => {
                         toastBootstrap.hide();
-                        window.location.replace("index.html");
+                        window.location.replace("Avaliacao.html");
                     }, 2500);
                 } 
             })
@@ -178,7 +178,7 @@ botaoFinalizar.addEventListener("click", async () => {
                 toastBootstrap.show();
                 setTimeout(() => {
                     toastBootstrap.hide();
-                    window.location.replace("index.html");
+                    window.location.replace("Avaliacao.html");
                 }, 2500);
             });
     } else {
