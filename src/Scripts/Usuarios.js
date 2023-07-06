@@ -559,6 +559,19 @@ function validatePlaca() {
     return alert('Insira uma placa válida (exemplo: ABC1234)');
 }
 
+function validatePlacaPerfil() {
+    const placaInput = document.getElementById('inputPlacaCarro');
+    const placa = placaInput.value;
+
+    //regex para definir o escopo da placa a ser validada (padrões convencional e mercosul)
+    const regex = /^[A-z]{3}\d[A-j0-9]\d{2}$/g;
+
+    if (regex.test(placa)) {
+      return salvarDadosCarro();
+    }
+    return alert('Insira uma placa válida (exemplo: ABC1234)');
+}
+
 //validar número de contato (aceitar apenas caracteres numéricos)
 function validarNumero(event) {
     var charCode = (event.which) ? event.which : event.keyCode;

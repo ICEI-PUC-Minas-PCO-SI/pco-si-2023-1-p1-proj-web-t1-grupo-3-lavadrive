@@ -403,7 +403,7 @@ function textoCarro() {
     <div class="d-flex justify-content-center my-3">
         <button class="btn btn-light border mt-4 ms-3" onclick="cadastrarNovoCarro()" >Novo carro</button>
 
-        <button class="btn btn-light border mt-4 ms-3" onclick="salvarDadosCarro()" style="width: 6rem;">Salvar</button>
+        <button class="btn btn-light border mt-4 ms-3" onclick="validatePlacaPerfil(); salvarDadosCarro()" style="width: 6rem;">Salvar</button>
     </div>
     `;
     return text;
