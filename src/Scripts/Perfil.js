@@ -10,6 +10,43 @@ function lerCadastrosSalvos() {
     return usuarios
 }
 
+function Mostrar() {
+    let usuarios = lerCadastrosSalvos();
+
+    let str = '';
+    fetch("https://api-avaliacao.vercel.app/agendamentos")
+        .then(response => response.json())
+        .then(data => {
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].responsavel == usuarios.cadastros[usuarios.usuarioAtual].nome)
+                    str += `
+       
+        
+        <div class="card" style="width: 16rem;">
+
+               <div class="card-body">
+    
+ 
+            <p class="card-text">Placa: ${data[i].placa}</p>         
+            <p class="card-text">Tipo de limpeza: ${data[i].tipoDeLimpeza}</p>
+            <p class="card-text">Data: ${data[i].data} Hora: ${data[i].hora}</p>
+            <p class="card-text">Categoria: ${data[i].categoria}</p>
+  </div>
+</div>
+        `;
+
+
+                document.getElementById("agendamentosDiv").innerHTML = str;
+            }
+        })
+}
+
+
+
+
+
+
 function opcoes(op) {
     var tela = document.getElementById("tela");
 
@@ -40,7 +77,7 @@ function opcoes(op) {
 
     <div class="d-flex justify-content-center my-3">
         <input id="perfilInputTelefone" class="form-control text-center border-secondary" type="search"
-            placeholder="Telefone" aria-label="Search" style="width: 20rem;">
+            placeholder="Telefone" aria-label="Search" style="width: 20rem;" onkeypress="return validarNumero(event)">
     </div>
 
     <div class="d-flex row justify-content-center my-3">
@@ -89,86 +126,109 @@ function opcoes(op) {
         dadosCarro();
     }
 
-        else if (op == 3) {
-            tela.innerHTML = `
+    else if (op == 3) {
+        tela.innerHTML = `
               <h3 class="mt-3">Últimos Agendamentos</h3>
           
               <div class="d-flex justify-content-center my-3">
-                <input id="filtroData" class="form-control text-center border-secondary" type="search" placeholder="00/00/0000"
+                <input id="filtroData" onKeyUp="filtrarAgendamentos()" class="form-control text-center border-secondary" type="search" placeholder="00/00/0000"
                   aria-label="Search" style="width: 20rem;" maxlength="10">
               </div>
           
-              <div id="agendamentosDiv" class="justify-content-center my-3 rounded border">
-                <!-- Aqui serão inseridos os agendamentos -->
+              <div id="agendamentosDiv" class="d-flex flex-wrap gap-2 p-2 text-center justify-content-center my-3 rounded border">
+                
               </div>
             `;
-          
-            let headersList = {
-              "Accept": "*/*",
-              "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-            };
-          
-            //buscar os agendamentos na API
-            async function buscarAgendamentos() {
-              try {
-                let response = await fetch("https://api-avaliacao.vercel.app/agendamentos", {
-                  method: "GET",
-                  headers: headersList
-                });
-          
-                let data = await response.json();
-                return data;
-              } catch (error) {
-                console.error(error);
-                return [];
-              }
-            }
-            
-            
-            // Função para filtrar os agendamentos por data
-            function filtrarAgendamentos() {
-              const filtroData = document.getElementById('filtroData').value;
-              const agendamentosDiv = document.getElementById('agendamentosDiv');
-          
-              buscarAgendamentos().then(agendamentos => {
-                // Filtra os agendamentos com base na data
-                const agendamentosFiltrados = agendamentos.filter(agendamento => agendamento.data  === filtroData);
-                
-            
-                
+        Mostrar();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Event listener para o campo de filtro de data
+    const filtroDataInput = document.getElementById('filtroData');
+
+    filtroDataInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            filtrarAgendamentos();
+        }
+    });
+}
+
+let headersList = {
+    "Accept": "*/*",
+    "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+};
+
+
+
+// Função para filtrar os agendamentos por data
+function filtrarAgendamentos() {
+    const filtroData = document.getElementById('filtroData').value;
+    const agendamentosDiv = document.getElementById('agendamentosDiv');
+    if (filtroData == "") {
+        Mostrar();
+    } else {
+        buscarAgendamentos().then(agendamentos => {
+            // Filtra os agendamentos com base na data
+
+            const agendamentosFiltrados = agendamentos.filter(agendamento => agendamento.data === filtroData);
+
+
+
             agendamentosDiv.innerHTML = '';
-          
+
             if (agendamentosFiltrados.length > 0) {
                 // se houver agendamentos
                 agendamentosFiltrados.forEach(agendamento => {
-                  const agendamentoElement = document.createElement('p');
-                  
-                  agendamentoElement.innerHTML = `Agendamento Encontrado!<br>Data: ${agendamento.data}, Horário: ${agendamento.hora}, Placa: ${agendamento.placa}`;
-                  agendamentosDiv.appendChild(agendamentoElement);
+                    const agendamentoElement = document.createElement('p');
+
+                    agendamentoElement.innerHTML = `Agendamento Encontrado!<br>Data: ${agendamento.data}, Horário: ${agendamento.hora}, Placa: ${agendamento.placa}`;
+                    agendamentosDiv.appendChild(agendamentoElement);
                 });
-              } else {
+            } else {
                 // se não houver agendamentos
                 const mensagemElement = document.createElement('p');
                 mensagemElement.textContent = 'Não há agendamentos para a data selecionada.';
                 agendamentosDiv.appendChild(mensagemElement);
-              }
-              });
             }
-            
-          
-            // Event listener para o campo de filtro de data
-            const filtroDataInput = document.getElementById('filtroData');
-          
-            filtroDataInput.addEventListener('keypress', function(event) {
-              if (event.key === 'Enter') {
-                filtrarAgendamentos();
-              }
-            });
-          }
-    }
 
-    
-    
+
+
+
+        });
+    }
+}
+
+
+//buscar os agendamentos na API
+async function buscarAgendamentos() {
+    try {
+        let response = await fetch("https://api-avaliacao.vercel.app/agendamentos", {
+            method: "GET",
+            headers: headersList
+        });
+
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
+
+
+
 function dadosPerfil() {
     let usuarios = lerCadastrosSalvos();
 
@@ -343,7 +403,7 @@ function textoCarro() {
     <div class="d-flex justify-content-center my-3">
         <button class="btn btn-light border mt-4 ms-3" onclick="cadastrarNovoCarro()" >Novo carro</button>
 
-        <button class="btn btn-light border mt-4 ms-3" onclick="salvarDadosCarro()" style="width: 6rem;">Salvar</button>
+        <button class="btn btn-light border mt-4 ms-3" onclick="validatePlacaPerfil()" style="width: 6rem;">Salvar</button>
     </div>
     `;
     return text;
