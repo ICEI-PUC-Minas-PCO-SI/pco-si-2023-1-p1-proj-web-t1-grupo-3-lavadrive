@@ -7,8 +7,10 @@ Validei tembém os campos de alteração do cadastro na tela de Perfil, como o e
 Também, como todos os outros integrantes, fiz algumas alterações html visando a melhora da responsividade de algumas telas do projeto.
 
 ## Gustavo Augusto Santos Perdigão
+Nessa etapa final, fui responsável pela correção dos botões na página de agendamento, deixando-os mais intuitivos e atualizei a documentação de "Especificações do Projeto" (fiz o commit pelo notebook do Daniel Araújo, entretanto quem fez as alterações fui eu), mais especificamente os tópicos de Requisitos Funcionais, Requisitos não Funcionais e Restrições da aplicação. Além disso, também fiquei encarregamento pela hospedagem na AWS para que a URL de todas as funcionalidades citadas na documentação estivessem funcionando corretamente.
 
 ## Pedro Antônio Silva Neto
 Nessa etapa, fui responsável por fazer alguns ajustes e correções no código, visando uma melhor interação. Além disso, adicionei uma função de notificação ao finalizar agendamento e logo em seguida encaminhar o usuário para a página inicial e ajudei, sempre que necessário, os outros integrantes.
+
 ## Yago de Arruda Simões
 Nesta etapa, eu fiquei responsável por corrigir um erro que permitia acessar algumas paginas sem estar logado ou então logado com uma conta que não deveria ter acesso a pagina, eu também fiz pequenos ajustes no html de algumas paginas para deixa-las mais de acordo com o padrão das outras, participei na organização do grupo e ajudei com duvidas  e na verificação final de responsividade e funcionalidade das páginas.
