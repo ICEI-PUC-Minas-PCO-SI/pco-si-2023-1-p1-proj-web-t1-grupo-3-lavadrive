@@ -77,7 +77,7 @@ function opcoes(op) {
 
     <div class="d-flex justify-content-center my-3">
         <input id="perfilInputTelefone" class="form-control text-center border-secondary" type="search"
-            placeholder="Telefone" aria-label="Search" style="width: 20rem;" onkeypress="return validarNumero(event)">
+            placeholder="Telefone" aria-label="Search" style="width: 20rem;" onkeypress="return validarNumeroPerfil(event)">
     </div>
 
     <div class="d-flex row justify-content-center my-3">
