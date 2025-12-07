@@ -167,18 +167,20 @@ botaoFinalizar.addEventListener("click", async () => {
 
                     setTimeout(() => {
                         toastBootstrap.hide();
-                        window.location.replace("Avaliacao.html");
+                        //window.location.replace("Avaliacao.html");
+                        window.location.replace("Index.html");
                     }, 2500);
                 } 
             })
             .catch(error => {
                 const toastLiveExample = document.getElementById('liveToast');
-                document.getElementById('toastMensage').textContent = "Agendamento realizado com sucesso!";
+                document.getElementById('toastMensage').textContent = "Agendamento realizado com sucesso!!!";
                 const toastBootstrap = new bootstrap.Toast(toastLiveExample);
                 toastBootstrap.show();
                 setTimeout(() => {
                     toastBootstrap.hide();
-                    window.location.replace("Avaliacao.html");
+                    //window.location.replace("Avaliacao.html");
+                    window.location.replace("Index.html");
                 }, 2500);
             });
     } else {
